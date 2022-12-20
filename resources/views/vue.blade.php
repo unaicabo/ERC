@@ -7,7 +7,7 @@
     <title>Vue</title>
 </head>
 <body>
-
+    <h1>Hola</h1>
     <div id="app"></div>
     <script src="{{ asset('js/main.js') }}"></script>
     
