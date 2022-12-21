@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/vue', function () {
     return view('vue');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
