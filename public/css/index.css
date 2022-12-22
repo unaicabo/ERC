@@ -44,19 +44,22 @@ p {
     margin: auto;
 }
 
-
 .tarjetas{
     background-image: url('/img/fondo.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color:darkblue;
-    padding: 2rem;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .tarjeta{
-    width: 35rem;
+    width: 30%;
     padding: 1rem;
     background-color: blanchedalmond;
-    margin-top: 1rem;
+
 
 }
 .titulo{
@@ -101,172 +104,22 @@ p {
 margin-top: 0.5rem;
 }
 
-#footer-movil {
-    display: none;
-
-    position: fixed;
-    bottom: 0;
-
-    padding: 1rem;
-  }
-
-  #footer-movil li {
-    text-align: center;
-    flex: 1 1 0;
-  }
-
-  #footer-movil a {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    flex-direction: column;
-
-    gap: 0.5rem;
-  }
-
-  #footer-movil a i {
-    font-size: 1.5rem;
-  }
-  .flex-space-evenly-row {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-/* ---------------HEADER------------------ */
-/* .logo{
-    padding: 50px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    color: black;
-    font-weight: bold;
-    font-size: 5rem;
-}
-
-#imagen-inicio{
-    max-width: 1000px;
-}
-
-#imagen-inicio img{
-    width: 100%;
-}
-
-.menu-nav{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
-    font-size: 2.5rem;
-    padding: 40px 10px;
-    background-color: #7e80f3;
-}
-
-.menu-nav ul{
-    list-style: none;
-    text-align: center;
-}
-
-.menu-nav a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    transition: 1s;
-    position: relative;
-    padding: 8px;
-}
-
-.menu-nav li:hover a{
-    color: white;
-    opacity: 0.5;
-    transition: 1s;
-}
-
-.menu-nav a::after{
-    content: "";
-    display: inline-block;
-    border-bottom: 2px solid white;
-    width: 1%;
-    opacity: 0;
-    transition: 0.8s;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.menu-nav a:hover::after{
-    width: 100%;
-    opacity: 1;
-    transition: 0.8s;
-}
-
-@media (min-width: 1200px){
-
-    .caja-todo-contenido{
-        width: 70%;
-    }
-
-    .logo{
-        right: 6%;
-        left: 0;
-        z-index: 999;
-        text-align: end;
-    }
-
-    .menu-nav{
-        background-color: transparent;
-        top: 0;
-        width: 60%;
-    }
-
-    .menu-nav a{
-        color: black;
-        font-weight: bold;
-        font-size: 3.5rem;
-    }
-
-    .menu-nav li:hover a{
-        color: black;
-        opacity: 1;
-    }
-
-    .menu-nav a::after{
-        color: black;
-    }
-
-    .menu-nav a::after{
-        border-bottom: 3px solid black;
-    }
-
-    .menu-nav a:hover::after{
-        border-bottom: 3px solid black;
-    }
-
-} */
-
 
 @media (min-width: 390px){
 .foto-principal{
-    width: 23.6rem;
+    width: 20rem;
 }
+
+.tarjetas{
+flex-direction: column;
+}
+
 .tarjeta{
-    width: 17.4rem;
+    width: 100%;
 }
 .foto-tarjetas{
-    width: 5rem;
+    width: 6rem;
     display: block;
     margin: auto;
 }
-#footer-movil {
-    display: initial;
-  }
-
-
-
 }
