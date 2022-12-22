@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/principal', function () {
+    return view('principal');
+});
 
 Route::get('/vue', function () {
     return view('vue');
