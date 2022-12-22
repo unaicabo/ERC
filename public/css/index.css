@@ -2,7 +2,15 @@
     font-family: Barlow-Condensed;
     src: url(./font/BarlowCondensed-Regular.ttf);
 }
+/* *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+html{
+    font-size: 0.625em;
+} */
 body {
     font-family: Barlow-Condensed !important;
     background-color: rgb(38,38,38);
@@ -36,16 +44,12 @@ p {
     margin: auto;
 }
 
-.foto-principal {
-    background-image: url('/img/imagen1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .tarjetas{
     background-image: url('/img/fondo.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: darkblue;
+    background-color:darkblue;
     padding: 2rem;
 }
 .tarjeta{
@@ -74,12 +78,13 @@ p {
     align-items: center;
 }
 .btn{
-    background-color: rgb(38, 38, 228);
+    background: linear-gradient(85deg, purple, blue);
     color: white;
     border: 0px;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
 }
 .texto{
     margin-bottom: 1rem;
@@ -92,9 +97,48 @@ p {
     align-items: center;
     margin-bottom: 2rem;
 }
+.nivel{
+margin-top: 0.5rem;
+}
+
+#footer-movil {
+    display: none;
+
+    position: fixed;
+    bottom: 0;
+
+    padding: 1rem;
+  }
+
+  #footer-movil li {
+    text-align: center;
+    flex: 1 1 0;
+  }
+
+  #footer-movil a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+
+  #footer-movil a i {
+    font-size: 1.5rem;
+  }
+  .flex-space-evenly-row {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
 /* ---------------HEADER------------------ */
-.logo{
+/* .logo{
     padding: 50px;
     position: absolute;
     top: 10px;
@@ -204,7 +248,7 @@ p {
         border-bottom: 3px solid black;
     }
 
-}
+} */
 
 
 @media (min-width: 390px){
@@ -212,13 +256,16 @@ p {
     width: 23.6rem;
 }
 .tarjeta{
-    width: 17rem;
+    width: 17.4rem;
 }
 .foto-tarjetas{
     width: 5rem;
     display: block;
     margin: auto;
 }
+#footer-movil {
+    display: initial;
+  }
 
 
 
