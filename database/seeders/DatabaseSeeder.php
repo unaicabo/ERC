@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Grupo;
 use App\Models\Usuarios;
+use App\Models\partida;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,9 +18,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
         //Grupo::factory(10)->create();
-        Usuarios::factory(20)->create();
+        //Usuarios::factory(20)->create();
+        //partida::factory(10)->create();
+        $this->call(grupoSeeder::class);
+        $this->call(usuarioSeeder::class);
+        $this->call(partidaSeeder::class);
 
     }
 }
