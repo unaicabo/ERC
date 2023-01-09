@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/principal', function () {
     return view('principal');
 });
+Route::get('/explicacion', function () {
+    return view('ExplicacionExtorsionDelComercio');
+});
 
 Route::get('/vue', function () {
     return view('vue');

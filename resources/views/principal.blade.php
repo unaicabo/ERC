@@ -31,6 +31,7 @@
 <body>
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
+    <p class="centrado">ERC</p>
 </div>
 <div class="tarjetas">
     <div class="tarjeta">
@@ -44,7 +45,7 @@
         </div>
 
         <div class="botones">
-            <button class="btn">Jugar</button>
+            <button class="btn" href="/explicacion">Jugar</button>
         </div>
         <p class="nivel">Basico</p>
 

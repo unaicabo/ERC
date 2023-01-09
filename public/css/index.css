@@ -44,6 +44,35 @@ p {
     margin: auto;
 }
 
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(251, 252, 252 );
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
+}
+.centrado-explicacion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(251, 252, 252 );
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
+}
+
 .tarjetas{
     background-image: url('/img/fondo.png');
     background-repeat: no-repeat;
@@ -59,8 +88,22 @@ p {
     width: 30%;
     padding: 1rem;
     background-color: blanchedalmond;
-
-
+}
+.tarjetas-explicacion{
+    background-image: url('/img/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:darkblue;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.tarjeta-explicacion{
+    width: 30%;
+    padding: 1rem;
+    background-color: blanchedalmond;
 }
 .titulo{
     display: flex;
@@ -101,25 +144,65 @@ p {
     margin-bottom: 2rem;
 }
 .nivel{
-margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
-
+#fondo-explicacion{
+    background-image: url('/img/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:darkblue;
+}
 
 @media (min-width: 390px){
-.foto-principal{
-    width: 20rem;
-}
+    .foto-principal{
+        width: 20rem;
+    }
 
-.tarjetas{
-flex-direction: column;
-}
+    .tarjetas{
+    flex-direction: column;
+    }
 
-.tarjeta{
-    width: 100%;
-}
-.foto-tarjetas{
-    width: 6rem;
-    display: block;
-    margin: auto;
-}
+    .tarjeta{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .tarjetas-explicacion{
+    flex-direction: column;
+    margin-top: 10rem;
+    }
+
+    .tarjeta-explicacion{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .foto-tarjetas{
+        width: 6rem;
+        display: block;
+        margin: auto;
+    }
+    .centrado{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 25%;
+        font-size: 400%;
+
+    }
+    .centrado-explicacion{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        font-size: 200%;
+
+    }
+    #fondo-explicacion{
+        background-image: url('/img/fondo.png');
+        background-repeat: no-repeat;
+        background-size:;
+        background-color:darkblue;
+    }
+
 }
