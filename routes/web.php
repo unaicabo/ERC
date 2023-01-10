@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrimeraPrueba;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,10 @@ Route::get('/', function () {
 
 Route::get('/vue', function () {
     return view('vue');
+});
+
+
+
+Route::get('/PrimeraPrueba', function () {
+    return view('PrimeraPrueba');
 });
