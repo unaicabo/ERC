@@ -1,4 +1,40 @@
-@font-face {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
     font-family: Barlow-Condensed;
     src: url(./font/BarlowCondensed-Regular.ttf);
+    background-color: rgb(56, 56, 170);
+}
+
+.contenedor{
+width: 70%;
+margin-left: 15%;
+background-color: blanchedalmond;
+margin-bottom: 3cm;
+border-radius: 15px;
+}
+
+h1{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+canvas{
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 25%;
+    margin-bottom: 2rem;
+}
+.contenedor-explicacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenedor-respuesta{
+    padding-bottom: 2rem;
 }
