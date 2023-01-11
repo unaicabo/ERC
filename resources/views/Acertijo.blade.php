@@ -23,9 +23,9 @@
             <div class="texto">
                 Desde el lunes hasta el viernes, soy la ultima en llegar, el sabado soy la primera, y el domingo a descansar. ¿Quien soy?
             </div>
-
+                <img class="img-acertijo" src="/img/dias-semana.png" alt="dias de la semana">
             <div class="botones">
-                <input type="text">
+                <input type="text" placeholder="Introducir respuesta">
                 <button class="btn">Validar</button>
             </div>
 

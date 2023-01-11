@@ -25,7 +25,7 @@
             </div>
 
             <div class="botones">
-                <input type="text">
+                <input type="text" placeholder="Introducir respuesta">
                 <button class="btn">Validar</button>
             </div>
 

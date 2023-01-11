@@ -172,6 +172,12 @@ p {
     background-image: url('/img/fondo.png');
     background-color:darkblue;
 }
+.img-acertijo{
+    width: 40rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
 @media (max-width: 730px){
     .tarjetas{
         column-count: 1;
@@ -191,6 +197,10 @@ p {
     .centrado-pruebas{
         width: 17rem;
         font-size: 190%;
+    }
+    .img-acertijo{
+        width: 20rem;
+
     }
 }
 @media (max-width: 390px){
