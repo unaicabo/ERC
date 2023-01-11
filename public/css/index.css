@@ -46,7 +46,7 @@ p {
 
 .centrado{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 300%;
@@ -60,7 +60,7 @@ p {
 }
 .centrado-explicacion{
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 300%;
@@ -72,28 +72,27 @@ p {
     -webkit-backdrop-filter: blur(5px);
     padding: 30px 50px;
 }
+.tarjetas {
 
-.tarjetas{
-    background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:darkblue;
+    column-count: 3;
+
+
     padding: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
-.tarjeta{
-    width: 30%;
+
+.tarjeta {
+    /* There will be 3 cards per row */
+    flex-basis: 33.33333%;
+
     padding: 1rem;
     background-color: blanchedalmond;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
+
 .tarjetas-explicacion{
-    background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:darkblue;
+    margin-top: 10rem;
+
     padding: 1.7rem;
     display: flex;
     flex-direction: column;
@@ -101,7 +100,7 @@ p {
     align-items: center;
 }
 .tarjeta-explicacion{
-    width: 30%;
+
     padding: 1rem;
     background-color: blanchedalmond;
 }
@@ -137,38 +136,62 @@ p {
     margin-top: 1rem;
 }
 .foto-tarjetas{
-    width: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 10rem;
+    display: block;
+    margin: auto;
     margin-bottom: 2rem;
+}
+.foto-principal{
+    width: 20rem;
+    display: block;
+    margin: auto;
+
 }
 .nivel{
     margin-top: 0.5rem;
 }
 #fondo-explicacion{
     background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color:darkblue;
 }
+#fondo-principal{
+    background-image: url('/img/fondo.png');
+    background-color:darkblue;
+}
+@media (max-width: 730px){
+    .tarjetas{
+        column-count: 1;
+    }
+    .tarjeta{
 
-@media (min-width: 390px){
+        margin-bottom: 1rem;
+    }
+    .tarjetas-explicacion{
+        margin-top: 12rem;
+    }
+    .tarjeta-explicacion{
+        width: 20rem;
+    }
+    .centrado-explicacion{
+        width: 14rem;
+    }
+}
+@media (max-width: 390px){
     .foto-principal{
         width: 20rem;
     }
 
     .tarjetas{
-    flex-direction: column;
+        column-count: 1;
     }
 
     .tarjeta{
         width: 100%;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
     .tarjetas-explicacion{
-    flex-direction: column;
-    margin-top: 10rem;
+        flex-direction: column;
+        margin-top: 10rem;
     }
 
     .tarjeta-explicacion{
@@ -187,7 +210,6 @@ p {
         align-items: center;
         top: 25%;
         font-size: 400%;
-
     }
     .centrado-explicacion{
         width: 50%;
@@ -196,12 +218,10 @@ p {
         align-items: center;
         top: 10%;
         font-size: 200%;
-
     }
     #fondo-explicacion{
         background-image: url('/img/fondo.png');
         background-repeat: no-repeat;
-        background-size:;
         background-color:darkblue;
     }
 

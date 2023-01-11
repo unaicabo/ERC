@@ -28,11 +28,12 @@
     </header> --}}
 
 </head>
-<body>
+<body id="fondo-principal">
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
     <p class="centrado">ERC</p>
 </div>
+
 <div class="tarjetas">
     <div class="tarjeta">
         <div class="titulo">
