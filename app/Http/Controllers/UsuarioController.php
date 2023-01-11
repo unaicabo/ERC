@@ -38,7 +38,6 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $usuarios = Usuario::all();
-        $existe = false;
         
         foreach ($usuarios as $key => $value) {
             if($value['usuario'] == $request['usuario']){
@@ -52,9 +51,7 @@ class UsuarioController extends Controller
         $usuario = new Usuario($request->all());
         $usuario->save();
 
-        session_start();
-        $_SESSION['usuario'] = $usuario['usuario'];
-        session_write_close();
+        Session::put('usuario', $usuario['usuario']);
 
         return view('index');
     }
@@ -105,13 +102,10 @@ class UsuarioController extends Controller
     }
 
     public function ventanaLogin() {
-        session_start();
-        if($_SESSION['usuario'] == null){
-            session_write_close();
-            return view('login');
-        } else {
-            session_write_close();
+        if(Session::has('usuario')){
             return view('index');
+        } else {
+            return view('login');
         }
     }
 
@@ -120,9 +114,7 @@ class UsuarioController extends Controller
 
         foreach ($usuarios as $key => $value) {
             if($value['usuario'] == $request['usuario'] && $value['contraseña'] == $request['contraseina']){
-                session_start();
-                $_SESSION['usuario'] = $request['usuario'];
-                session_write_close();
+                Session::put('usuario', $request['usuario']);
 
                 return view('index');
                 break;
@@ -134,10 +126,7 @@ class UsuarioController extends Controller
     }
 
     public function logout(){
-        session_start();
-        $_SESSION['usuario'] = null;
-        session_write_close();
-
+        Session::put('usuario', null);
         return view('index');
     }
 }

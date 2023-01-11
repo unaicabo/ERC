@@ -22,6 +22,11 @@ Route::get('/vue', function () {
     return view('vue');
 });
 
+
+Route::get('/prueba', function () {
+    return view('PruebaDos');
+});
+
 Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
