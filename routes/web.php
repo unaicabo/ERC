@@ -23,8 +23,12 @@ Route::get('/vue', function () {
 });
 
 
-Route::get('/prueba', function () {
-    return view('PruebaDos');
+Route::get('/pruebaDos', function () {
+    return view('Cuestionario');
+});
+
+Route::get('/pruebaCuatro', function () {
+    return view('PruebaCuatro');
 });
 
 Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');

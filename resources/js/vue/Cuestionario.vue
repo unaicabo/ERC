@@ -1,19 +1,12 @@
 <template>
-    <div class="w-50">
-        <h4>Progreso de candado:</h4>
-        <div class="cajaProgesoCandados">
-            <div class="cajaLetra bg-primary text-white text-center display-6">7</div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"></div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"></div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"></div>
-        </div>
-    </div>
+    <Candado/>
+
     <h1 class="text-center">Segunda Prueba</h1>
     <h3 class="text-center mx-auto w-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas adipisci distinctio provident natus, suscipit quos, perspiciatis aspernatur quasi esse saepe aliquam. Saepe enim asperiores illum pariatur, ut ipsum odio rem.</h3>
 
     <div id="cajaPruebaCuestionario" class="ml-1 bg-light w-50 mx-auto">
         <form id="formCuestionario">
-            <h4><label id="preguntaCuestionario">{{ pregunta}}</label></h4>
+            <h4><label id="preguntaCuestionario">{{ pregunta }}</label></h4>
             <input type="radio" value="a" name="pregunta1" v-model="respuesta" id="respuestaA"><label for="respuestaA" id="respuestaACuestionario">{{ respuestaA }}</label><br>
             <input type="radio" value="b" name="pregunta1" v-model="respuesta" id="respuestaB"><label for="respuestaB" id="respuestaBCuestionario">{{ respuestaB }}</label><br>
             <input type="radio" value="c" name="pregunta1" v-model="respuesta" id="respuestaC"><label for="respuestaC" id="respuestaCCuestionario">{{ respuestaC }}</label><br>
@@ -24,19 +17,11 @@
     </div>
 </template>
 
+<script setup>
+    import Candado from './components/Candados.vue';
+</script>
+
 <script>
-    function volverAJugar() {
-        document.getElementById('preguntaCuestionario').innerHTML = '1 - Entre los objetos que persigue un buen sistema de almacenamiento está:';
-        document.getElementById('respuestaACuestionario').innerHTML = 'A) Máximo de aprovechamiento de la capacidad de almacenamiento';
-        document.getElementById('respuestaBCuestionario').innerHTML = 'B) Accesibilidad a los productos';
-        document.getElementById('respuestaCCuestionario').innerHTML = 'C) Rotación controladad de stock';
-        document.getElementById('respuestaDCuestionario').innerHTML = 'D) Todas son correctas';
-
-        document.getElementById('cajaResultado').remove();
-
-        document.getElementById('formCuestionario').style.display = 'block';
-    }
-
    export default {
         data() {
             return {
@@ -59,6 +44,18 @@
             }
         },
         methods: {
+            volverAJugar() {
+
+                this.pregunta = this.preguntas[0];
+                this.respuestaA = this.respuestasA[0];
+                this.respuestaB = this.respuestasB[0];
+                this.respuestaC = this.respuestasC[0];
+                this.respuestaD = this.respuestasD[0];
+
+                document.getElementById('cajaResultado').remove();
+
+                document.getElementById('formCuestionario').style.display = 'block';
+            },
             compPregunta(){
                 document.getElementById('labelSinRespuesta').style.display = 'none';
 
@@ -108,14 +105,12 @@
                             botonAvanzar.setAttribute('type', 'button');
                             botonAvanzar.setAttribute('value', 'Siguiente prueba');
                             botonAvanzar.setAttribute('id', 'buttonAcabar');
-                            aAvanzar.setAttribute("href", "{{ route('usuarios.login') }}");
+                            aAvanzar.setAttribute("href", "./login");
 
                             aAvanzar.appendChild(botonAvanzar);
 
                             resultado.appendChild(br);
                             resultado.appendChild(aAvanzar);
-
-                            //a href="{{ route('usuarios.logout') }}
                         }, 1);
                     } else {
                         resultado.innerHTML = '<i class="fa-solid fa-xmark" id="animation"></i>';
@@ -138,11 +133,10 @@
                             this.c = 0;
                             this.d = 0;
                             this.contNumPreg = 0;
-                            botonVolver.addEventListener('click', volverAJugar);
+                            botonVolver.addEventListener('click', this.volverAJugar);
                         }, 1);
                     }
                 }
-                
             }
         }
     }
@@ -150,4 +144,37 @@
 
 <style>
 
+    #cajaPruebaCuestionario {
+        padding: 10px;
+        border-radius: 5px;
+        min-height: 300px;
+    }
+
+    #cajaPruebaCuestionario #labelSinRespuesta {
+        display: none;
+    }
+
+    #cajaPruebaCuestionario input[type=radio] {
+        margin: 5px;
+    }
+
+    #cajaPruebaCuestionario label {
+        padding: 5px;
+    }
+
+    #cajaPruebaCuestionario #preguntaCuestionario {
+        height: 80px;
+    }
+
+    #animation {
+        margin-top: 80px;
+        transition: all 3s;
+    }
+
+    #buttonAcabar {
+        margin-top: 40px;
+        transform: scale(0.4);
+        border-radius: 10px;
+        padding: 10px;
+    }
 </style>
