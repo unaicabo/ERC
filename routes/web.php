@@ -22,6 +22,12 @@ Route::get('/principal', function () {
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 });
+Route::get('/BuscaLetra', function () {
+    return view('BuscaLetras');
+});
+Route::get('/Acertijo', function () {
+    return view('Acertijo');
+});
 
 Route::get('/vue', function () {
     return view('vue');

@@ -60,6 +60,22 @@ p {
 }
 .centrado-explicacion{
     position: absolute;
+
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(251, 252, 252 );
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
+}
+.centrado-pruebas{
+    position: absolute;
+    width: 27rem;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -73,10 +89,7 @@ p {
     padding: 30px 50px;
 }
 .tarjetas {
-
     column-count: 3;
-
-
     padding: 1.7rem;
 }
 
@@ -107,6 +120,8 @@ p {
 .titulo{
     display: flex;
     justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
     /* align-items: center;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
@@ -145,7 +160,6 @@ p {
     width: 20rem;
     display: block;
     margin: auto;
-
 }
 .nivel{
     margin-top: 0.5rem;
@@ -163,7 +177,6 @@ p {
         column-count: 1;
     }
     .tarjeta{
-
         margin-bottom: 1rem;
     }
     .tarjetas-explicacion{
@@ -174,6 +187,10 @@ p {
     }
     .centrado-explicacion{
         width: 14rem;
+    }
+    .centrado-pruebas{
+        width: 17rem;
+        font-size: 190%;
     }
 }
 @media (max-width: 390px){
@@ -223,6 +240,10 @@ p {
         background-image: url('/img/fondo.png');
         background-repeat: no-repeat;
         background-color:darkblue;
+    }
+    .centrado-pruebas{
+        width: 13rem;
+        font-size: 145%;
     }
 
 }
