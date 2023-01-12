@@ -23,11 +23,12 @@ body {
     padding: 50px;
     position: absolute;
     top: 10px;
-    left: 20px;
+    right: 30px;
     color: white;
     font-weight: bold;
     font-size: 5rem;
 }
+
 
 #imagen-inicio img{
     width: 100%;
@@ -175,6 +176,10 @@ p {
     transition: 1s;
 }
 
+@media (min-width: 1200px){
+
+    .caja-todo-contenido{
+        width: 70%;
     }
 
     .logo{
@@ -191,12 +196,18 @@ p {
     }
 
     .menu-nav a{
+        color: white;
         font-weight: bold;
         font-size: 3.5rem;
     }
 
     .menu-nav li:hover a{
+        color: white;
         opacity: 1;
+    }
+
+    .menu-nav a::after{
+        color: white;
     }
 
     .menu-nav a::after{
@@ -245,7 +256,7 @@ p {
         border-bottom: 500px solid #99f37e;
         z-index: 99999999;
     }
-    .foto-buscarLetra{
-        width:19rem;
-    }
+
+
+}
 
