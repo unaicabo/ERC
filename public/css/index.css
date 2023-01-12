@@ -178,6 +178,9 @@ p {
     margin: auto;
     margin-bottom: 2rem;
 }
+.foto-buscarLetra{
+    width: 40rem;
+}
 @media (max-width: 730px){
     .tarjetas{
         column-count: 1;
@@ -189,7 +192,7 @@ p {
         margin-top: 12rem;
     }
     .tarjeta-explicacion{
-        width: 20rem;
+        width: 40rem;
     }
     .centrado-explicacion{
         width: 14rem;
@@ -200,7 +203,9 @@ p {
     }
     .img-acertijo{
         width: 20rem;
-
+    }
+    .foto-buscarLetra{
+        width: 40rem;
     }
 }
 @media (max-width: 390px){
@@ -254,6 +259,9 @@ p {
     .centrado-pruebas{
         width: 13rem;
         font-size: 145%;
+    }
+    .foto-buscarLetra{
+        width:19rem;
     }
 
 }
