@@ -1,8 +1,12 @@
 cargarImagen ();
+var image
+
+let x = 0;
+let y = 0;
 
 function cargarImagen () {
     // displaying the uploaded image
-    const image = document.createElement("img");
+    image = document.createElement("img");
     image.src = 'img/sopa_letras2.PNG';
 
     // enbaling the brush after after the image
@@ -52,18 +56,45 @@ function drawOnImage(image = null) {
     let isDrawing;
 
     canvasElement.onmousedown = (e) => {
+
+        console.log("pageYOffset"+window.pageYOffset);
+        console.log("Coords abs: " + e.clientX+" "+e.clientY);
+        var scroll = window.pageYOffset;
+        console.log(scroll);
+
+
         isDrawing = true;
         context.beginPath();
         context.lineWidth = 2;
         context.strokeStyle = "#ff0000";
         context.lineJoin = "round";
         context.lineCap = "round";
-        context.moveTo(e.clientX-505, e.clientY-115);
+
+        if (scroll>0){
+            x = e.clientX;
+            console.log("x "+x);
+            y = e.clientY-scroll;
+            console.log("y "+y);
+
+            context.moveTo(e.clientX, e.clientY-scroll);
+        }else{
+            context.moveTo(e.clientX- 515, e.clientY-207);
+        }
     };
 
     canvasElement.onmousemove = (e) => {
+        var scroll = window.pageYOffset;
         if (isDrawing) {
-            context.lineTo(e.clientX-505, e.clientY-115);
+            if (scroll>0){
+                x = e.clientX;
+                console.log("x move "+x);
+                y = e.clientY-scroll;
+                console.log("y move "+y);
+
+                context.lineTo(e.clientX, e.clientY-scroll);
+            }else{
+                context.lineTo(e.clientX- 515, e.clientY-207);
+            }
             context.stroke();
         }
     };
