@@ -50,7 +50,7 @@
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
                     <p>Aceptar los terminos y condiciones:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado" v-model="terminos"></p>
-                    <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
+                    <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
                 </div>
             </form>
         </div>
