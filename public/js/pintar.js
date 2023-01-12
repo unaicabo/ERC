@@ -78,7 +78,7 @@ function drawOnImage(image = null) {
 
             context.moveTo(e.clientX, e.clientY-scroll);
         }else{
-            context.moveTo(e.clientX- 515, e.clientY-207);
+            context.moveTo(e.clientX- 515, e.clientY-375);
         }
     };
 
@@ -93,7 +93,7 @@ function drawOnImage(image = null) {
 
                 context.lineTo(e.clientX, e.clientY-scroll);
             }else{
-                context.lineTo(e.clientX- 515, e.clientY-207);
+                context.lineTo(e.clientX- 515, e.clientY-375);
             }
             context.stroke();
         }

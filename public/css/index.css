@@ -87,6 +87,7 @@ p {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 30px 50px;
+    text-align: center;
 }
 .tarjetas {
     column-count: 3;
@@ -178,6 +179,35 @@ p {
     margin: auto;
     margin-bottom: 2rem;
 }
+
+.contenedor-sopadeletras{
+    width: 70%;
+    margin-left: 15%;
+    background-color: blanchedalmond;
+    margin-bottom: 3cm;
+    /* border-radius: 15px; */
+    margin-top: 6cm;
+    }
+
+    canvas{
+        width: 500px;
+        margin-top: 2rem;
+        margin-left: 27%;
+        margin-bottom: 1rem;
+    }
+
+    .boton-clear{
+        width: 10%;
+        margin-left: 45%;
+        padding-left: 2%;
+    }
+
+    .respuesta-sopadeletras{
+        padding-bottom: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
 @media (max-width: 730px){
     .tarjetas{
         column-count: 1;
@@ -197,6 +227,7 @@ p {
     .centrado-pruebas{
         width: 17rem;
         font-size: 190%;
+        text-align: center;
     }
     .img-acertijo{
         width: 20rem;
@@ -254,6 +285,7 @@ p {
     .centrado-pruebas{
         width: 13rem;
         font-size: 145%;
+        text-align: center;
     }
 
 }
