@@ -25,8 +25,8 @@
     } else {
     ?>
         <div class="col"><button>Demo</button></div>
-        <div class="col"><button>Register</button></div>
-        <div class="col"><button>Login</button></div>
+        <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Register</button></a></div>
+        <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Login</button></a></div>
     <?php
     }
 ?>
