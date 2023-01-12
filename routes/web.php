@@ -39,6 +39,9 @@ Route::get('/sopadeletras', function () {
 Route::get('/vue', function () {
     return view('vue');
 });
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+});
 
 
 
@@ -48,6 +51,9 @@ Route::get('/pruebaDos', function () {
 
 Route::get('/pruebaCuatro', function () {
     return view('PruebaCuatro');
+});
+Route::get('/inicio', function () {
+    return view('inicio');
 });
 
 Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');
