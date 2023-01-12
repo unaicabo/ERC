@@ -28,11 +28,12 @@
     </header> --}}
 
 </head>
-<body>
+<body id="fondo-principal">
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
     <p class="centrado">ERC</p>
 </div>
+
 <div class="tarjetas">
     <div class="tarjeta">
         <div class="titulo">
@@ -45,7 +46,7 @@
         </div>
 
         <div class="botones">
-            <button class="btn" href="/explicacion">Jugar</button>
+            <a href="{{ route ('explicacion') }}"><button class="btn">Jugar</button></a>
         </div>
         <p class="nivel">Basico</p>
 
@@ -63,7 +64,7 @@
             </div>
 
             <div class="botones">
-                <button class="btn">Jugar</button>
+                <a href="{{ route ('explicacion') }}"><button class="btn">Jugar</button></a>
             </div>
             <p class="nivel">Medio</p>
         </div>
@@ -81,7 +82,7 @@
             </div>
 
             <div class="botones">
-                <button class="btn">Jugar</button>
+                <a href="{{ route ('explicacion') }}"><button class="btn">Jugar</button></a>
             </div>
             <p class="nivel">Avanzado</p>
         </div>
