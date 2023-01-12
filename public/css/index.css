@@ -94,7 +94,7 @@ p {
     width: 80%;
     margin: auto;
     font-size: 3rem;
-} 
+}
 
 .caja-diseño{
     /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
@@ -175,7 +175,7 @@ p {
     transition: 1s;
 }
 
-    }
+
 
     .logo{
         right: 6%;
@@ -231,7 +231,7 @@ p {
         border-bottom: none;
         transform: rotate(90deg);
         display: none;
-     
+
     }
 
     .caja-diseño-3{
