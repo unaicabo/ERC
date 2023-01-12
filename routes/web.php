@@ -28,6 +28,9 @@ Route::get('/BuscaLetra', function () {
 Route::get('/Acertijo', function () {
     return view('Acertijo');
 });
+Route::get('/crearGrupos', function () {
+    return view('CrearGrupo');
+});
 
 Route::get('/vue', function () {
     return view('vue');
