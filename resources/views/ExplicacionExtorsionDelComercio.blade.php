@@ -26,7 +26,7 @@
             </div>
 
             <div class="botones">
-                <button class="btn">Empezar a jugar</button>
+            <a href="{{ route ('acertijo') }}"><button class="btn">Empezar a jugar</button></a>
             </div>
             <p class="nivel">Basico</p>
 

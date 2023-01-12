@@ -22,13 +22,13 @@ Route::get('/principal', function () {
 });
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
-});
+})->name('explicacion');
 Route::get('/BuscaLetra', function () {
     return view('BuscaLetras');
 });
 Route::get('/Acertijo', function () {
     return view('Acertijo');
-});
+})->name('acertijo');
 
 Route::get('/vue', function () {
     return view('vue');
