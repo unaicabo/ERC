@@ -295,9 +295,14 @@ p {
 
     canvas{
         width: 500px;
+
+        height: 500px;
         margin-top: 2rem;
         margin-left: 27%;
         margin-bottom: 1rem;
+        /* background-color: black; */
+        /*background-image: url('/img/sopa_letras2.PNG');*/
+
     }
 
     .boton-clear{
@@ -313,6 +318,11 @@ p {
 >>>>>>> b726d93fecba1bf4f84a827f9f17a3a6798f0e99
     }
 
+    .foto-buscarLetra{
+        width:40rem;
+    }
+
+
 @media (max-width: 730px){
     .tarjetas{
         column-count: 1;
@@ -324,7 +334,10 @@ p {
         margin-top: 12rem;
     }
     .tarjeta-explicacion{
-        width: 20rem;
+        width: 28rem;
+    }
+    .foto-buscarLetra{
+        width:28rem;
     }
     .centrado-explicacion{
         width: 14rem;
@@ -360,6 +373,9 @@ p {
     .tarjeta-explicacion{
         width: 100%;
         margin-top: 1rem;
+    }
+    .foto-buscarLetra{
+        width:19rem;
     }
     .foto-tarjetas{
         width: 6rem;

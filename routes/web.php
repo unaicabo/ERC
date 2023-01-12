@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrimeraPrueba;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +30,10 @@ Route::get('/buscarletra', function () {
 Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
+
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+});
 
 
 Route::get('/vue', function () {
