@@ -207,6 +207,9 @@ p {
         text-align: center;
         margin-top: 1rem;
     }
+    .foto-buscarLetra{
+        width:40rem;
+    }
 
 @media (max-width: 730px){
     .tarjetas{
@@ -219,7 +222,10 @@ p {
         margin-top: 12rem;
     }
     .tarjeta-explicacion{
-        width: 20rem;
+        width: 28rem;
+    }
+    .foto-buscarLetra{
+        width:28rem;
     }
     .centrado-explicacion{
         width: 14rem;
@@ -255,6 +261,9 @@ p {
     .tarjeta-explicacion{
         width: 100%;
         margin-top: 1rem;
+    }
+    .foto-buscarLetra{
+        width:19rem;
     }
     .foto-tarjetas{
         width: 6rem;
