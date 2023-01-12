@@ -18,7 +18,7 @@
             </div>
             
             <figure id="imagen-inicio">
-                <img src="img/candado.jpg" alt="">
+                <img src="img/inicio1.jpg" alt="">
             </figure>
 
             <nav class="menu-nav">

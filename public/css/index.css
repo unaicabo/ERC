@@ -24,13 +24,13 @@ body {
     position: absolute;
     top: 10px;
     left: 20px;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 5rem;
 }
 
 #imagen-inicio{
-    max-width: 1000px;
+   
 }
 
 #imagen-inicio img{
@@ -199,13 +199,11 @@ p {
     }
 
     .menu-nav a{
-        color: black;
         font-weight: bold;
         font-size: 3.5rem;
     }
 
     .menu-nav li:hover a{
-        color: black;
         opacity: 1;
     }
 
