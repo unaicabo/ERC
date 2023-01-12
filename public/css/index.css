@@ -24,9 +24,13 @@ body {
     position: absolute;
     top: 10px;
     left: 20px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 5rem;
+}
+
+#imagen-inicio{
+    max-width: 1000px;
 }
 
 #imagen-inicio img{
@@ -175,6 +179,10 @@ p {
     transition: 1s;
 }
 
+@media (min-width: 1200px){
+
+    .caja-todo-contenido{
+        width: 70%;
     }
 
     .logo{
@@ -182,6 +190,7 @@ p {
         left: 0;
         z-index: 999;
         text-align: end;
+        color: red;
     }
 
     .menu-nav{
@@ -191,20 +200,26 @@ p {
     }
 
     .menu-nav a{
+        color: black;
         font-weight: bold;
         font-size: 3.5rem;
     }
 
     .menu-nav li:hover a{
+        color: black;
         opacity: 1;
     }
 
     .menu-nav a::after{
-        border-bottom: 3px solid white;
+        color: black;
+    }
+
+    .menu-nav a::after{
+        border-bottom: 3px solid black;
     }
 
     .menu-nav a:hover::after{
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid black;
     }
 
     #caja-diseño-inicio{
@@ -235,7 +250,7 @@ p {
     }
 
     .caja-diseño-3{
-        display: none;
+        display: flex;
         position: absolute;
         bottom: 0;
         left: -20%;
@@ -245,7 +260,5 @@ p {
         border-bottom: 500px solid #99f37e;
         z-index: 99999999;
     }
-    .foto-buscarLetra{
-        width:19rem;
-    }
 
+}

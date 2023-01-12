@@ -58,7 +58,7 @@
 
         if(Session::has('usuario')){
         ?>
-            <div class="col"><a href="{{ route('usuarios.logout') }}"><button> Logout </button></a></div>
+            <div class="col"><a href="{{ route('usuarios.logout') }}"><button>Logout</button></a></div>
         <?php
         } else {
         ?>
