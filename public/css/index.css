@@ -175,10 +175,6 @@ p {
     transition: 1s;
 }
 
-@media (min-width: 1200px){
-
-    .caja-todo-contenido{
-        width: 70%;
     }
 
     .logo{
@@ -249,6 +245,7 @@ p {
         border-bottom: 500px solid #99f37e;
         z-index: 99999999;
     }
+    .foto-buscarLetra{
+        width:19rem;
+    }
 
-
-}
