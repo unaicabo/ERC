@@ -31,6 +31,10 @@ Route::get('/Acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+});
+
 
 Route::get('/vue', function () {
     return view('vue');

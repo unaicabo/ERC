@@ -73,11 +73,15 @@ function drawOnImage(image = null) {
         if (scroll>0){
             x = e.clientX;
             console.log("x "+x);
-            y = e.clientY-scroll;
+            y = e.clientY;
             console.log("y "+y);
 
-            context.moveTo(e.clientX, e.clientY-scroll);
+            context.moveTo(e.clientX, e.clientY);
         }else{
+            x = e.clientX;
+            console.log("x "+x);
+            y = e.clientY;
+            console.log("y "+y);
             context.moveTo(e.clientX- 515, e.clientY-375);
         }
     };
@@ -88,11 +92,16 @@ function drawOnImage(image = null) {
             if (scroll>0){
                 x = e.clientX;
                 console.log("x move "+x);
-                y = e.clientY-scroll;
+                y =e.clientY;
                 console.log("y move "+y);
 
-                context.lineTo(e.clientX, e.clientY-scroll);
+                context.lineTo(e.clientX, e.clientY);
             }else{
+                x = e.clientX;
+                console.log("x move "+x);
+                y = e.clientY;
+                console.log("y move "+y);
+
                 context.lineTo(e.clientX- 515, e.clientY-375);
             }
             context.stroke();
