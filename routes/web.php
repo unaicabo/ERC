@@ -36,6 +36,9 @@ Route::get('/Acertijo', function () {
 Route::get('/vue', function () {
     return view('vue');
 });
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+});
 
 
 

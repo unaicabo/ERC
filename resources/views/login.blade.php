@@ -45,8 +45,8 @@
                     <input type="text" name="nombre" placeholder="Nombre *" id="nombreIrakaslea" value="{{ old('nombre') }}" v-model="nombre"/>
                     <input type="text" name="apellido" placeholder="Apellidos *" id="apellidosIrakaslea" value="{{ old('apellido') }}" v-model="apellidos"/>
                     <input type="text" name="usuario" placeholder="Usuario *" id="usuarioIrakaslea" value="{{ old('usuario') }}" v-model="usuario"/>
-                    <input type="password" name="contraseña" placeholder="Pasahitza *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>
-                    <input type="password" name="contraseina2Irakaslea" placeholder="Errepikatu pasahitza *" id="contraseina2Irakaslea" value="{{ old('contraseina2Irakaslea') }}" v-model="contraseina2"/>
+                    <input type="password" name="contraseña" placeholder="Contraseña *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>
+                    <input type="password" name="contraseina2Irakaslea" placeholder="Repite la contraseña *" id="contraseina2Irakaslea" value="{{ old('contraseina2Irakaslea') }}" v-model="contraseina2"/>
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
                     <p>Aceptar los terminos y condiciones:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado" v-model="terminos"></p>
