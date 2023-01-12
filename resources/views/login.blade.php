@@ -79,7 +79,7 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left" id="moveToLogin">
-                    <h1>Kaixo, aspaldiko!</h1>
+                    <h1>Bienvenido de nuevo!</h1>
                     <p>Introduce usuario y contraseña para entrar en la web.</p>
                     <button type="button" class="ghost" id="signIn" @click="moveLogin()">Iniciar Sesion</button>
                 </div>
