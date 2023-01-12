@@ -2,7 +2,8 @@
     font-family: Barlow-Condensed;
     src: url(./font/BarlowCondensed-Regular.ttf);
 }
-/* *{
+
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -10,250 +11,326 @@
 
 html{
     font-size: 0.625em;
-} */
+}
+
 body {
     font-family: Barlow-Condensed !important;
-    background-color: rgb(38,38,38);
+    background-color: rgb(38, 38, 38) !important;
+    color: white !important;
 }
 
-header {
-    margin-top: 5px;
-    font-family: Barlow-Condensed;
-    text-align: center;
-    padding-right: 12px;
-    box-shadow: 0px 5px 5px #888888;
+.logo{
+    padding: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
 }
 
-header button {
-    border: 0px;
-    border-radius: 10px;
+#imagen-inicio img{
     width: 100%;
-    height: 60%;
-    margin-top: 6px;
+}
+
+.menu-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 40px 10px;
+    background-color: #484ae0;
+}
+
+.menu-nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu-nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 1s;
+    position: relative;
+    padding: 8px;
+}
+
+.menu-nav li:hover a{
+    color: white;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.menu-nav a::after{
+    content: "";
+    display: inline-block;
+    border-bottom: 2px solid white;
+    width: 1%;
+    opacity: 0;
+    transition: 0.8s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-nav a:hover::after{
+    width: 100%;
+    opacity: 1;
+    transition: 0.8s;
 }
 
 .titleEscape {
     margin-top: 50px;
     text-align: center;
-    font-size: 5em;
+    font-size: 8rem;
 }
 
 p {
     text-align: center;
     width: 80%;
     margin: auto;
+    font-size: 3rem;
 }
 
-.centrado{
+.caja-diseño{
+    /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+#caja-diseño-inicio{
+    position: relative;
+    margin-top: 200px;
+}
+
+.caja-diseño-1{
+    height: 300px;
+    background-color: #484ae0;
+}
+
+.caja-diseño-2{
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 300%;
-    font-weight: bold;
-    color: rgb(251, 252, 252 );
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding: 30px 50px;
-}
-.centrado-explicacion{
-    position: absolute;
-
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 300%;
-    font-weight: bold;
-    color: rgb(251, 252, 252 );
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding: 30px 50px;
-}
-.centrado-pruebas{
-    position: absolute;
-    width: 27rem;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 300%;
-    font-weight: bold;
-    color: rgb(251, 252, 252 );
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding: 30px 50px;
-}
-.tarjetas {
-    column-count: 3;
-    padding: 1.7rem;
+    top: -80px;
+    right: 0;
+    width: 50%;
+    height: 0px;
+    border-left: 5rem solid transparent;
+    border-bottom: 80px solid #484ae0;
 }
 
-.tarjeta {
-    /* There will be 3 cards per row */
-    flex-basis: 33.33333%;
-
-    padding: 1rem;
-    background-color: blanchedalmond;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+.caja-diseño-3{
+    display: none;
 }
 
-.tarjetas-explicacion{
-    margin-top: 10rem;
+#btn-jugar{
+    text-align: center;
+    font-size: 3rem;
+    margin: 50px;
+}
 
-    padding: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.tarjeta-explicacion{
-
-    padding: 1rem;
-    background-color: blanchedalmond;
-}
-.titulo{
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    /* align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    backdrop-filter: blur(10px); */
-
-}
-.titulo h2{
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.botones{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn{
-    background: linear-gradient(85deg, purple, blue);
+#btn-jugar button{
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
     color: white;
-    border: 0px;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 22222;
 }
-.texto{
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-.foto-tarjetas{
-    width: 10rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-}
-.foto-principal{
-    width: 20rem;
-    display: block;
-    margin: auto;
-}
-.nivel{
-    margin-top: 0.5rem;
-}
-#fondo-explicacion{
-    background-image: url('/img/fondo.png');
-    background-color:darkblue;
-}
-#fondo-principal{
-    background-image: url('/img/fondo.png');
-    background-color:darkblue;
-}
-.img-acertijo{
-    width: 40rem;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-}
-@media (max-width: 730px){
-    .tarjetas{
-        column-count: 1;
-    }
-    .tarjeta{
-        margin-bottom: 1rem;
-    }
-    .tarjetas-explicacion{
-        margin-top: 12rem;
-    }
-    .tarjeta-explicacion{
-        width: 20rem;
-    }
-    .centrado-explicacion{
-        width: 14rem;
-    }
-    .centrado-pruebas{
-        width: 17rem;
-        font-size: 190%;
-    }
-    .img-acertijo{
-        width: 20rem;
 
-    }
+#btn-jugar button::after{
+    content: "";
+    display: inline-block;
+    background-color: #484ae0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 1s;
+    opacity: 0;
 }
-@media (max-width: 390px){
-    .foto-principal{
-        width: 20rem;
+
+#btn-jugar button:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+
+#btn-jugar button:hover{
+    border: none;
+    transition: 1s;
+}
+
+
+<<<<<<< HEAD
+=======
+
+
+
+    .logo{
+        right: 6%;
+        left: 0;
+        z-index: 999;
+        text-align: end;
     }
 
-    .tarjetas{
-        column-count: 1;
+    .menu-nav{
+        background-color: transparent;
+        top: 0;
+        width: 60%;
     }
 
-    .tarjeta{
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-    .tarjetas-explicacion{
-        flex-direction: column;
-        margin-top: 10rem;
+    .menu-nav a{
+        font-weight: bold;
+        font-size: 3.5rem;
     }
 
-    .tarjeta-explicacion{
-        width: 100%;
-        margin-top: 1rem;
-    }
-    .foto-tarjetas{
-        width: 6rem;
-        display: block;
-        margin: auto;
-    }
-    .centrado{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 25%;
-        font-size: 400%;
-    }
-    .centrado-explicacion{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 10%;
-        font-size: 200%;
-    }
-    #fondo-explicacion{
-        background-image: url('/img/fondo.png');
-        background-repeat: no-repeat;
-        background-color:darkblue;
-    }
-    .centrado-pruebas{
-        width: 13rem;
-        font-size: 145%;
+    .menu-nav li:hover a{
+        opacity: 1;
     }
 
-}
+    .menu-nav a::after{
+        border-bottom: 3px solid white;
+    }
+
+    .menu-nav a:hover::after{
+        border-bottom: 3px solid white;
+    }
+
+    #caja-diseño-inicio{
+        height: 100%;
+        width: 30%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+    }
+
+    .caja-diseño-1{
+        height: 100%;
+    }
+
+    .caja-diseño-2{
+        z-index: 99999999999;
+        top: 650px;
+        right: 45%;
+        width: 500px;
+        max-width: none;
+        height: 0px;
+        border-top: 100px solid #484ae0;
+        border-bottom: none;
+        transform: rotate(90deg);
+        display: none;
+
+    }
+
+    .caja-diseño-3{
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        width: 25%;
+        height: 0px;
+        border-right: 5rem solid transparent;
+        border-bottom: 500px solid #99f37e;
+        z-index: 99999999;
+    }
+
+>>>>>>> 6dc2e8f0703f8f5d346da3054390cc66257619f3
+    @media (min-width: 1200px){
+
+        .caja-todo-contenido{
+            width: 70% !important;
+        }
+
+        .logo{
+            right: 6% !important;
+            left: 0;
+            z-index: 999;
+            text-align: end;
+        }
+
+        .menu-nav{
+            background-color: transparent;
+            top: 0;
+            width: 60%;
+        }
+
+        .menu-nav a{
+            font-weight: bold;
+            font-size: 3.5rem;
+        }
+
+        .menu-nav li:hover a{
+            opacity: 1;
+        }
+
+        .menu-nav a::after{
+            border-bottom: 3px solid white;
+        }
+
+        .menu-nav a:hover::after{
+            border-bottom: 3px solid white;
+        }
+
+        #caja-diseño-inicio{
+            height: 100%;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin-top: 0;
+        }
+
+        .caja-diseño-1{
+            height: 100%;
+        }
+
+        .caja-diseño-2{
+            z-index: 99999999999;
+            top: 650px;
+            right: 45%;
+            width: 500px;
+            max-width: none;
+            height: 0px;
+            border-top: 100px solid #484ae0;
+            border-bottom: none;
+            transform: rotate(90deg);
+            display: none;
+
+        }
+
+        .caja-diseño-3{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: -20%;
+            width: 25%;
+            height: 0px;
+            border-right: 5rem solid transparent;
+            border-bottom: 500px solid #99f37e;
+            z-index: 99999999;
+        }
+
+
+    }
+
+
+    .foto-buscarLetra{
+        width:19rem;
+    }
+
