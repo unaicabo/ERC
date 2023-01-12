@@ -208,15 +208,11 @@ p {
     }
 
     .menu-nav a::after{
-        color: black;
-    }
-
-    .menu-nav a::after{
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid white;
     }
 
     .menu-nav a:hover::after{
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid white;
     }
 
     #caja-diseño-inicio{
