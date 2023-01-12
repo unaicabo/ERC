@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Cambiar?? -->
-    <link rel="stylesheet" type="text/css" href="./css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Inicio</title>
@@ -64,9 +64,9 @@
         ?>
             <nav class="menu-nav">
                 <ul class="row">
-                    <li class="col"><button>Demo</button></li>
-                    <li class="col"><a href="{{ route ('usuarios.login') }}"><button>Register</button></a></li>
-                    <li class="col"><a href="{{ route ('usuarios.login') }}"><button>Login</button></a></li>
+                    <li class="col"><a href="">Demo</a></li>
+                    <li class="col"><a href="{{ route ('usuarios.login') }}">Register</a></li>
+                    <li class="col"><a href="{{ route ('usuarios.login') }}">Login</a></li>
                 </ul>
             </nav>
         <?php
