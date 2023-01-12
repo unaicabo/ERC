@@ -246,7 +246,7 @@ p {
     }
 
     .caja-diseño-3{
-        display: flex;
+        display: none;
         position: absolute;
         bottom: 0;
         left: -20%;
