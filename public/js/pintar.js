@@ -4,6 +4,9 @@ var image
 let x = 0;
 let y = 0;
 
+let correccionX = 0;
+let correccionY = 0;
+
 function cargarImagen () {
     // displaying the uploaded image
     image = document.createElement("img");
@@ -33,6 +36,13 @@ drawOnImage(image);
 function drawOnImage(image = null) {
     const canvasElement = document.getElementById("canvas");
     const context = canvasElement.getContext("2d");
+
+    let posicion = canvasElement.getBoundingClientRect()
+    correccionX = posicion.x;
+    console.log("correccionx: "+correccionX);
+    correccionY = posicion.y;
+    console.log("correccion y: "+correccionY);
+
 
     // if an image is present,
     // the image passed as a parameter is drawn in the canvas

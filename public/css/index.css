@@ -191,9 +191,12 @@ p {
 
     canvas{
         width: 500px;
+        height: 500px;
         margin-top: 2rem;
         margin-left: 27%;
         margin-bottom: 1rem;
+        /* background-color: black; */
+        /*background-image: url('/img/sopa_letras2.PNG');*/
     }
 
     .boton-clear{
