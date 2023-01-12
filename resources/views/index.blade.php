@@ -14,9 +14,23 @@
     <header>
         <div class="row">
             <h1 class="col">ERC</h1>
-            <div class="col"><button>Demo</button></div>
-            <div class="col"><button>Register</button></div>
-            <div class="col"><button>Login</button></div>
+    <?php
+    use Illuminate\Support\Facades\Log;
+    use Illuminate\Support\Facades\Session;
+
+    if(Session::has('usuario')){
+    ?>
+        <div class="col"><a href="{{ route('usuarios.logout') }}"><button> Logout </button></a></div>
+    <?php
+    } else {
+    ?>
+        <div class="col"><button>Demo</button></div>
+        <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Register</button></a></div>
+        <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Login</button></a></div>
+    <?php
+    }
+?>
+            
         </div>
     </header>
 

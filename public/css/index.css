@@ -46,7 +46,7 @@ p {
 
 .centrado{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 300%;
@@ -60,7 +60,8 @@ p {
 }
 .centrado-explicacion{
     position: absolute;
-    top: 50%;
+
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 300%;
@@ -72,28 +73,39 @@ p {
     -webkit-backdrop-filter: blur(5px);
     padding: 30px 50px;
 }
-
-.tarjetas{
-    background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:darkblue;
-    padding: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.centrado-pruebas{
+    position: absolute;
+    width: 27rem;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(251, 252, 252 );
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
 }
-.tarjeta{
-    width: 30%;
+.tarjetas {
+    column-count: 3;
+    padding: 1.7rem;
+}
+
+.tarjeta {
+    /* There will be 3 cards per row */
+    flex-basis: 33.33333%;
+
     padding: 1rem;
     background-color: blanchedalmond;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
+
 .tarjetas-explicacion{
-    background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:darkblue;
+    margin-top: 10rem;
+
     padding: 1.7rem;
     display: flex;
     flex-direction: column;
@@ -101,13 +113,15 @@ p {
     align-items: center;
 }
 .tarjeta-explicacion{
-    width: 30%;
+
     padding: 1rem;
     background-color: blanchedalmond;
 }
 .titulo{
     display: flex;
     justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
     /* align-items: center;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
@@ -137,38 +151,74 @@ p {
     margin-top: 1rem;
 }
 .foto-tarjetas{
-    width: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 10rem;
+    display: block;
+    margin: auto;
     margin-bottom: 2rem;
+}
+.foto-principal{
+    width: 20rem;
+    display: block;
+    margin: auto;
 }
 .nivel{
     margin-top: 0.5rem;
 }
 #fondo-explicacion{
     background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color:darkblue;
 }
+#fondo-principal{
+    background-image: url('/img/fondo.png');
+    background-color:darkblue;
+}
+.img-acertijo{
+    width: 40rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+@media (max-width: 730px){
+    .tarjetas{
+        column-count: 1;
+    }
+    .tarjeta{
+        margin-bottom: 1rem;
+    }
+    .tarjetas-explicacion{
+        margin-top: 12rem;
+    }
+    .tarjeta-explicacion{
+        width: 20rem;
+    }
+    .centrado-explicacion{
+        width: 14rem;
+    }
+    .centrado-pruebas{
+        width: 17rem;
+        font-size: 190%;
+    }
+    .img-acertijo{
+        width: 20rem;
 
-@media (min-width: 390px){
+    }
+}
+@media (max-width: 390px){
     .foto-principal{
         width: 20rem;
     }
 
     .tarjetas{
-    flex-direction: column;
+        column-count: 1;
     }
 
     .tarjeta{
         width: 100%;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
     .tarjetas-explicacion{
-    flex-direction: column;
-    margin-top: 10rem;
+        flex-direction: column;
+        margin-top: 10rem;
     }
 
     .tarjeta-explicacion{
@@ -187,7 +237,6 @@ p {
         align-items: center;
         top: 25%;
         font-size: 400%;
-
     }
     .centrado-explicacion{
         width: 50%;
@@ -196,13 +245,15 @@ p {
         align-items: center;
         top: 10%;
         font-size: 200%;
-
     }
     #fondo-explicacion{
         background-image: url('/img/fondo.png');
         background-repeat: no-repeat;
-        background-size:;
         background-color:darkblue;
+    }
+    .centrado-pruebas{
+        width: 13rem;
+        font-size: 145%;
     }
 
 }
