@@ -38,7 +38,7 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $usuarios = Usuario::all();
-        
+
         foreach ($usuarios as $key => $value) {
             if($value['usuario'] == $request['usuario']){
                 Session::put('error', 'ErrorUsExistRegis');
@@ -103,7 +103,7 @@ class UsuarioController extends Controller
 
     public function ventanaLogin() {
         if(Session::has('usuario')){
-            return view('index');
+            return view('login');
         } else {
             return view('login');
         }
