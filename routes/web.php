@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrimeraPrueba;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,13 +27,16 @@ Route::get('/explicacion', function () {
 Route::get('/BuscaLetra', function () {
     return view('BuscaLetras');
 });
+
 Route::get('/Acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
+
 Route::get('/vue', function () {
     return view('vue');
 });
+
 
 
 Route::get('/pruebaDos', function () {
@@ -47,3 +51,4 @@ Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
+
