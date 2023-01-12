@@ -23,11 +23,11 @@ Route::get('/principal', function () {
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
-Route::get('/BuscaLetra', function () {
+Route::get('/buscarletra', function () {
     return view('BuscaLetras');
 });
 
-Route::get('/Acertijo', function () {
+Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
