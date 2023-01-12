@@ -29,7 +29,6 @@ body {
     font-size: 5rem;
 }
 
-
 #imagen-inicio img{
     width: 100%;
 }
@@ -187,6 +186,7 @@ p {
         left: 0;
         z-index: 999;
         text-align: end;
+        color: white
     }
 
     .menu-nav{
@@ -215,7 +215,7 @@ p {
     }
 
     .menu-nav a:hover::after{
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid black;
     }
 
     #caja-diseño-inicio{
@@ -246,7 +246,7 @@ p {
     }
 
     .caja-diseño-3{
-        display: none;
+        display: flex;
         position: absolute;
         bottom: 0;
         left: -20%;
@@ -256,7 +256,4 @@ p {
         border-bottom: 500px solid #99f37e;
         z-index: 99999999;
     }
-
-
 }
-
