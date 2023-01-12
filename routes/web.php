@@ -49,6 +49,9 @@ Route::get('/pruebaDos', function () {
 Route::get('/pruebaCuatro', function () {
     return view('PruebaCuatro');
 });
+Route::get('/inicio', function () {
+    return view('inicio');
+});
 
 Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
