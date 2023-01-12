@@ -23,8 +23,8 @@ Route::get('/principal', function () {
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 });
-Route::get('/primeraprueba', function () {
-    return view('PrimeraPrueba');
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
 });
 
 Route::get('/vue', function () {
