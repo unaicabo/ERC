@@ -43,10 +43,15 @@
             <input type="text" name="respuesta" id="respuesta" onfocus="limpiar()" class="respuesta">
             <input type="button" value="Introducir" onclick="comprobarVacios()" class="btn">
         </div>
+
+        <div class="contenedor-resultado">
+            <p id="resultado"></p>
+            <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a>
+        </div>
     </div>
 
     <script src="js/pintar.js"></script>
-    <script src="js/vacios.js"></script>
+    <script src="js/validarSopaLetras.js"></script>
 </body>
 
 </html>

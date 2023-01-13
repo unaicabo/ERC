@@ -25,7 +25,7 @@ Route::get('/explicacion', function () {
 })->name('explicacion');
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
-});
+})->name('buscarletra');
 
 Route::get('/acertijo', function () {
     return view('Acertijo');
