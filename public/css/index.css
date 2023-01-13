@@ -88,6 +88,7 @@ p {
     -webkit-backdrop-filter: blur(5px);
     padding: 30px 50px;
 }
+
 .tarjetas {
     column-count: 3;
     padding: 1.7rem;
