@@ -33,15 +33,15 @@ Route::get('/acertijo', function () {
 
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
-});
+})->name('sopadeletras');
 
 
 Route::get('/vue', function () {
     return view('vue');
 });
-Route::get('/sopadeletras', function () {
-    return view('SopaDeLetras');
-});
+// Route::get('/sopadeletras', function () {
+//     return view('SopaDeLetras');
+// });
 
 
 

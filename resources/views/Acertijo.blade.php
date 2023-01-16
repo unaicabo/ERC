@@ -25,11 +25,14 @@
             </div>
                 <img class="img-acertijo" src="/img/dias-semana.png" alt="dias de la semana">
             <div class="botones">
-                <input type="text" placeholder="Introducir respuesta">
-                <button class="btn">Validar</button>
+                <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
+                <button class="btn" onclick="comprobarVacios()">Validar</button>
+            </div>
+            <div class="contenedor-resultado">
+                <p id="resultado"></p> <a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a>
             </div>
 
-
         </div>
+        <script src="js/validarAcertijo.js"></script>
 </body>
 </html>
