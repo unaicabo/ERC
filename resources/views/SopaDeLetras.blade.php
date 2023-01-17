@@ -44,8 +44,8 @@
             <input type="button" value="Introducir" onclick="comprobarVacios()" class="btn">
         </div>
 
-        <div class="contenedor-resultado">
-            <p id="resultado"><a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p><a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a>
+        <div id="contenedor-resultado">
+            <p id="resultado"> Correcto, has consegido un digito del candado <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
             {{-- <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a> --}}
         </div>
     </div>

@@ -236,19 +236,20 @@ canvas {
     border: 2px solid rgb(160, 160, 160);
 }
 
-#resultado{
+/* #resultado{
     visibility: hidden;
 }
 
- #btnSiguiente{
+#btnSiguiente{
     visibility: hidden;
     margin-left: 44%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
+} */
 
-.contenedor-resultado{
-    margin-top: 0.7rem;
+#contenedor-resultado{
+    height: 2cm;
+    display: none;
 }
 
 @media (max-width: 730px) {

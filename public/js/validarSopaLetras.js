@@ -13,9 +13,10 @@ function comprobarVacios() {
     else{
         document.getElementById("respuesta").style.borderColor = "#0fff00";
         document.getElementById("respuesta").style.border = "2px solid #0fff00";
-        document.getElementById("resultado").style.visibility= 'visible';
-        document.getElementById("resultado").innerHTML = "Correcto, has consegido un digito del candado";
-        document.getElementById("btnSiguiente").style.visibility= 'visible';
+        document.getElementById("contenedor-resultado").style.display= 'flex';
+        // document.getElementById("resultado").style.visibility= 'visible';
+        // document.getElementById("resultado").innerHTML = "Correcto, has consegido un digito del candado";
+        // document.getElementById("btnSiguiente").style.visibility= 'visible';
     }
 }
 
