@@ -24,8 +24,6 @@ Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
 
-
-
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
 })->name('buscarletra');
@@ -50,11 +48,6 @@ Route::get('/sopadeletras', function () {
 Route::get('/vue', function () {
     return view('vue');
 });
-// Route::get('/sopadeletras', function () {
-//     return view('SopaDeLetras');
-// });
-
-
 
 Route::get('/pruebaDos', function () {
     return view('Cuestionario');
