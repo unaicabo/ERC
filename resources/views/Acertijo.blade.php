@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <title>Explicación</title>
+    <title>Acertijo</title>
 </head>
 
 <body id="fondo-explicacion">
@@ -25,11 +25,14 @@
             </div>
                 <img class="img-acertijo" src="/img/dias-semana.png" alt="dias de la semana">
             <div class="botones">
-                <input type="text" placeholder="Introducir respuesta">
-                <button class="btn">Validar</button>
+                <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
+                <button class="btn" onclick="comprobarVacios()">Validar</button>
+            </div>
+            <div class="contenedor-resultado">
+                <p id="resultado"></p> <a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a>
             </div>
 
-
         </div>
+        <script src="js/validarAcertijo.js"></script>
 </body>
 </html>

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
-use App\Models\usuarios;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 class UsuarioController extends Controller
 {
@@ -15,8 +16,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = user::all();
-        return view('users.index', ['usuarios' => $usuarios]);
+        //
     }
 
     /**
@@ -37,7 +37,23 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuarios = Usuario::all();
+
+        foreach ($usuarios as $key => $value) {
+            if($value['usuario'] == $request['usuario']){
+                Session::put('error', 'ErrorUsExistRegis');
+                return view('login');
+                break;
+            };
+        }
+
+        $request['rol'] = 'Alumno';
+        $usuario = new Usuario($request->all());
+        $usuario->save();
+
+        Session::put('usuario', $usuario['usuario']);
+
+        return view('index');
     }
 
     /**
@@ -83,5 +99,34 @@ class UsuarioController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function ventanaLogin() {
+        if(Session::has('usuario')){
+            return view('login');
+        } else {
+            return view('login');
+        }
+    }
+
+    public function login(Request $request) {
+        $usuarios = Usuario::all();
+
+        foreach ($usuarios as $key => $value) {
+            if($value['usuario'] == $request['usuario'] && $value['contraseña'] == $request['contraseina']){
+                Session::put('usuario', $request['usuario']);
+
+                return view('index');
+                break;
+            };
+        }
+
+        Session::put('error', 'ErrorUsContLogin');
+        return view('login');
+    }
+
+    public function logout(){
+        Session::put('usuario', null);
+        return view('index');
     }
 }

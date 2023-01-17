@@ -20,9 +20,9 @@
             <div class="texto">
                 <p>El juego consiste en encontrar la letra oculta en esta imagen.</p>
             </div>
-            <div class="">
-                <img src="/img/foto-letra.png" alt="busca letras">
-            </div>
+
+                <img class="foto-buscarLetra" src="/img/foto-letra.svg" alt="busca letras">
+
 
             <div class="botones">
                 <input type="text" placeholder="Introducir respuesta">
