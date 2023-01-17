@@ -33,12 +33,15 @@ Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
-Route::get('/crearGrupos', function () {
-    return view('CrearGrupo');
-});
+// Route::get('/crearGrupos', function () {
+//     return view('CrearGrupo');
+// });
 
 Route::get('/usuarios', [UsuarioController::class, 'index'])
-->name('users.index');
+    ->name('perfil');
+
+Route::get('/crearGrupos', [UsuarioController::class, 'create'])
+    ->name('CrearGrupo');
 
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');

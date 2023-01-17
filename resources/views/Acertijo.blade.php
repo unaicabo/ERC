@@ -28,8 +28,8 @@
                 <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
                 <button class="btn" onclick="comprobarVacios()">Validar</button>
             </div>
-            <div class="contenedor-resultado">
-                <p id="resultado"></p> <a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a>
+            <div id="contenedor-resultado">
+                <p id="resultado"> Correcto, has conseguido un digito del candado <a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a></p>
             </div>
 
         </div>

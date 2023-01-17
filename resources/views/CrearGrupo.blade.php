@@ -14,7 +14,16 @@
     {{-- <div>
         <h1 class="centrado-pruebas">CREAR GRUPO</h1>
     </div> --}}
-    <div id="appForm" class="tarjeta-explicacion">
+    <div id="appForm" class="tarjeta-explicacion"></div>
+
+    <select name="categories[]" multiple>
+        @foreach ($usuarios as $usuario)
+            <option value="$usuario->id">$usuario->nombre $usuario->apellido</option>
+        @endforeach
+      </select>
+
+
+
 
 
 </body>
