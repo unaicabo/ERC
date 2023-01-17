@@ -45,8 +45,7 @@
         </div>
 
         <div id="contenedor-resultado">
-            <p id="resultado"> Correcto, has consegido un digito del candado <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
-            {{-- <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a> --}}
+            <p id="resultado"> Correcto, has conseguido un digito del candado <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
         </div>
     </div>
 
