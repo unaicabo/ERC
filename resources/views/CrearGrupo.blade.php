@@ -16,8 +16,6 @@
     </div> --}}
     <div id="appForm" class="tarjeta-explicacion">
 
-    </div>
-
 
 </body>
 </html>

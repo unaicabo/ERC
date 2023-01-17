@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::get('/Acertijo', function () {
 Route::get('/crearGrupos', function () {
     return view('CrearGrupo');
 });
+Route::get('/usuarios', [UsuarioController::class, 'index'])
+->name('users.index');
 
 Route::get('/vue', function () {
     return view('vue');
