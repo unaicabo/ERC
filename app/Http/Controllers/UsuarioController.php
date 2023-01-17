@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
+//...
+// Simplemente obtener el ID de usuario que está autentificado...
+
+
 class UsuarioController extends Controller
 {
     /**
@@ -62,9 +66,13 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         //
+        
+        // $usuario = Usuario::findOrFail($id);
+        // return view('perfil-usuario', ['usuario' => $usuario]);
     }
 
     /**

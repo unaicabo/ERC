@@ -53,8 +53,13 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
+Route::get('/perfil-usuario', function () {
+    return view('perfil-usuario');
+});
+
 Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
+
 
