@@ -23,25 +23,36 @@ Route::get('/principal', function () {
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
+
+
+
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
-});
+})->name('buscarletra');
+
 
 Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
+Route::get('/crearGrupos', function () {
+    return view('CrearGrupo');
+});
+
+Route::get('/usuarios', [UsuarioController::class, 'index'])
+->name('users.index');
+
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
-});
+})->name('sopadeletras');
 
 
 Route::get('/vue', function () {
     return view('vue');
 });
-Route::get('/sopadeletras', function () {
-    return view('SopaDeLetras');
-});
+// Route::get('/sopadeletras', function () {
+//     return view('SopaDeLetras');
+// });
 
 
 

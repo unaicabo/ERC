@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/Index.css">
     {{-- @vite(['resources/js/app.js']) --}}
-    <title>Primera prueba</title>
+    <title>Sopa de letras</title>
 </head>
 
 <body id="fondo-explicacion">
@@ -40,13 +40,18 @@
             <p>Para conseguir sacar el codigo del candado tenemos que mirar las palablas que estan en vertical y contar
                 cuantasveces esta la letra "o".
             </p>
-            <input type="text" name="respuesta" id="respuesta" onfocus="limpiar()" class="respuesta">
+            <input type="text" id="respuesta" onfocus="limpiar()" placeholder="Introducir respuesta">
             <input type="button" value="Introducir" onclick="comprobarVacios()" class="btn">
+        </div>
+
+        <div id="contenedor-resultado">
+            <p id="resultado"> Correcto, has consegido un digito del candado <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
+            {{-- <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a> --}}
         </div>
     </div>
 
     <script src="js/pintar.js"></script>
-    <script src="js/vacios.js"></script>
+    <script src="js/validarSopaLetras.js"></script>
 </body>
 
 </html>
