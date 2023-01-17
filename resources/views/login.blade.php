@@ -57,7 +57,7 @@
         <div class="form-container sign-in-container" >
             <form action="{{ route ('usuarios.login') }}" method="POST" id="formLogin">
                 @csrf
-                <h1>Iniciar sesion</h1>
+                <h1>Iniciar sesión</h1>
                 <?php
                     if(Session::has('error')){
                         if((session('error')) == 'ErrorUsContLogin'){
@@ -72,7 +72,7 @@
                 ?>
                 <input type="text" placeholder="Usuario" name="usuario" id="usuarioLogin" v-model="usuario"/>
                 <input type="password" placeholder="Contraseña" name="contraseina" id="contraseinaLogin" v-model="contraseina"/>
-                <a href="#">Has olvidado la contraseña?</a>
+                <a href="#">¿Has olvidado la contraseña?</a>
                 <button type="submit" value="login" id="login" @click="login">Entrar</button>
             </form>
         </div>
