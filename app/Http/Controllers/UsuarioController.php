@@ -16,7 +16,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuario::all();
+            return view('users.index', ['usuarios' => $usuarios]);
     }
 
     /**
@@ -26,7 +27,8 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        //
+        $usuarios = Usuario::all();
+        return view('CrearGrupo', ['usuarios' => $usuarios]);
     }
 
     /**
