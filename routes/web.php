@@ -60,4 +60,3 @@ Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
-
