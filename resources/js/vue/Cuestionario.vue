@@ -140,14 +140,21 @@
             }
         }
     }
-</script>
+</script>  
 
 <style>
+
+    body{
+        font-family: Barlow-Condensed !important;
+        background-color: rgb(38, 38, 38) !important;
+        color: white !important;
+    }
 
     #cajaPruebaCuestionario {
         padding: 10px;
         border-radius: 5px;
         min-height: 300px;
+        color: black;
     }
 
     #cajaPruebaCuestionario #labelSinRespuesta {
