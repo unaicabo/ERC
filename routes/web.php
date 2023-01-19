@@ -86,6 +86,10 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->middleware('auth');
 
+Route::get('/perfil-usuario', function () {
+    return view('perfil-usuario');
+});
+
 Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
