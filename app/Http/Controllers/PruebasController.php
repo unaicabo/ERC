@@ -25,7 +25,7 @@ class PruebasController extends Controller
         $grupo = Auth::user()->grupo_id;
 
 
-        $partida->tiempo = $hora;
+        $partida->hora_inicio = $hora;
         $partida->grupo_id = $grupo;
 
         echo ($grupo);
