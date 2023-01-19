@@ -22,8 +22,10 @@ const formularioRegister = {
 			nombre: '',
 			apellidos: '',
 			usuario: '',
+			email: '',
 			contraseina: '',
 			contraseina2: '',
+			imagen: '',
 			terminos: false,
 		}
 	},
@@ -31,8 +33,9 @@ const formularioRegister = {
 		register(event){
 			event.preventDefault();
 			const regexSoloLetras = /^[a-zA-Z]+$/;
+			const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-			if(this.nombre == '' || this.apellidos == '' || this.usuario == '' || this.contraseina == '' || this.contraseina2 == ''){
+			if(this.nombre == '' || this.apellidos == '' || this.usuario == '' || this.email == '' || this.contraseina == '' || this.contraseina2 == ''){
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> Introduce todos los datos');
 			} else if(!this.terminos) {
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> Hay que aceptar los terminos');
@@ -42,6 +45,8 @@ const formularioRegister = {
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> El nombre solo puede contener letras');
 			} else if(!regexSoloLetras.test(this.apellidos)) {
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> El apellido solo puede contener letras');
+			} else if(!regexEmail.test(this.email)) {
+				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> El email tiene que ser un email');
 			} else {
 				$('#msgErrorRegister').html('');
 				document.getElementById('formRegister').submit();

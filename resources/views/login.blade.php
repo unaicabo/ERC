@@ -26,7 +26,7 @@
     }
 ?>
         <div class="form-container sign-up-container">
-            <form action="{{ route ('usuarios.store') }}" method="POST" id="formRegister">
+            <form action="{{ route ('usuarios.store') }}" method="POST" id="formRegister"  enctype="multipart/form-data">
                 @csrf
                 <h1>Registrarse</h1>
                 <?php
@@ -44,9 +44,11 @@
                 <div id="formIkaslea" class="signUpForm">
                     <input type="text" name="nombre" placeholder="Nombre *" id="nombreIrakaslea" value="{{ old('nombre') }}" v-model="nombre"/>
                     <input type="text" name="apellido" placeholder="Apellidos *" id="apellidosIrakaslea" value="{{ old('apellido') }}" v-model="apellidos"/>
+                    <input type="email" name="email"  placeholder="Email *" id="emailIrakaslea" v-model="email">
                     <input type="text" name="usuario" placeholder="Usuario *" id="usuarioIrakaslea" value="{{ old('usuario') }}" v-model="usuario"/>
                     <input type="password" name="contraseña" placeholder="Pasahitza *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>
                     <input type="password" name="contraseina2Irakaslea" placeholder="Errepikatu pasahitza *" id="contraseina2Irakaslea" value="{{ old('contraseina2Irakaslea') }}" v-model="contraseina2"/>
+                    <input type="file" accept="image/png,image/jpeg,imagen/jpg" placeholder="Imagen" name="imagen" id="imagenIrakaslea" v-model="imagen">
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
                     <p>Aceptar los terminos y condiciones:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado" v-model="terminos"></p>
