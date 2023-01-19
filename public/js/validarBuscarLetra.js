@@ -5,7 +5,7 @@ function comprobarVacios() {
         document.getElementById("respuesta").style.borderColor = "red";
         document.getElementById("respuesta").style.Color = "red";
         document.getElementById("respuesta").value = "Introduce tu respuesta";
-    }else if (respuesta != "s" && respuesta != "S"){
+    }else if (respuesta != "p"  && respuesta != "P"){
         document.getElementById("respuesta").style.borderColor = "red";
         document.getElementById("resultado").style.visibility= 'visible';
         document.getElementById("resultado").innerHTML = "Parace que ese no es el digito correcto";
