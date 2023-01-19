@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\PruebasController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,14 +24,8 @@ Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
 
-Route::get('/buscarletra', function () {
-    return view('BuscaLetras');
-})->name('buscarletra');
-
-
-Route::get('/acertijo', function () {
-    return view('Acertijo');
-})->name('acertijo');
+Route::get('/iniciarBasica', [PruebasController::class, 'iniciarBasica'])
+    ->name('iniciarBasica');
 
 // Route::get('/crearGrupos', function () {
 //     return view('CrearGrupo');
@@ -43,18 +37,30 @@ Route::get('/usuarios', [UsuarioController::class, 'index'])
 Route::get('/crearGrupos', [UsuarioController::class, 'create'])
     ->name('CrearGrupo');
 
+Route::get('/buscarletra', function () {
+    return view('BuscaLetras');
+})->name('buscarletra');
+
+Route::get('/acertijo', function () {
+    return view('Acertijo');
+})->name('acertijo');
+
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
 })->name('sopadeletras');
 
+Route::get('/cuestionario', function () {
+    return view('Cuestionario');
+})->name('cuestionario');
+
 
 Route::get('/vue', function () {
     return view('vue');
-});
+ });
 
-Route::get('/pruebaDos', function () {
-    return view('Cuestionario');
-});
+// Route::get('/pruebaDos', function () {
+//     return view('Cuestionario');
+// });
 
 Route::get('/pruebaCuatro', function () {
     return view('PruebaCuatro');

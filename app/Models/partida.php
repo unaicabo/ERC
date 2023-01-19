@@ -11,6 +11,6 @@ class partida extends Model
 
     protected $table = "partidas";
     protected $primaryKey = "id";
-    protected $fillable = ['puntuacion', 'participante_id', 'grupo_id'];
+    protected $fillable = ['puntuacion', 'participante_id', 'grupo_id', 'hora_inicio'];
     protected $hidden = ['id'];
 }

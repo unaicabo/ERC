@@ -25,3 +25,4 @@ function limpiar(){
     document.getElementById("respuesta").style.Color = "white";
     document.getElementById("respuesta").value = "";
 }
+

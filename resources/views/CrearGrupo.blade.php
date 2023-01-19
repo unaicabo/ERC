@@ -16,9 +16,9 @@
     </div> --}}
     <div id="appForm" class="tarjeta-explicacion"></div>
 
-    <select name="categories[]" multiple>
+    <select name="usuarios">
         @foreach ($usuarios as $usuario)
-            <option value="$usuario->id">$usuario->nombre $usuario->apellido</option>
+            <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
         @endforeach
       </select>
 

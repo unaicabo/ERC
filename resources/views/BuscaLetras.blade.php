@@ -11,17 +11,17 @@
 
 <body id="fondo-explicacion">
     <div>
-        <h1 class="centrado-pruebas">BUSCA LA LETRA OCULTA</h1>
+        <h1 class="centrado-pruebas">ADIVINA LA LETRA</h1>
     </div>
     <div class="tarjetas-explicacion">
         <div class="tarjeta-explicacion">
 
 
             <div class="texto">
-                <p>El juego consiste en encontrar la letra oculta en esta imagen.</p>
+                <p>¿Con qué letra identificarías la siguiente imagen de marketing?</p>
             </div>
 
-            <img class="foto-buscarLetra" src="/img/foto-letra.svg" alt="busca letras">
+            <img class="foto-buscarLetra" src="/img/MARKETING.jpg" alt="busca letras">
 
 
             <div class="botones">
