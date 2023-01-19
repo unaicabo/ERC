@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('grupo_id');
             $table->string('dificultad', 30);
             $table->dateTime('tiempo')->nullable();
+            //Nullable??
             $table->foreign('grupo_id')->references('id')->on('grupos');
             $table->foreign('participante_id')->references('id')->on('users');
             $table->timestamps();

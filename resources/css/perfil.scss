@@ -1,0 +1,64 @@
+#nombre {
+    text-align: center;
+    font-size: 3em;
+}
+
+.fichaPerfil {
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+
+    .fotoPerfil {
+        display: flex;        
+        justify-content: flex-end;
+        margin-right: 5%;
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .datosPerfil {
+        justify-self: flex-start;
+        margin-left: 5%;
+    }
+}
+
+#partidas {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    hr {
+        size: 10px;
+    }
+
+    p {
+        text-align: justify;
+        margin: 5px;
+        width: 95%;
+    }
+
+    .partida {
+        border: solid 1px black;
+        border-radius: 5px;
+        width: 80%;
+        margin-top: 20px;
+        padding: 10px;
+
+        #cajaPuntDifi {
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                margin-top: 10px;
+            }
+        }
+    }
+}
