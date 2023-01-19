@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\partida;
+use App\Models\Grupo;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,16 +17,16 @@ class PruebasController extends Controller
     //
     public function iniciarBasica()
     {
-        //date_default_timezone_set("Europa/España");
         $partida = new partida();
 
+        $usuario = session ('id');
         $hora = date('H:i:s');
+        $grupo = session('grupo');
 
-        $NuevaFecha = strtotime ( '+1 hour' , strtotime ($hora) ) ;
 
         $partida->hora_inicio = $hora;
 
-        echo ($partida);
+        echo ($grupo);
         // return view('acertijo');
     }
 
