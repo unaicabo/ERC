@@ -117,6 +117,9 @@ class UsuarioController extends Controller
         foreach ($usuarios as $key => $value) {
             if($value['usuario'] == $request['usuario'] && $value['contraseña'] == $request['contraseina']){
                 Session::put('usuario', $request['usuario']);
+                Session::put('id', $value['id']);
+                Session::put('grupo', $value['grupo_id']);
+
 
                 return view('index');
                 break;
