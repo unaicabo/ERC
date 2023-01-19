@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use SplFileInfo;
+
 class UsuarioController extends Controller
 {
     /**
@@ -16,8 +21,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = Usuario::all();
-            return view('users.index', ['usuarios' => $usuarios]);
+        //
     }
 
     /**
@@ -25,10 +29,25 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $usuarios = Usuario::all();
-        return view('CrearGrupo', ['usuarios' => $usuarios]);
+        //Validar los datos
+        $user = new User();
+
+        $user->name = $request->nombre;
+        $user->apellido = $request->apellido;
+        $user->email = $request->email;
+        $user->imagen = $request->usuario . '.' . pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
+        $user->username = $request->usuario;
+        $user->password = Hash::make($request->contraseña);
+        $user->rol = 'Alumno';
+
+        $user->save();
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
+
+        Auth::login($user);
+
+        return redirect(route('index'));
     }
 
     /**
@@ -39,23 +58,7 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        $usuarios = Usuario::all();
-
-        foreach ($usuarios as $key => $value) {
-            if($value['usuario'] == $request['usuario']){
-                Session::put('error', 'ErrorUsExistRegis');
-                return view('login');
-                break;
-            };
-        }
-
-        $request['rol'] = 'Alumno';
-        $usuario = new Usuario($request->all());
-        $usuario->save();
-
-        Session::put('usuario', $usuario['usuario']);
-
-        return view('index');
+        //
     }
 
     /**
@@ -103,35 +106,28 @@ class UsuarioController extends Controller
         //
     }
 
-    public function ventanaLogin() {
-        if(Session::has('usuario')){
-            return view('login');
-        } else {
-            return view('login');
-        }
-    }
-
     public function login(Request $request) {
-        $usuarios = Usuario::all();
 
-        foreach ($usuarios as $key => $value) {
-            if($value['usuario'] == $request['usuario'] && $value['contraseña'] == $request['contraseina']){
-                Session::put('usuario', $request['usuario']);
-                Session::put('id', $value['id']);
-                Session::put('grupo', $value['grupo_id']);
+        $credentials = [
+            "username" => $request->usuario,
+            "password" => $request->contraseina,
+        ];
 
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-                return view('index');
-                break;
-            };
+            return redirect(route('principal'));
+        } else {
+            return redirect(route('usuarios.login'));
         }
-
-        Session::put('error', 'ErrorUsContLogin');
-        return view('login');
     }
 
-    public function logout(){
-        Session::put('usuario', null);
-        return view('index');
+    public function logout(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect(route('index'));
     }
 }
