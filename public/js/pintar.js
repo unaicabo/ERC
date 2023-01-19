@@ -4,6 +4,9 @@ var image
 let x = 0;
 let y = 0;
 
+let correccionX = 0;
+let correccionY = 0;
+
 function cargarImagen () {
     // displaying the uploaded image
     image = document.createElement("img");
@@ -33,6 +36,13 @@ drawOnImage(image);
 function drawOnImage(image = null) {
     const canvasElement = document.getElementById("canvas");
     const context = canvasElement.getContext("2d");
+
+    let posicion = canvasElement.getBoundingClientRect()
+    correccionX = posicion.x;
+    console.log("correccionx: "+correccionX);
+    correccionY = posicion.y;
+    console.log("correccion y: "+correccionY);
+
 
     // if an image is present,
     // the image passed as a parameter is drawn in the canvas
@@ -73,12 +83,16 @@ function drawOnImage(image = null) {
         if (scroll>0){
             x = e.clientX;
             console.log("x "+x);
-            y = e.clientY-scroll;
+            y = e.clientY;
             console.log("y "+y);
 
-            context.moveTo(e.clientX, e.clientY-scroll);
+            context.moveTo(e.clientX, e.clientY);
         }else{
-            context.moveTo(e.clientX- 515, e.clientY-207);
+            x = e.clientX;
+            console.log("x "+x);
+            y = e.clientY;
+            console.log("y "+y);
+            context.moveTo(e.clientX- 515, e.clientY-375);
         }
     };
 
@@ -88,12 +102,17 @@ function drawOnImage(image = null) {
             if (scroll>0){
                 x = e.clientX;
                 console.log("x move "+x);
-                y = e.clientY-scroll;
+                y =e.clientY;
                 console.log("y move "+y);
 
-                context.lineTo(e.clientX, e.clientY-scroll);
+                context.lineTo(e.clientX, e.clientY);
             }else{
-                context.lineTo(e.clientX- 515, e.clientY-207);
+                x = e.clientX;
+                console.log("x move "+x);
+                y = e.clientY;
+                console.log("y move "+y);
+
+                context.lineTo(e.clientX- 515, e.clientY-375);
             }
             context.stroke();
         }

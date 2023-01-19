@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="././css/SopaDeLetras.css">
+    <link rel="stylesheet" type="text/css" href="./css/Index.css">
     {{-- @vite(['resources/js/app.js']) --}}
-    <title>Primera prueba</title>
+    <title>Sopa de letras</title>
 </head>
 
-<body>
-    <div class="contenedor">
-        <h1 class="titulo">Primera Prueba</h1>
+<body id="fondo-explicacion">
+    <div>
+        <h1 class="centrado-pruebas">COMPLETA LA SOPA DE LETRAS</h1>
+    </div>
+    <div class="contenedor-sopadeletras">
         <div class="contenedor-explicacion">
-            <p>En esta primera prueba al llegar a la sala hemos encontrado todos nuestros documentos tirados por el
+            <p class="titulo">En esta primera prueba al llegar a la sala hemos encontrado todos nuestros documentos tirados por el
                 suelo,tenemos que buscarlos y organizarnos.
             </p>
             <p>
@@ -29,22 +31,26 @@
         <div class="contenedor-prueba">
             <canvas id="canvas"></canvas>
 
-            <div class="boton">
+            <div class="boton-clear">
                 <button id="clear" class="btn">Limpiar</button>
             </div>
         </div>
 
-        <div class="contenedor-respuesta">
+        <div class="respuesta-sopadeletras">
             <p>Para conseguir sacar el codigo del candado tenemos que mirar las palablas que estan en vertical y contar
                 cuantasveces esta la letra "o".
             </p>
-            <input type="text" name="respuesta" id="respuesta" onfocus="limpiar()" class="respuesta">
+            <input type="text" id="respuesta" onfocus="limpiar()" placeholder="Introducir respuesta">
             <input type="button" value="Introducir" onclick="comprobarVacios()" class="btn">
+        </div>
+
+        <div id="contenedor-resultado">
+            <p id="resultado"> Correcto, has conseguido un digito del candado <a id="btnSiguiente" href="{{ route ('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
         </div>
     </div>
 
     <script src="js/pintar.js"></script>
-    <script src="js/vacios.js"></script>
+    <script src="js/validarSopaLetras.js"></script>
 </body>
 
 </html>

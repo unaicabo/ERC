@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ikasles', function (Blueprint $table) {
+        Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->string('izen_abizen', 75);
-            $table->integer('adina');
-            $table->string('telefonoa', 35)->nullable();
-            $table->string('helbidea', 75)->nullable();
+            $table->string('puntuacion', 15);
+            $table->unsignedBigInteger('participante_id');
+            $table->unsignedBigInteger('grupo_id');
+            $table->foreign('grupo_id')->references('id')->on('grupos');
+            $table->foreign('participante_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios');
+        Schema::dropIfExists('partidas');
     }
 };

@@ -1,8 +1,7 @@
 <?php
-
+use App\Http\Controllers\PruebasController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PrimeraPrueba;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,34 +16,60 @@ use App\Http\Controllers\PrimeraPrueba;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 Route::get('/principal', function () {
     return view('principal');
-});
+})->middleware('auth')->name('principal');
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
-Route::get('/BuscaLetra', function () {
-    return view('BuscaLetras');
-});
 
-Route::get('/Acertijo', function () {
+Route::get('/iniciarBasica', [PruebasController::class, 'iniciarBasica'])
+    ->name('iniciarBasica');
+
+Route::get('/IVA', function () {
+    return view('IVA');
+})->middleware('auth')->name('IVA');
+Route::get('/CodBarras', function () {
+    return view('CodBarras');
+})->middleware('auth')->name('codBarras');
+Route::get('/Puzle', function () {
+    return view('Puzle');
+})->middleware('auth')->name('puzle');
+// Route::get('/crearGrupos', function () {
+//     return view('CrearGrupo');
+// });
+
+Route::get('/usuarios', [UsuarioController::class, 'index'])
+    ->name('perfil');
+
+Route::get('/crearGrupos', [UsuarioController::class, 'create'])
+    ->name('CrearGrupo');
+
+Route::get('/buscarletra', function () {
+    return view('BuscaLetras');
+})->name('buscarletra');
+
+Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
+
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+})->name('sopadeletras');
+
+Route::get('/cuestionario', function () {
+    return view('Cuestionario');
+})->name('cuestionario');
 
 
 Route::get('/vue', function () {
     return view('vue');
-});
-Route::get('/sopadeletras', function () {
-    return view('SopaDeLetras');
-});
+ });
 
-
-
-Route::get('/pruebaDos', function () {
-    return view('Cuestionario');
-});
+// Route::get('/pruebaDos', function () {
+//     return view('Cuestionario');
+// });
 
 Route::get('/pruebaCuatro', function () {
     return view('PruebaCuatro');
@@ -53,13 +78,14 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
-Route::get('/perfil-usuario', function () {
-    return view('perfil-usuario');
+Route::get('/login', function () {
+    return view('login');
 });
 
-Route::get('/login', [UsuarioController::class, 'ventanaLogin'])->name('usuarios.ventanaLogin');
-Route::post('/register', [UsuarioController::class, 'store'])->name('usuarios.store');
+Route::get('/perfil', function () {
+    return view('perfil');
+})->middleware('auth');
+
+Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
-
-
