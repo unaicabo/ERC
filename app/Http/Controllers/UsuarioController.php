@@ -67,6 +67,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         //
@@ -110,7 +111,7 @@ class UsuarioController extends Controller
 
         $credentials = [
             "username" => $request->usuario,
-            "password" => $request->contraseina
+            "password" => $request->contraseina,
         ];
 
         if(Auth::attempt($credentials)) {

@@ -8,6 +8,7 @@ use App\Models\Grupo;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class PruebasController extends Controller
 {
@@ -19,14 +20,14 @@ class PruebasController extends Controller
     {
         $partida = new partida();
 
-        $usuario = session ('id');
+        $usuario = Auth::user()->id;
         $hora = date('H:i:s');
         $grupo = session('grupo');
 
 
         $partida->hora_inicio = $hora;
 
-        echo ($grupo);
+        echo ($usuario);
         // return view('acertijo');
     }
 
