@@ -23,10 +23,13 @@ Route::get('/principal', function () {
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
-Route::get('/BuscaLetra', function () {
+
+Route::get('/buscarletra', function () {
     return view('BuscaLetras');
-});
-Route::get('/Acertijo', function () {
+})->name('buscarletra');
+
+
+Route::get('/acertijo', function () {
     return view('Acertijo');
 })->name('acertijo');
 
@@ -39,7 +42,24 @@ Route::get('/CodBarras', function () {
 Route::get('/Puzle', function () {
     return view('Puzle');
 })->middleware('auth')->name('puzle');
+// Route::get('/crearGrupos', function () {
+//     return view('CrearGrupo');
+// });
 
+Route::get('/usuarios', [UsuarioController::class, 'index'])
+    ->name('perfil');
+
+Route::get('/crearGrupos', [UsuarioController::class, 'create'])
+    ->name('CrearGrupo');
+
+Route::get('/sopadeletras', function () {
+    return view('SopaDeLetras');
+})->name('sopadeletras');
+
+
+Route::get('/vue', function () {
+    return view('vue');
+});
 
 Route::get('/pruebaDos', function () {
     return view('Cuestionario');
@@ -47,6 +67,9 @@ Route::get('/pruebaDos', function () {
 
 Route::get('/pruebaCuatro', function () {
     return view('PruebaCuatro');
+});
+Route::get('/inicio', function () {
+    return view('inicio');
 });
 
 Route::get('/login', function () {

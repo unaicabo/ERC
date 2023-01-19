@@ -112,7 +112,7 @@ class UsuarioController extends Controller
             "username" => $request->usuario,
             "password" => $request->contraseina
         ];
-        
+
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
