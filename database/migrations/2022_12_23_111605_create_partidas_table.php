@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('puntuacion', 15);
             $table->unsignedBigInteger('participante_id');
             $table->unsignedBigInteger('grupo_id');
+            $table->string('dificultad', 30);
+            $table->dateTime('tiempo')->nullable();
             $table->foreign('grupo_id')->references('id')->on('grupos');
             $table->foreign('participante_id')->references('id')->on('users');
             $table->timestamps();
