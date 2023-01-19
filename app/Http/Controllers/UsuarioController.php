@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -20,8 +22,6 @@ class UsuarioController extends Controller
     public function index()
     {
         //
-
-        return view('PrimeraPrueba');
     }
 
     /**
