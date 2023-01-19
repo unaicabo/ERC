@@ -14,17 +14,25 @@
     {{-- <div>
         <h1 class="centrado-pruebas">CREAR GRUPO</h1>
     </div> --}}
-    <div id="appForm" class="tarjeta-explicacion"></div>
+    <div id="appForm" class="tarjeta-explicacion">
 
     <select name="usuarios">
         @foreach ($usuarios as $usuario)
             <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
         @endforeach
       </select>
+      <button onclick="aniadirIntegranteArray()">+</button>
 
+    </body>
+    <script>
+        let usuarios = []
+         function aniadirIntegranteArray(){
+                var usuario = document.getElementById('usuarios').value;
+                usuarios.push(usuario);
+                console.log(usuarios);
+                integrantes = document.getElementById('integrantes').innerHTML
+        }
 
-
-
-
-</body>
+    </script>
 </html>
+

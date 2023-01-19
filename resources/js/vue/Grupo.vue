@@ -5,18 +5,22 @@
 
         <div id="formIkaslea" class="signUpForm">
             <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreIrakaslea"/>
-            <input type="text" name="integrantes" placeholder="Integrantes del grupo *" id="integrantes"/>
-
+            <!-- <input type="text" name="integrantes" placeholder="Integrantes del grupo *" id="integrantes"/> -->
+            <p id="integrantes"></p>
             <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
-            <p>Aceptar los terminos y condiciones:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado" ></p>
             <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
         </div>
     </form>
-    <button @click="aniadirIntegrante()">+</button>
+
+
+
+    <!-- <button @click="aniadirIntegranteArray()">+</button> -->
 </template>
 
 <script>
+
+
     export default {
         methods: {
             aniadirIntegrante() {
@@ -26,6 +30,7 @@
 
                 document.getElementById('formIkaslea').appendChild(select);
             }
+
         }
     }
 </script>
