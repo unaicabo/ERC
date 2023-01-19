@@ -33,8 +33,8 @@
             ?>
                 <nav class="menu-nav">
                     <ul class="row">
-                        <li class="col"><a class="mi-perfil" href=""><span class="caja-icono-perfil"><i class="fas fa-play"></i></span>Nueva partida</a></li>
-                        <li class="col"><a class="mi-perfil" href=""><span class="caja-icono-perfil"><i class="fas fa-user"></i></span>Mi perfil</a></li>
+                        <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-play"></i></div>Nueva partida</a></li>
+                        <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-user"></i></div>Mi perfil</a></li>
                     </ul>
                 </nav>
             <?php
@@ -97,6 +97,11 @@
             padding: 15px;
         }
 
+        #pag-perfil .menu-nav a{
+            letter-spacing: 0em;
+            padding: 0;
+        }
+
         #pag-perfil .mi-perfil{
             display: flex;
             flex-direction: column;
@@ -105,8 +110,7 @@
 
         .caja-icono-perfil{
             border-radius: 50%;
-            padding: 0;
-            padding: 13px 15px;
+            padding: 14px 15px;
             border: 2px solid white;
             width: 60px;
             display: flex;
@@ -116,13 +120,11 @@
 
         .caja-icono-perfil i{
             font-size: 2.5rem;
-            padding: 0;
+            width: auto;
             margin: 0;
-            border: 2px solid black;
             text-align: center;
             display: flex;
             justify-content: center;
-
         }
 
         .caja-usuario{
@@ -133,10 +135,6 @@
             flex-direction: column;
             width: 80%;
             max-width: 800px;
-        }
-
-        #pag-perfil dt:first-child{
-            display: none;
         }
 
         .caja-foto-usuario{
