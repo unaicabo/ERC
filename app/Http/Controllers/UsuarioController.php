@@ -128,4 +128,23 @@ class UsuarioController extends Controller
 
         return redirect(route('index'));
     }
+
+    public function crearProfesor(Request $request) {
+        $user = new User();
+
+        $user->name = $request->nombre;
+        $user->apellido = $request->apellido;
+        $user->email = $request->email;
+        $user->imagen = $request->usuario . '.' . pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
+        $user->username = $request->usuario;
+        $user->password = Hash::make($request->contraseña);
+        $user->rol = 'Profesor';
+
+        $user->save();
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
+
+        Auth::login($user);
+
+        return redirect(route('index'));
+    }
 }
