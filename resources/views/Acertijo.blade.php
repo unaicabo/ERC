@@ -9,30 +9,36 @@
     <title>Acertijo</title>
 </head>
 
-<body id="fondo-explicacion">
-    <div>
-        <h1 class="centrado-pruebas">COMPLETA EL ACERTIJO</h1>
-    </div>
-    <div class="tarjetas-explicacion">
-        <div class="tarjeta-explicacion">
-
-
-            <div class="titulo">
-                <p>EL JUEGO CONSISTE EN LEER EL ACERTIJO Y PENSAR LA RESPUESTA CORRECTA.</p>
+<body>
+    <div id="pag-acertijo">
+        <h2>Completa el acertijo</h2>
+        <div class="caja-prueba">
+            <div class="enunciado">
+                <p>Lee el acertijo y elige la respuesta correcta</p>
             </div>
-            <div class="texto">
-                Desde el lunes hasta el viernes, soy la ultima en llegar, el sabado soy la primera, y el domingo a descansar. ¿Quien soy?
+            <div class="contenido-prueba">
+                <p>Desde el lunes hasta el viernes, soy la última en llegar, el sábado soy la primera, y el domingo a descansar.</p>
+                <p>¿Quién soy?</p>
+                <div class="contenedor-dias">
+                    <div class="dia"><p>Lunes</p></div>
+                    <div class="dia"><p>Martes</p></div>
+                    <div class="dia"><p>Miércoles</p></div>
+                    <div class="dia"><p>Jueves</p></div>
+                    <div class="dia"><p>Viernes</p></div>
+                    <div class="dia"><p>Sábado</p></div>
+                    <div class="dia"><p>Domingo</p></div>
+                </div>
             </div>
-                <img class="img-acertijo" src="/img/dias-semana.png" alt="dias de la semana">
             <div class="botones">
                 <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
                 <button class="btn" onclick="comprobarVacios()">Validar</button>
             </div>
             <div id="contenedor-resultado">
-                <p id="resultado"> Correcto, has conseguido un digito del candado <a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a></p>
+                <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a></p>
             </div>
 
         </div>
+    </div>
         <script src="js/validarAcertijo.js"></script>
 </body>
 </html>
