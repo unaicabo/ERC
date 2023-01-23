@@ -27,9 +27,12 @@ class PruebasController extends Controller
 
         $partida->hora_inicio = $hora;
         $partida->grupo_id = $grupo;
+        $partida->participante_id = $usuario;
+        $partida->dificultad = "Basica";
+        $partida->puntuacion = "0";
 
-        echo ($grupo);
-        // return view('acertijo');
+        $partida->save();
+        return view('acertijo');
     }
 
 
