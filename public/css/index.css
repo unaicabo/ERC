@@ -331,6 +331,48 @@ p {
     text-align: center;
 }
 
+/* Pagina explicacion juego */
+
+#pag-explicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pag-explicacion h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#pag-explicacion h1::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid white;
+    width: 100%;
+}
+
+#pag-explicacion .caja-prueba{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 50px;
+    max-width: 900px;
+    padding-bottom: 50px;
+}
+
+#pag-explicacion .titulo{
+    font-size: 2rem;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+
 /* Pagina acertijo */
 
 #pag-acertijo{
