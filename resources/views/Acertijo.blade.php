@@ -34,7 +34,8 @@
                 <button class="btn" onclick="comprobarVacios()">Validar</button>
             </div>
             <div id="contenedor-resultado">
-                <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente" href="{{ route ('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a></p>
+                <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente" href="{{ route ('sopadeletras') }}">
+                <button class="btn">Siguiente prueba</button></a></p>
             </div>
 
         </div>
