@@ -1,64 +1,220 @@
-#nombre {
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 0.625em;
+}
+
+body {
+    font-family: Barlow-Condensed !important;
+    background-color: rgb(38, 38, 38);
+    font-size: 2rem;
+}
+
+/* estilos cl */
+
+#pag-perfil{
+    display: flex;
+    flex-direction: column;
+}
+
+#pag-perfil .logo{
+    border-bottom: 1px solid white;
+}
+
+#pag-perfil .contenido{
+    margin-top: 220px;
+    font-size: 2rem;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pag-perfil .menu-nav{
+    padding: 15px;
+}
+
+#pag-perfil .menu-nav a{
+    letter-spacing: 0em;
+    padding: 0;
+}
+
+#pag-perfil .mi-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caja-icono-perfil{
+    border-radius: 50%;
+    padding: 14px 15px;
+    border: 2px solid white;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.caja-icono-perfil i{
+    font-size: 2.5rem;
+    width: auto;
+    margin: 0;
     text-align: center;
-    font-size: 3em;
+    display: flex;
+    justify-content: center;
 }
 
-.fichaPerfil {
-    margin: auto;
-    margin-top: 20px;
+.caja-usuario{
+    border-radius: 10px;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
     width: 80%;
+    max-width: 800px;
+}
 
-    .fotoPerfil {
-        display: flex;        
-        justify-content: flex-end;
-        margin-right: 5%;
+.caja-foto-usuario{
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        img {
-            width: 70%;
-        }
+.usuario-nombre{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: grey;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.datos-usuario{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#img-usuario{
+    width: 50%;
+    max-width: 250px;
+}
+
+#img-usuario img{
+    padding-top: 1px;
+    width: 100%;
+}
+
+.usuario-icono{
+    border-radius: 50%;
+    color: grey;
+    padding: 20px 35px;
+    font-size: 3rem;
+    border: 2px solid grey;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.usuario-icono i{
+    color: grey;
+}
+
+#pag-perfil h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    width: 80%;
+    margin: 50px;
+}
+
+#pag-perfil h2::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid white;
+    width: 100%;
+}
+
+#partidas{
+    max-width: 1000px;
+}
+
+.partida{
+    background-color: white;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+    margin: 40px;
+
+    h4{
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding: 20px;
+        color: white;
+        background-color: #484ae0;
+        border-radius: 5px 5px 0 0;
+        border: none;
     }
 
-    .datosPerfil {
-        justify-self: flex-start;
-        margin-left: 5%;
+    .d-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0 20px;
+        border-top: 1px solid rgb(206, 200, 200);
+    }
+
+    h3{
+        font-size: 3.4rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .fa-star{
+        color: rgb(232, 192, 10);
+        font-size: 3rem;
+    }
+
+    h5{
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 30px;
+        font-weight: bold;
     }
 }
 
-#partidas {
-    margin-top: 30px;
-    margin-left: 10%;
-    margin-bottom: 50px;
+@media (min-width: 1600px){
 
-    h2 {
-        font-size: 2em;
-        font-weight: bold;
-        margin-left: 20px;
+    #pag-perfil .contenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
     }
 
-    hr {
-        size: 10px;
+    .caja-usuario{
+        width: 40%;
     }
 
-    p {
-        text-align: justify;
-        margin: 5px;
-        width: 95%;
-    }
+    #partidas{
+        width: 45%;
+        padding: 0;
 
-    .partida {
-        border: solid 1px black;
-        border-radius: 5px;
-        width: 80%;
-        margin-top: 20px;
-        padding: 10px;
-
-        #cajaPuntDifi {
-            display: flex;
-            justify-content: space-between;
-
-            i {
-                margin-top: 10px;
-            }
+        h2{
+            margin: 0;
         }
     }
+
 }
