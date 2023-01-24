@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="botones">
-                    <a href="{{ route ('iniciarBasica') }}"><button class="btn">Empezar a jugar</button></a>
+                    <a href="{{ route ('iniciarPrueba') }}"><button class="btn">Empezar a jugar</button></a>
                 </div>
                 <p class="nivel">Básico</p>
 

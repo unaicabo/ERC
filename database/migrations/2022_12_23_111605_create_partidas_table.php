@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->string('puntuacion', 15);
             $table->unsignedBigInteger('participante_id');
             $table->unsignedBigInteger('grupo_id');
             $table->string('dificultad', 30);
