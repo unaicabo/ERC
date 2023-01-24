@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Session;
-
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use SplFileInfo;
 
 class UsuarioController extends Controller
 {
@@ -115,6 +111,7 @@ class UsuarioController extends Controller
         ];
 
         if(Auth::attempt($credentials)) {
+
             $request->session()->regenerate();
 
             return redirect(route('principal'));
@@ -128,6 +125,25 @@ class UsuarioController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
+        return redirect(route('index'));
+    }
+
+    public function crearProfesor(Request $request) {
+        $user = new User();
+
+        $user->name = $request->nombre;
+        $user->apellido = $request->apellido;
+        $user->email = $request->email;
+        $user->imagen = $request->usuario . '.' . pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION);
+        $user->username = $request->usuario;
+        $user->password = Hash::make($request->contraseña);
+        $user->rol = 'Profesor';
+
+        $user->save();
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
+
+        Auth::login($user);
 
         return redirect(route('index'));
     }
