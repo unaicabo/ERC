@@ -14,10 +14,12 @@
             <input type="button" class="text-right" value="Responder" @click="compPregunta()"> 
             <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
         </form>
+     <a id="btnNextPrueba" :href="route('principal')">Siguiente Prueba</a>
     </div>
 </template>
 
 <script setup>
+    import route from 'ziggy';
     import Candado from './components/Candados.vue';
 </script>
 
@@ -95,22 +97,11 @@
                     if(this.b > this.a && this.b > this.c && this.b > this.d) {
                         resultado.innerHTML = '<i class="fa-solid fa-b" id="animation"></i>';
 
-                        document.getElementById('cajaPruebaCuestionario').appendChild(resultado);
+                        document.getElementById('cajaPruebaCuestionario').insertBefore(resultado, document.getElementById('btnNextPrueba'));
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)"; 
 
-                            let botonAvanzar = document.createElement('input');
-                            let aAvanzar = document.createElement('a');
-
-                            botonAvanzar.setAttribute('type', 'button');
-                            botonAvanzar.setAttribute('value', 'Siguiente prueba');
-                            botonAvanzar.setAttribute('id', 'buttonAcabar');
-                            aAvanzar.setAttribute("href", "./login");
-
-                            aAvanzar.appendChild(botonAvanzar);
-
-                            resultado.appendChild(br);
-                            resultado.appendChild(aAvanzar);
+                            document.getElementById('btnNextPrueba').style.display = 'block';
                         }, 1);
                     } else {
                         resultado.innerHTML = '<i class="fa-solid fa-xmark" id="animation"></i>';
@@ -184,4 +175,21 @@
         border-radius: 10px;
         padding: 10px;
     }
+
+    #btnNextPrueba {
+        display: none;
+        text-align: center;
+        width: 30%;
+        margin: auto;
+        margin-top: 80px;
+        padding: 4px 0px;
+        background-color: rgb(245, 121, 142);
+        border: 3px solid black;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+
+
 </style>
