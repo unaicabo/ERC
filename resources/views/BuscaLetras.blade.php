@@ -30,7 +30,7 @@
             </div>
             <div id="contenedor-resultado">
                 <p id="resultado"> Correcto, has conseguido un digito del candado <a id="btnSiguiente"
-                        href="{{ route('sopadeletras') }}"><button class="btn">Siguiente prueba</button></a></p>
+                        href="{{ route('cuestionario') }}"><button class="btn">Siguiente prueba</button></a></p>
             </div>
         </div>
         <script src="js/validarBuscarLetra.js"></script>

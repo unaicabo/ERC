@@ -83,7 +83,6 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->middleware('auth');
 
-
 Route::get('/crearProfesor', function () {
     return view('CrearProfesor');
 })->middleware('auth');
