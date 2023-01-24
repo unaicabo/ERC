@@ -22,13 +22,17 @@ class PruebasController extends Controller
 
         $usuario = Auth::user()->id;
         $hora = date('H:i:s');
-        $grupo = session('grupo');
+        $grupo = Auth::user()->grupo_id;
 
 
         $partida->hora_inicio = $hora;
+        $partida->grupo_id = $grupo;
+        $partida->participante_id = $usuario;
+        $partida->dificultad = "Basica";
+        $partida->puntuacion = "0";
 
-        echo ($usuario);
-        // return view('acertijo');
+        $partida->save();
+        return view('acertijo');
     }
 
 
