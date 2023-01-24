@@ -179,12 +179,12 @@ p {
 }
 
 .btn {
-    background: linear-gradient(85deg, purple, rgb(128, 53, 190), rgb(72, 72, 226));
+    background-color: #484ae0;
     color: white;
     font-size: 2rem;
     text-transform: uppercase;
     border: none;
-    border-radius: 7px;
+    border-radius: 3px;
     padding: 10px;
     letter-spacing: 0.1em;
     box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
@@ -460,6 +460,49 @@ p {
     padding: 10px;
 }
 
+/* pagina principal */
+
+.pag-principal .tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pag-principal .nivel{
+    border-radius: 0 0 5px 5px;
+    margin-top: 30px;
+}
+
+.pag-principal .nivel-med{
+    background-color: orange;
+}
+
+.pag-principal .nivel-avan{
+    background-color: red;
+}
+
+.pag-principal .tarjeta{
+    max-width: 900px;
+    margin: 20px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.pag-principal .titulo{
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.pag-principal .foto-tarjetas{
+    width: 150px;
+}
+
+.pag-principal .btn{
+    background-color: #484ae0 !important;
+}
+
     @media (min-width: 1200px){
 
         .caja-todo-contenido{
@@ -545,6 +588,12 @@ p {
 
         .contenedor-dias .dia{
             width: 50%;
+        }
+
+        /* pagina principal */
+
+        .pag-principal .tarjetas{
+            flex-direction: row;
         }
 
     }
@@ -663,4 +712,5 @@ p {
 
     }
 }
+
 

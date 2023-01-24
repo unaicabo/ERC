@@ -28,7 +28,8 @@
     </header> --}}
 
 </head>
-<body id="fondo-principal">
+<body class="pag-principal">
+
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
     <p class="centrado">ERC</p>
@@ -37,7 +38,7 @@
 <div class="tarjetas">
     <div class="tarjeta">
         <div class="titulo">
-            <h2>LA EXTORSIÓN DEL COMERCIO</h2>
+            <h2>La extorsión del comercio</h2>
         </div>
 
         <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
@@ -48,14 +49,14 @@
         <div class="botones">
             <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn">Jugar</button></a>
         </div>
-        <p class="nivel">Basico</p>
+        <p class="nivel nivel-bas">Basico</p>
 
     </div>
 
 
         <div class="tarjeta">
             <div class="titulo">
-                <h2>LA EXTORSIÓN DEL COMERCIO</h2>
+                <h2>La extorsión del comercio</h2>
             </div>
 
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
@@ -66,14 +67,14 @@
             <div class="botones">
                 <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn">Jugar</button></a>
             </div>
-            <p class="nivel">Medio</p>
+            <p class="nivel nivel-med">Medio</p>
         </div>
 
 
 
         <div class="tarjeta">
             <div class="titulo">
-                <h2>LA EXTORSIÓN DEL COMERCIO</h2>
+                <h2>La extorsión del comercio</h2>
             </div>
 
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
@@ -84,7 +85,7 @@
             <div class="botones">
                 <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn">Jugar</button></a>
             </div>
-            <p class="nivel">Avanzado</p>
+            <p class="nivel nivel-avan">Avanzado</p>
         </div>
 
 </div>
