@@ -50,7 +50,8 @@ class PruebasController extends Controller
 
         //$partida->tiempo = "2023-01-24 09:25:10";
 
-        $partida->save();
+        //$partida->save();
+
         echo("--".$tiempo);
 
         //return view('perfil');
