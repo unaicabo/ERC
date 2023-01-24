@@ -37,57 +37,47 @@
 </div>
 
 <div class="tarjetas">
-    <div class="tarjeta">
-        <div class="titulo">
-            <h2>La extorsión del comercio</h2>
-        </div>
-
-        <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
-        <div class="texto">
-            <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
-        </div>
-
-        <div class="botones">
-            <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
-        </div>
-        <p class="nivel nivel-bas">Basico</p>
-
-    </div>
-
-
+    <div class="caja-tarjeta">
+    <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
-            <div class="titulo">
-                <h2>La extorsión del comercio</h2>
-            </div>
-
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
             <div class="texto">
                 <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
             </div>
+            <p class="nivel nivel-bas">Basico</p>
+        </div>
+        <div class="botones">
+                <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+        </div>
+    </div>
+    <div class="caja-tarjeta">
+        <h2>La extorsión del comercio</h2>
+        <div class="tarjeta">
 
-            <div class="botones">
-                <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+            <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
+            <div class="texto">
+                <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
             </div>
             <p class="nivel nivel-med">Medio</p>
         </div>
-
-
-
+        <div class="botones">
+            <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+        </div>
+    </div>
+    <div class="caja-tarjeta">
+        <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
-            <div class="titulo">
-                <h2>La extorsión del comercio</h2>
-            </div>
 
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
             <div class="texto">
                 <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
             </div>
-
-            <div class="botones">
-                <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
-            </div>
             <p class="nivel nivel-avan">Avanzado</p>
         </div>
+        <div class="botones">
+            <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+        </div>
+    </div>
 
 </div>
 
