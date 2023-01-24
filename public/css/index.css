@@ -517,29 +517,27 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #pag-acertijo h2{
-    color: white;
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
     text-transform: uppercase;
     font-weight: normal;
     text-align: center;
     padding: 50px;
     margin: 0;
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: 0.1em;
     width: 100%;
 }
 
-#pag-acertijo h2::after{
-    content: "";
-    display: inline-block;
-    border: 1px solid white;
-    width: 100%;
-}
-
 #pag-acertijo .caja-prueba{
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.283);
+    color: white;
     border-radius: 10px;
     margin: 50px;
     max-width: 900px;
@@ -555,7 +553,7 @@ p {
 }
 
 #pag-acertijo .enunciado{
-    background-color: #484ae0;
+    background-color: #484ae0b0;
     border-radius: 10px 10px 0 0;
     padding: 40px;
 }
@@ -677,6 +675,10 @@ p {
 
         .contenedor-dias .dia{
             width: 50%;
+        }
+
+        #pag-acertijo{
+          height: 100vh;
         }
 
         /* pagina principal */
