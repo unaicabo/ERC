@@ -9,6 +9,9 @@
 </head>
 
 <body id="fondo-explicacion">
+    <?php
+        session(['lvl' => $_GET['lvl']]);
+    ?>
     <div>
         <h1 class="centrado-explicacion">COMO JUGAR</h1>
     </div>
