@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- CSS only -->
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> --}}
     <title>Pagina Principal</title>
@@ -32,7 +34,6 @@
 
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
-    <p class="centrado">ERC</p>
 </div>
 
 <div class="tarjetas">
@@ -47,7 +48,7 @@
         </div>
 
         <div class="botones">
-            <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn">Jugar</button></a>
+            <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
         <p class="nivel nivel-bas">Basico</p>
 
@@ -65,7 +66,7 @@
             </div>
 
             <div class="botones">
-                <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn">Jugar</button></a>
+                <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
             </div>
             <p class="nivel nivel-med">Medio</p>
         </div>
@@ -83,7 +84,7 @@
             </div>
 
             <div class="botones">
-                <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn">Jugar</button></a>
+                <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
             </div>
             <p class="nivel nivel-avan">Avanzado</p>
         </div>

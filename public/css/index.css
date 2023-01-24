@@ -471,6 +471,7 @@ p {
 .pag-principal .nivel{
     border-radius: 0 0 5px 5px;
     margin-top: 30px;
+    padding: 15px;
 }
 
 .pag-principal .nivel-med{
@@ -482,7 +483,7 @@ p {
 }
 
 .pag-principal .tarjeta{
-    max-width: 900px;
+    max-width: 800px;
     margin: 20px;
     padding: 0;
     border-radius: 5px;
@@ -501,6 +502,27 @@ p {
 
 .pag-principal .btn{
     background-color: #484ae0 !important;
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+
+.pag-principal .btn:hover{
+    border: 2px solid #484ae0 !important;
+    background-color: transparent !important;
+    color: #484ae0;
+    transition: 0.7s;
+}
+
+.pag-principal{
+    background-image: url(../img/fondo3.jpg);
+}
+
+.pag-principal .fa-play{
+    color: white;
+}
+
+.pag-principal .btn:hover .fa-play{
+    color: #484ae0;
 }
 
     @media (min-width: 1200px){
