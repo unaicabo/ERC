@@ -24,8 +24,8 @@ Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
 })->name('explicacion');
 
-Route::get('/iniciarBasica', [PruebasController::class, 'iniciarBasica'])
-    ->name('iniciarBasica');
+Route::get('/iniciarPrueba', [PruebasController::class, 'iniciarPrueba'])
+    ->name('iniciarPrueba');
 
 Route::get('/IVA', function () {
     return view('IVA');
@@ -81,12 +81,13 @@ Route::get('/login', function () {
 
 Route::get('/perfil', function () {
     return view('perfil');
-})->middleware('auth');
+})->middleware('auth')->name('perfil');
 
 Route::get('/crearProfesor', function () {
     return view('CrearProfesor');
 })->middleware('auth');
 Route::post('/crearProfesor', [UsuarioController::class, 'crearProfesor'])->name('crearProfesor');
+Route::get('/finpartida', [PruebasController::class, 'acabarPartida'])->middleware('auth')->name('finpartida');
 
 Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
