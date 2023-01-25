@@ -9,49 +9,17 @@
     <link href="css/index.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     @vite(['resources/css/perfil.scss','resources/css/index.css'])
 </head>
-<body id="pag-perfil">
-
-    <header>
-        <div class="caja-logo">
-            <h1 class="logo">LOGO ERC</h1>
+<body>
+    <div id="nombre">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</div>
+    <div class="row fichaPerfil">
+        <div class="col fotoPerfil">
+            <img src="./img/usersImg/{{ Auth::user()->imagen }}" alt="Foto Perfil">
         </div>
-        <nav class="menu-nav">
-            <ul class="row">
-                <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-play"></i></div>Nueva partida</a></li>
-                <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-user"></i></div>Mi perfil</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="contenido">
-        <div class="caja-usuario">
-            <div class="caja-foto-usuario">
-                <figure id="img-usuario">
-                    <img src="./img/usersImg/{{ Auth::user()->imagen }}" alt="Foto Perfil">
-                </figure>
-                <p class="usuario-nombre">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>
-            </div>
-
-            <dl class="datos-usuario">
-                <div>
-                    <div class="usuario-icono"><i class="fas fa-user"></i></div>
-                    <dt>Usuario</dt>
-                    <dd>{{ Auth::user()->username }}</dd>
-                </div>
-
-                <div>
-                    <div class="usuario-icono"><i class="fas fa-users"></i></div>
-                    <dt>Grupo</dt>
-                    <dd>{{ Auth::user()->grupo_id }}</dd>
-                </div>
-
-                <div>
-                    <div class="usuario-icono"><i class="fas fa-star-half-alt"></i></div>
-                    <dt>Puntuación</dt>
-                    <dd>120</dd>
-                </div>
-            </dl>
+        <div class="col datosPerfil">
+            <h4>Usuario: {{ Auth::user()->username }}</h4>
+            <h4>Grupo: {{ Auth::user()->grupo_id }}</h4>
+            <h4>Puntuación: </h4>
         </div>
-
         <div id="partidas">
             <h2>Mis partidas</h2>
             <?php
@@ -71,6 +39,7 @@
                                 <i class="fa-solid fa-star"></i>
                             </div>
                         </div>
+                        <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
                     </div>
                     <?php
                 }
