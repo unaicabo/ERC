@@ -16,30 +16,23 @@
 
     <body>
         <div id="pag-perfil">
+            <style>
+                img {
+                    width: 10%;
+                }
+            </style>
             <header>
-                <div class="caja-logo">
-                    <h1 class="logo">LOGO ERC</h1>
-                </div>
-                    
-            <?php
-            use Illuminate\Support\Facades\Log;
-            use Illuminate\Support\Facades\Session;
-
-            if(Session::has('usuario')){
-            ?>
-                <div class="col"><a href="{{ route('usuarios.logout') }}"><button>Logout</button></a></div>
-            <?php
-            } else {
-            ?>
                 <nav class="menu-nav">
+                    <div class="row">
+                        <div class="col"></div>
+                        <h1 class="col">ESCAPE ROOM COMERCE</h1>
+                        <div class="col justify-self-end">{{ Auth::user()->username }}<img src="./img/usersImg/{{ Auth::user()->imagen }}"></div>
+                    </div>
                     <ul class="row">
-                        <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-play"></i></div>Nueva partida</a></li>
-                        <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-user"></i></div>Mi perfil</a></li>
+                        <li class="col"><a href="">NUEVA PARTIDA</a></li>
+                        <li class="col"><a href="">PERFIL</a></li>
                     </ul>
                 </nav>
-            <?php
-            }
-            ?>
             </header>
 
             <main class="contenido">
