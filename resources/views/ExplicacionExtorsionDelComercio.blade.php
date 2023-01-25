@@ -13,17 +13,18 @@
         session(['lvl' => $_GET['lvl']]);
     ?>
     <div>
-        <h1 class="centrado-explicacion">COMO JUGAR</h1>
+
     <div id="pag-explicacion">
-            <h1>Como jugar</h1>
+            <h1>Extorsión del comercio</h1>
         <div class="caja-prueba">
-            <div>
                 <div class="titulo">
-                    <h2>Extorsión del comercio</h2>
+                    <h2>Cómo jugar</h2>
                 </div>
 
                 <div class="texto">
-                    <p>El juego consiste en encontrar todas las llaves solucionando rompecabezas como puzzles, sopas de letras y preguntas para poder abrir un cofre y encontrar el tesoro oculto en el y proclamarse vencedor.</p>
+                    <p>Encuentra todas las llaves solucionando rompecabezas como puzzles, sopas de letras y preguntas para poder abrir el cofre.</p>
+                    <p>¡Hazte con el tesoro oculto y proclamate vencedor!</p>
+                    <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone, llevando vuestra empresa a pique. </p>
                 </div>
                 <div class="texto">
                     <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone llevando vuestra empresa a pique. </p>

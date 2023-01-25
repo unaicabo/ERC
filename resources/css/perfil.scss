@@ -70,9 +70,9 @@ body {
 }
 
 .caja-usuario{
+    color: white;
     border-radius: 10px;
-    color: black;
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.352);
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -92,7 +92,7 @@ body {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    color: grey;
+    color: white;
     padding-bottom: 15px;
     border-bottom: 1px solid lightgrey;
 }
@@ -116,10 +116,10 @@ body {
 
 .usuario-icono{
     border-radius: 50%;
-    color: grey;
+    color: #484ae0;
     padding: 20px 35px;
     font-size: 3rem;
-    border: 2px solid grey;
+    border: 2px solid #484ae0;
     width: 50px;
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@ body {
 }
 
 .usuario-icono i{
-    color: grey;
+    color: #484ae0;
 }
 
 #pag-perfil h2{

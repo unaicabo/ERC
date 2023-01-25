@@ -143,7 +143,6 @@ p {
 }
 
 .tarjeta-explicacion {
-
     padding: 1rem;
     background-color: blanchedalmond;
 }
@@ -157,12 +156,6 @@ p {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     backdrop-filter: blur(10px); */
-
-}
-
-.titulo h2 {
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 .botones {
@@ -179,12 +172,12 @@ p {
 }
 
 .btn {
-    background: linear-gradient(85deg, purple, rgb(128, 53, 190), rgb(72, 72, 226));
+    background-color: #484ae0;
     color: white;
     font-size: 2rem;
     text-transform: uppercase;
     border: none;
-    border-radius: 7px;
+    border-radius: 3px;
     padding: 10px;
     letter-spacing: 0.1em;
     box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
@@ -214,20 +207,6 @@ p {
     width: 20rem;
     display: block;
     margin: auto;
-}
-
-.nivel {
-    margin-top: 0.5rem;
-}
-
-#fondo-explicacion {
-    background-image: url('/img/fondo.png');
-    background-color: darkblue;
-}
-
-#fondo-principal {
-    background-image: url('/img/fondo.png');
-    background-color: darkblue;
 }
 
 .img-acertijo {
@@ -263,13 +242,8 @@ p {
     transition: 1s;
 }
 
-
 .foto-principal {
     width: 20rem;
-}
-
-.tarjetas {
-    column-count: 1;
 }
 
 .caja-diseño-3{
@@ -317,25 +291,130 @@ p {
     font-size: 400%;
 }
 
-.centrado-explicacion {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 10%;
-    font-size: 200%;
-}
-
-#fondo-explicacion {
-    background-image: url('/img/fondo.png');
-    background-repeat: no-repeat;
-    background-color: darkblue;
-}
-
 .centrado-pruebas {
     width: 13rem;
     font-size: 145%;
     text-align: center;
+}
+
+/* pagina principal */
+
+.pag-principal{
+    color: white;
+}
+
+.pag-principal .tarjetas{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.pag-principal .nivel{
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.pag-principal .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+.pag-principal .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+}
+
+.pag-principal .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+}
+
+.caja-tarjeta{
+    margin: 20px;
+}
+
+.pag-principal .tarjeta{
+    max-width: 800px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+}
+
+.pag-principal h2{
+    padding: 20px;
+    padding-top: 30px;
+    margin: 30px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.817);
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+}
+
+.pag-principal h2::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.304);
+    width: 100%;
+}
+
+.pag-principal h2{
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+.pag-principal .foto-tarjetas{
+    width: 150px;
+}
+
+.pag-principal .botones{
+    margin-top: 20px;
+}
+
+.pag-principal .tarjeta{
+    padding-top: 20px;
+}
+
+.pag-principal a:hover{
+    background-color: #484ae0a5 !important;
+    border: 1px solid transparent;
+    color: white;
+    transition: 0.7s;
+}
+
+.pag-principal .btn{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.pag-principal a{
+    border: 2px solid #484ae0;
+    background-color: transparent !important;
+    color: #484ae0;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pag-principal{
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20vh;
+}
+
+.pag-principal .fa-play{
+    color: #484ae0;
+    font-size: 2.5rem;
+}
+
+.pag-principal a:hover .fa-play{
+    color: white;
+    font-size: 3rem;
+    transition: 0.5s;
 }
 
 /* Pagina explicacion juego */
@@ -346,37 +425,89 @@ p {
     align-items: center;
 }
 
+#pag-explicacion .caja-prueba{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 50px;
+    max-width: 900px;
+}
+
+#fondo-explicacion {
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20vh;
+}
+
 #pag-explicacion h1{
-    color: white;
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
     text-transform: uppercase;
     font-weight: normal;
     text-align: center;
     padding: 50px;
     margin: 0;
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: 0.1em;
     width: 100%;
 }
 
-#pag-explicacion h1::after{
+#pag-explicacion h2{
+    padding: 5px;
+    margin-top: 30px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#pag-explicacion h2::after{
     content: "";
     display: inline-block;
     border: 1px solid white;
     width: 100%;
 }
 
-#pag-explicacion .caja-prueba{
-    background-color: whitesmoke;
-    border-radius: 10px;
-    margin: 50px;
-    max-width: 900px;
-    padding-bottom: 50px;
+#pag-explicacion .titulo{
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
 }
 
-#pag-explicacion .titulo{
-    font-size: 2rem;
+#pag-explicacion .texto{
+    margin: 20px;
+    margin-bottom: 50px;
     padding: 20px;
-    text-transform: uppercase;
+}
+
+#pag-explicacion p{
+    padding: 10px;
+}
+
+#pag-explicacion .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283) !important;
+    color: white !important;
+}
+
+#pag-explicacion .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+}
+
+#pag-explicacion .btn{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 3rem;
+    font-family: Barlow-Condensed !important;
+}
+
+#pag-explicacion .nivel{
+        color: white;
+        background-color: rgba(0, 128, 0, 0.623);
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 0 0 10px 10px;
 }
 
 
@@ -386,29 +517,27 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #pag-acertijo h2{
-    color: white;
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
     text-transform: uppercase;
     font-weight: normal;
     text-align: center;
     padding: 50px;
     margin: 0;
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: 0.1em;
     width: 100%;
 }
 
-#pag-acertijo h2::after{
-    content: "";
-    display: inline-block;
-    border: 1px solid white;
-    width: 100%;
-}
-
 #pag-acertijo .caja-prueba{
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.283);
+    color: white;
     border-radius: 10px;
     margin: 50px;
     max-width: 900px;
@@ -424,7 +553,7 @@ p {
 }
 
 #pag-acertijo .enunciado{
-    background-color: #484ae0;
+    background-color: #484ae0b0;
     border-radius: 10px 10px 0 0;
     padding: 40px;
 }
@@ -459,6 +588,7 @@ p {
 .contenedor-dias p{
     padding: 10px;
 }
+
 
     @media (min-width: 1200px){
 
@@ -545,6 +675,16 @@ p {
 
         .contenedor-dias .dia{
             width: 50%;
+        }
+
+        #pag-acertijo{
+          height: 100vh;
+        }
+
+        /* pagina principal */
+
+        .pag-principal .tarjetas{
+            flex-direction: row;
         }
 
     }
@@ -663,4 +803,5 @@ p {
 
     }
 }
+
 
