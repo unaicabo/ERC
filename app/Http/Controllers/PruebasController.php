@@ -22,8 +22,10 @@ class PruebasController extends Controller
         $partida = new partida();
 
         $usuario = Auth::user()->id;
-        $hora = now();
+        $hora = date_create();
         $grupo = Auth::user()->grupo_id;
+
+
 
 
         $partida->tiempo = $hora;
@@ -37,6 +39,7 @@ class PruebasController extends Controller
         session(['IdPartida' => $partida->id]);
 
         echo("--" . $partida->id);
+
 
         //return view($partida->Id);
         return view('acertijo');
