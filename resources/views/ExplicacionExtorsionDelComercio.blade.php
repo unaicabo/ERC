@@ -13,7 +13,7 @@
         session(['lvl' => $_GET['lvl']]);
     ?>
     <div>
-        
+
     <div id="pag-explicacion">
             <h1>Extorsión del comercio</h1>
         <div class="caja-prueba">
@@ -26,11 +26,16 @@
                     <p>¡Hazte con el tesoro oculto y proclamate vencedor!</p>
                     <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone, llevando vuestra empresa a pique. </p>
                 </div>
-                <p class="nivel" id="basico">Básico</p>
-        </div>
-        <div class="botones">
-            <a href="{{ route ('iniciarBasica') }}"><button class="btn">Empezar a jugar</button></a>
-        </div>
+                <div class="texto">
+                    <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone llevando vuestra empresa a pique. </p>
+                </div>
+
+                <div class="botones">
+                    <a href="{{ route ('iniciarPrueba') }}"><button class="btn">Empezar a jugar</button></a>
+                </div>
+                <p class="nivel">Básico</p>
+
+            </div>
     </div>
 </body>
 </html>

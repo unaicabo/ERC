@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\partida;
 use App\Models\Grupo;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
@@ -16,24 +17,49 @@ class PruebasController extends Controller
 
 
     //
-    public function iniciarBasica()
+    public function iniciarPrueba()
     {
         $partida = new partida();
 
         $usuario = Auth::user()->id;
-        $hora = date('H:i:s');
+        $hora = now();
         $grupo = Auth::user()->grupo_id;
 
 
-        $partida->hora_inicio = $hora;
+        $partida->tiempo = $hora;
         $partida->grupo_id = $grupo;
         $partida->participante_id = $usuario;
-        $partida->dificultad = "Basica";
+        $partida->dificultad = session('lvl');
         $partida->puntuacion = "0";
 
         $partida->save();
+
+        session(['IdPartida' => $partida->id]);
+
+        echo("--" . $partida->id);
+
+        //return view($partida->Id);
         return view('acertijo');
+
     }
 
+    public function acabarPartida()
+    {
+        $id = session('IdPartida');
+        $partida = partida::FindOrFail($id);
+
+        $horainicio= new \Carbon\Carbon($partida->tiempo);
+        $horafin = new \Carbon\Carbon(now());
+
+        $tiempo = $horainicio->diff($horafin);
+
+        //$partida->tiempo = "2023-01-24 09:25:10";
+
+        //$partida->save();
+
+        echo("--".$tiempo);
+
+        //return view('perfil');
+    }
 
 }
