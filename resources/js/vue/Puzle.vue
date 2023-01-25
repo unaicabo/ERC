@@ -1,5 +1,5 @@
 <template>
-    <Candado numUno="1" numDos="8"></Candado>
+    <Candado numUno="1" numDos="7"></Candado>
 
     <h1 class="text-center titulo">Tercera Prueba</h1>
     <h3 class="text-center titulo mx-auto w-75">Para obtener el ultimo numero del candado azul deberás primero completar este puzle.<br>A continuacion deberás sumar todos los digitos de los cuadradados azules. El ultimo digito será la solución.</h3>

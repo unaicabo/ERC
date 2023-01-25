@@ -141,7 +141,8 @@ class UsuarioController extends Controller
         $user->rol = 'Profesor';
 
         $user->save();
-        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' 
+            . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
 
         Auth::login($user);
 
