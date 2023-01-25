@@ -11,6 +11,16 @@
 
 <body>
     <div id="pag-acertijo">
+        <div id="caja-candado">
+            <figure id="img-candado">
+                    <img src="img/candado.png" alt="candado">
+                    <div id="codigo-candado">
+                        <p>*</p>
+                        <p>*</p>
+                        <p>*</p>
+                    </div>
+            </figure>
+        </div>
         <h2>Completa el acertijo</h2>
         <div class="caja-prueba">
             <div class="enunciado">

@@ -11,6 +11,16 @@
 </head>
 
 <body id="pag-sopaletras">
+    <div id="caja-candado">
+        <figure id="img-candado">
+                <img src="img/candado.png" alt="candado">
+                <div id="codigo-candado">
+                    <p>*</p>
+                    <p>*</p>
+                    <p>*</p>
+                </div>
+        </figure>
+    </div>
     <h1>Completa la sopa de letras</h1>
     <div class="caja-prueba">
         <p>En esta primera prueba al llegar a la sala hemos encontrado todos nuestros documentos tirados por el

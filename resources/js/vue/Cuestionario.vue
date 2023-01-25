@@ -1,8 +1,8 @@
 <template>
     <Candado/>
 
-    <h1 class="text-center">Segunda Prueba</h1>
-    <h3 class="text-center mx-auto w-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas adipisci distinctio provident natus, suscipit quos, perspiciatis aspernatur quasi esse saepe aliquam. Saepe enim asperiores illum pariatur, ut ipsum odio rem.</h3>
+    <h1 class="text-center">Cuestionario</h1>
+    <h3 class="text-center mx-auto w-75"></h3>
 
     <div id="cajaPruebaCuestionario" class="ml-1 bg-light w-50 mx-auto">
         <form id="formCuestionario">
@@ -11,9 +11,11 @@
             <input type="radio" value="b" name="pregunta1" v-model="respuesta" id="respuestaB"><label for="respuestaB" id="respuestaBCuestionario">{{ respuestaB }}</label><br>
             <input type="radio" value="c" name="pregunta1" v-model="respuesta" id="respuestaC"><label for="respuestaC" id="respuestaCCuestionario">{{ respuestaC }}</label><br>
             <input type="radio" value="d" name="pregunta1" v-model="respuesta" id="respuestaD"><label for="respuestaD" id="respuestaDCuestionario">{{ respuestaD }}</label><br><br>
-            <input type="button" class="text-right" value="Responder" @click="compPregunta()">
-            <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
         </form>
+        
+        <input type="button" class="text-right" value="Validar" @click="compPregunta()">
+        <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
+        
      <a id="btnNextPrueba" :href="route('finpartida')">Siguiente Prueba</a>
     </div>
 </template>
@@ -32,7 +34,7 @@
                 c: 0,
                 d: 0,
                 contNumPreg: 0,
-                preguntas: ['1 - Entre los objetos que persigue un buen sistema de almacenamiento está:','2 - ¿Como se denomina el almacenamiento en el que cada producto tiene su ubicación?', '3 - El sistema de almacenamiento convencional:', '4 - Si quieres posicionarte en un buscador, ¿Por cuál pagarías?', '5 - El buscador mas utilizado es:', '6 - ¿Cual es el marketing que se propaga de usuario en usuario?'],
+                preguntas: ['1 - Entre los objetos que persigue un buen sistema de almacenamiento está:','2 - ¿Cómo se denomina el almacenamiento en el que cada producto tiene su ubicación?', '3 - El sistema de almacenamiento convencional:', '4 - Si quieres posicionarte en un buscador, ¿Por cuál pagarías?', '5 - El buscador más utilizado es:', '6 - ¿Cuál es el marketing que se propaga de usuario en usuario?'],
                 respuestasA: ['A) Máximo de aprovechamiento de la capacidad de almacenamiento', 'A) Almacenamiento caótico', 'A) No utiliza estanterías', 'A) SEM', 'A) Yahoo!', 'A) De afilición'],
                 respuestasB: ['B) Accesibilidad a los productos', 'B) Almacenamiento ordenado', 'B) No sirve para el almacenamiento de mercancía paletizada', 'B) SEO', 'B) Google', 'B) Viral'],
                 respuestasC: ['C) Rotación controladad de stock', 'C) Almacenamiento desordenado', 'C) Es fácil realizar las salidas por el método FIFO', 'C) Por los dos', 'C) Ask', 'C) One to one'],
@@ -138,14 +140,6 @@
     body{
         font-family: Barlow-Condensed !important;
         background-color: rgb(38, 38, 38) !important;
-        color: white !important;
-    }
-
-    #cajaPruebaCuestionario {
-        padding: 10px;
-        border-radius: 5px;
-        min-height: 300px;
-        color: black;
     }
 
     #cajaPruebaCuestionario #labelSinRespuesta {
@@ -160,10 +154,6 @@
         padding: 5px;
     }
 
-    #cajaPruebaCuestionario #preguntaCuestionario {
-        height: 80px;
-    }
-
     #animation {
         margin-top: 80px;
         transition: all 3s;
@@ -175,21 +165,6 @@
         border-radius: 10px;
         padding: 10px;
     }
-
-    #btnNextPrueba {
-        display: none;
-        text-align: center;
-        width: 30%;
-        margin: auto;
-        margin-top: 80px;
-        padding: 4px 0px;
-        background-color: rgb(245, 121, 142);
-        border: 3px solid black;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-    }
-
 
 
 </style>

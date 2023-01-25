@@ -659,7 +659,7 @@ p {
     background-image: url(../img/fondo3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 150vh;
+    min-height: 110vh;
 }
 
 #pag-acertijo h2{
@@ -700,7 +700,12 @@ p {
     transition: 0.5s;
 }
 
+#pag-acertijo .botones{
+    margin-bottom: 40px;
+}
+
 #resultado{
+    color: white;
     padding: 20px;
 }
 
@@ -754,6 +759,138 @@ p {
 
 .contenedor-dias p{
     padding: 10px;
+}
+
+/*********** Pagina cuestionario **************/
+
+
+#cuestionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+    font-size: 2.2rem;
+    color: white;
+}
+
+#cuestionario h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#cajaPruebaCuestionario{
+    background-color: transparent !important;
+    width: 90% !important;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formCuestionario{
+    background-color: rgba(255, 255, 255, 0.283) !important;
+    color: white;
+    border-radius: 10px;
+    margin: 50px;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#labelSinRespuesta{
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+#cajaPruebaCuestionario #preguntaCuestionario {
+    height: 80px;
+    font-size: 3rem;
+}
+
+#cuestionario .text-right{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#cuestionario .text-right:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#btnNextPrueba {
+    display: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#btnNextPrueba:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+/***** Img candado *****/
+
+#caja-candado{
+    width: 100%;
+    padding: 20px 100px;
+}
+
+#img-candado{
+    width: 150px;
+    max-width: 200px;
+    position: relative;
+}
+
+#img-candado img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+#codigo-candado{
+    display: flex;
+    justify-content: center;
+    color: #484ae0;
+    padding: 0 20px;
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+}
+
+#codigo-candado p{
+    padding: 0;
+    font-size: 6rem;
+    padding: 4px;
+    margin: 0;
 }
 
 
