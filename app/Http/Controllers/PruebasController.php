@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\partida;
 use App\Models\Grupo;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PruebasController extends Controller
 {
@@ -22,13 +22,10 @@ class PruebasController extends Controller
         $partida = new partida();
 
         $usuario = Auth::user()->id;
-        $hora = date_create();
         $grupo = Auth::user()->grupo_id;
+        $hora = date_create();
 
-
-
-
-        $partida->tiempo = $hora;
+        //$partida->tiempo = $hora;
         $partida->grupo_id = $grupo;
         $partida->participante_id = $usuario;
         $partida->dificultad = session('lvl');
@@ -36,14 +33,9 @@ class PruebasController extends Controller
 
         $partida->save();
 
-        session(['IdPartida' => $partida->id]);
+        session(['IdPartida' => $partida->id, 'tiempo' => $hora->getTimestamp()]);
 
-        echo("--" . $partida->id);
-
-
-        //return view($partida->Id);
         return view('acertijo');
-
     }
 
     public function acabarPartida()
@@ -51,18 +43,21 @@ class PruebasController extends Controller
         $id = session('IdPartida');
         $partida = partida::FindOrFail($id);
 
-        $horainicio= new \Carbon\Carbon($partida->tiempo);
-        $horafin = new \Carbon\Carbon(now());
+        $s = date_create()->getTimestamp() - session('tiempo');
+        if($s > 59) {
+            $m = floor($s/60);
+            $s = $s%60;
+            $tiempo = $m . ',' . $s;
+        } else {
+            $tiempo = '0,' .$s;
+        }
 
-        $tiempo = $horainicio->diff($horafin);
+        Log::alert($tiempo);
+        $partida->tiempo = $tiempo;
 
-        //$partida->tiempo = "2023-01-24 09:25:10";
+        $partida->save();
 
-        //$partida->save();
-
-        echo("--".$tiempo);
-
-        //return view('perfil');
+        return redirect(route('perfil'));
     }
 
 }

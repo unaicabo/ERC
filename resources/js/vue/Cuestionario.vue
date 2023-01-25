@@ -14,7 +14,7 @@
             <input type="button" class="text-right" value="Responder" @click="compPregunta()">
             <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
         </form>
-     <a id="btnNextPrueba" :href="route('principal')">Siguiente Prueba</a>
+     <a id="btnNextPrueba" :href="route('finpartida')">Siguiente Prueba</a>
     </div>
 </template>
 
