@@ -11,7 +11,7 @@
             <input type="radio" value="b" name="pregunta1" v-model="respuesta" id="respuestaB"><label for="respuestaB" id="respuestaBCuestionario">{{ respuestaB }}</label><br>
             <input type="radio" value="c" name="pregunta1" v-model="respuesta" id="respuestaC"><label for="respuestaC" id="respuestaCCuestionario">{{ respuestaC }}</label><br>
             <input type="radio" value="d" name="pregunta1" v-model="respuesta" id="respuestaD"><label for="respuestaD" id="respuestaDCuestionario">{{ respuestaD }}</label><br><br>
-            <input type="button" class="text-right" value="Responder" @click="compPregunta()"> 
+            <input type="button" class="text-right" value="Responder" @click="compPregunta()">
             <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
         </form>
      <a id="btnNextPrueba" :href="route('principal')">Siguiente Prueba</a>
@@ -78,7 +78,7 @@
                     this.respuestaB = this.respuestasB[this.contNumPreg];
                     this.respuestaC = this.respuestasC[this.contNumPreg];
                     this.respuestaD = this.respuestasD[this.contNumPreg];
-                
+
                     this.respuesta = false;
 
                 } else {
@@ -99,7 +99,7 @@
 
                         document.getElementById('cajaPruebaCuestionario').insertBefore(resultado, document.getElementById('btnNextPrueba'));
                         setTimeout(() => {
-                            document.getElementById("animation").style.transform = "scale(3)"; 
+                            document.getElementById("animation").style.transform = "scale(3)";
 
                             document.getElementById('btnNextPrueba').style.display = 'block';
                         }, 1);
@@ -107,7 +107,7 @@
                         resultado.innerHTML = '<i class="fa-solid fa-xmark" id="animation"></i>';
 
                         document.getElementById('cajaPruebaCuestionario').appendChild(resultado);
-                        document.getElementById("animation").style.color = "red"; 
+                        document.getElementById("animation").style.color = "red";
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)";
 
@@ -131,7 +131,7 @@
             }
         }
     }
-</script>  
+</script>
 
 <style>
 

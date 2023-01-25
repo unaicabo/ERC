@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\partida;
 use App\Models\Grupo;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
@@ -46,7 +47,11 @@ class PruebasController extends Controller
     {
         $id = session('IdPartida');
         $partida = partida::FindOrFail($id);
-        $tiempo = (now())-($partida->tiempo);
+
+        $horainicio= new \Carbon\Carbon($partida->tiempo);
+        $horafin = new \Carbon\Carbon(now());
+
+        $tiempo = $horainicio->diff($horafin);
 
         //$partida->tiempo = "2023-01-24 09:25:10";
 
