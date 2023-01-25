@@ -540,8 +540,24 @@ p {
     color: white;
     border-radius: 10px;
     margin: 50px;
-    max-width: 900px;
-    padding-bottom: 50px;
+    margin-bottom: 0;
+    max-width: 800px;
+}
+
+#pag-acertijo .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-acertijo .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
 }
 
 #resultado{
@@ -553,7 +569,7 @@ p {
 }
 
 #pag-acertijo .enunciado{
-    background-color: #484ae0b0;
+    background-color: #484ae0a5;
     border-radius: 10px 10px 0 0;
     padding: 40px;
 }
@@ -565,7 +581,15 @@ p {
 #pag-acertijo p{
     font-size: 2.5rem;
     text-align: center;
+    padding: 10px;
     width: 100%;
+}
+#pag-acertijo input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
 }
 
 #pag-acertijo .enunciado p{
@@ -576,13 +600,16 @@ p {
 
 .contenedor-dias{
     margin: 20px;
+    width: 80%;
+    max-width: 800px;
 }
 
 .contenedor-dias .dia{
     border-radius: 10px;
-    background-color: rgb(231, 155, 63);
-    margin: 10px;
-    width: 100%;
+    border: 2px solid #484ae0;
+    color: #484ae0;
+    font-weight: bold; 
+    margin: 10px 0;
 }
 
 .contenedor-dias p{
