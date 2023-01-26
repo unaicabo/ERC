@@ -11,22 +11,20 @@
 
 </head>
 <body>
-
-    <div class="container" id="container">
+    <?php 
+        if(session()->has('errorRegister')){
+            echo('<div class="container right-panel-active" id="container">');
+        } else {
+            echo('<div class="container" id="container">');
+        }
+    ?>
         <div class="form-container sign-up-container">
             <form action="{{ route ('usuarios.store') }}" method="POST" id="formRegister"  enctype="multipart/form-data">
                 @csrf
                 <h1>Registrarse</h1>
                 <?php
-                    if(Session::has('error')){
-                        if((session('error')) == 'ErrorUsExistRegis'){
-                            echo('<p id="msgErrorRegister" class="warn"><i class="fa-solid fa-triangle-exclamation"></i> El Usuario ya existe</p>');
-                            Session::put('error', null);
-                        } else {
-                            echo('<p id="msgErrorRegister" class="warn"></p>');
-                        }
-                    } else {
-                        echo('<p id="msgErrorRegister" class="warn"></p>');
+                    if(session()->has('errorRegister')){
+                        echo('<p id="msgErrorRegister" class="warn"><i class="fa-solid fa-triangle-exclamation"></i>' . session('errorRegister') . ' </p>');
                     }
                 ?>
                 <div id="formIkaslea" class="signUpForm">

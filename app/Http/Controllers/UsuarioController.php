@@ -30,7 +30,13 @@ class UsuarioController extends Controller
         $users = User::all();
 
         foreach ($users as $key => $user) {
-            Log::alert($user['username']);
+            if($user['username'] == $request->usuario) {
+                session(['errorRegister' => 'El nombre de usuario ya está en uso']);
+                return view('login');
+            } else if($user['email'] == $request->email){
+                session(['errorRegister' => 'El email ya está en uso']);
+                return view('login');
+            }
         }
 
         $user = new User();
@@ -48,7 +54,7 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
 
     /**
