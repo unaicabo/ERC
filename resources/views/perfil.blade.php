@@ -9,21 +9,8 @@
     <link href="css/index.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     @vite(['resources/css/perfil.scss','resources/css/index.css'])
 </head>
+@include('header')
 <body id="pag-perfil">
-    <header>
-        <nav class="menu-nav">
-            <div class="caja-logo">
-                <h1 class="logo">LOGO ERC</h1>
-            </div>
-            <div class="row">
-                <div class="col justify-self-end">{{ Auth::user()->username }}<img src="./img/usersImg/{{ Auth::user()->imagen }}"></div>
-            </div>
-            <ul class="row">
-                <li class="col"><a href="principal">Nueva partida</a></li>
-                <li class="col"><a href="">Perfil</a></li>
-            </ul>
-        </nav>
-    </header>
     <main class="contenido">
         <div class="caja-usuario">
             <div class="caja-foto-usuario">
