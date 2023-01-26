@@ -19,17 +19,18 @@
             <div class="contenido-prueba">
                 <p>Desde el lunes hasta el viernes, soy la última en llegar, el sábado soy la primera, y el domingo a descansar.</p>
                 <p>¿Quién soy?</p>
-                <div class="contenedor-dias">
-                    <div class="dia"><p>Lunes</p></div>
-                    <div class="dia"><p>Martes</p></div>
-                    <div class="dia"><p>Miércoles</p></div>
-                    <div class="dia"><p>Jueves</p></div>
-                    <div class="dia"><p>Viernes</p></div>
-                    <div class="dia"><p>Sábado</p></div>
-                    <div class="dia"><p>Domingo</p></div>
-                </div>
             </div>
-            <div class="botones">
+        </div>
+        <div class="contenedor-dias">
+            <div class="dia"><p>Lunes</p></div>
+            <div class="dia"><p>Martes</p></div>
+            <div class="dia"><p>Miércoles</p></div>
+            <div class="dia"><p>Jueves</p></div>
+            <div class="dia"><p>Viernes</p></div>
+            <div class="dia"><p>Sábado</p></div>
+            <div class="dia"><p>Domingo</p></div>
+        </div>
+        <div class="botones">
                 <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
                 <button class="btn" onclick="comprobarVacios()">Validar</button>
             </div>
@@ -37,9 +38,7 @@
                 <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente" href="{{ route ('sopadeletras') }}">
                 <button class="btn">Siguiente prueba</button></a></p>
             </div>
-
         </div>
-    </div>
         <script src="js/validarAcertijo.js"></script>
 </body>
 </html>

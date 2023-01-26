@@ -15,14 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('index');
-Route::get('/principal', function () {
     return view('principal');
-})->middleware('auth')->name('principal');
+})->name('principal');
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
-})->name('explicacion');
+})->middleware('auth')->name('explicacion');
 
 Route::get('/iniciarPrueba', [PruebasController::class, 'iniciarPrueba'])
     ->name('iniciarPrueba');
