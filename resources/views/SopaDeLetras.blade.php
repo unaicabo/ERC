@@ -25,11 +25,11 @@
     <div class="caja-prueba">
         <div class="enunciado">
             <p>Para conseguir sacar el código del candado tenemos que mirar las palablas que están en vertical y contar
-                cuántas veces está la letra <b>"o"</b>.
+                cuántas veces está la letra "o".
             </p>
         </div>
         <p>Necesitamos buscar un <b>albarán</b>, facturas de <b>contrareembolso</b>, una copia de los archivos del
-            <b>googlebot</b>, un pedrive con las <b>keywords</b>, el registro de la <b>recepción</b> de la mercancía y
+            <b>googlebot</b>, un pedrive con <b>keywords</b>, el registro de la <b>recepción</b> del almacen y
             un boceto del <b>producto</b> que vende nuestro cliente.
         </p>
 

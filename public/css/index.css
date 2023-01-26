@@ -119,7 +119,7 @@ header button {
 
 p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-size: 3rem;
 }
@@ -614,6 +614,20 @@ p {
     min-height: 100vh;
 }
 
+#fondo-explicacion .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+#fondo-explicacion .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+    border-radius: 0 10px 10px;
+}
+
+#fondo-explicacion .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+   border-radius: 0 0 10px 10px;
+}
+
 #pag-explicacion h1{
     text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
     color: rgba(255, 255, 255, 0.779);
@@ -1022,7 +1036,7 @@ p {
 }
 
 #pag-sopaletras b{
-    color:#484ae0;
+    color:#5c5fe6;
 }
 
 #pag-sopaletras h1{
@@ -1038,21 +1052,27 @@ p {
     margin-bottom: 0;
 }
 
+#pag-sopaletras .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
 #pag-sopaletras .caja-prueba{
     background-color: rgba(255, 255, 255, 0.283);
     width: 90%;
     border-radius: 10px;
     margin: 30px 0;
     max-width: 800px;
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pag-sopaletras .caja-prueba p{
+/* #pag-sopaletras .caja-prueba p{
     margin-bottom: 30px;
-}
+} */
 
 #pag-sopaletras input{
     background-color: rgba(240, 248, 255, 0.441);
@@ -1094,6 +1114,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding-top: 1rem;
 }
 
 .boton-clear{
