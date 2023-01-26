@@ -19,7 +19,7 @@
 
 <div class="tarjetas">
     <div class="caja-tarjeta">
-    <h2>La extorsión del comercio</h2>
+        <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
             <div class="texto">
@@ -31,7 +31,7 @@
                 <a href="{{ route ('explicacion', 'lvl=Basico') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
     </div>
-    <div class="caja-tarjeta">
+    <!-- <div class="caja-tarjeta">
         <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
 
@@ -44,7 +44,7 @@
         <div class="botones">
             <a href="{{ route ('explicacion', 'lvl=Medio') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
-    </div>
+    </div> -->
     <div class="caja-tarjeta">
         <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
