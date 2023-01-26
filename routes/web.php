@@ -39,14 +39,14 @@ Route::get('/Puzle', function () {
 // });
 
 Route::get('/usuarios', [UsuarioController::class, 'index'])
-    ->name('perfil');
+->middleware('auth')->name('perfil');
 
 Route::get('/crearGrupos', [UsuarioController::class, 'listarUsuarios'])
     ->middleware('auth')->name('CrearGrupo');
 
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
-})->name('buscarletra');
+})->middleware('auth')->name('buscarletra');
 
 Route::get('/acertijo', function () {
     return view('Acertijo');
@@ -54,11 +54,11 @@ Route::get('/acertijo', function () {
 
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
-})->name('sopadeletras');
+})->middleware('auth')->name('sopadeletras');
 
 Route::get('/cuestionario', function () {
     return view('Cuestionario');
-})->name('cuestionario');
+})->middleware('auth')->name('cuestionario');
 
 
 Route::get('/vue', function () {
