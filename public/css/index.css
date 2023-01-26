@@ -120,7 +120,7 @@ header button {
 
 p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-size: 3rem;
 }
@@ -576,6 +576,19 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+}
+
+#fondo-explicacion .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+#fondo-explicacion .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+}
+
+#fondo-explicacion .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+    border-radius: 10px;
 }
 
 #pag-explicacion h1{
