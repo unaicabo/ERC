@@ -36,7 +36,7 @@
 
                 console.log(idUsuarios);
                 console.log(nombreUsuarios);
-                document.getElementById('integrantes').innerHTML = integrantes;
+                document.getElementByName('integrantes')[0].value = nombreUsuarios;
         }
 
     </script>
