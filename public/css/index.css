@@ -123,7 +123,7 @@ p {
     width: 80%;
     margin: auto;
     font-size: 3rem;
-} 
+}
 
 .caja-diseño{
     /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
@@ -443,7 +443,7 @@ p {
 }
 
 .pag-principal .tarjetas{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
@@ -753,7 +753,7 @@ p {
     border-radius: 10px;
     border: 2px solid #484ae0;
     color: #484ae0;
-    font-weight: bold; 
+    font-weight: bold;
     margin: 10px 0;
 }
 
@@ -1088,38 +1088,38 @@ p {
         .caja-todo-contenido{
             width: 70%;
         }
-    
+
         .logo{
             right: 6%;
             left: 0;
             z-index: 999;
             text-align: end;
         }
-    
+
         .menu-nav{
             background-color: transparent;
             top: 0;
             width: 60%;
             padding: 20px;
         }
-    
+
         .menu-nav a{
             font-weight: bold;
             font-size: 3.5rem;
         }
-    
+
         .menu-nav li:hover a{
             opacity: 1;
         }
-    
+
         .menu-nav a::after{
             border-bottom: 3px solid black;
         }
-    
+
         .menu-nav a:hover::after{
             border-bottom: 3px solid black;
         }
-    
+
         #caja-diseño-inicio{
             height: 100%;
             width: 30%;
@@ -1128,11 +1128,11 @@ p {
             right: 0;
             margin-top: 0;
         }
-    
+
         .caja-diseño-1{
             height: 100%;
         }
-    
+
         .caja-diseño-2{
             z-index: 99999999999;
             top: 650px;
@@ -1144,9 +1144,9 @@ p {
             border-bottom: none;
             transform: rotate(90deg);
             display: none;
-         
+
         }
-    
+
         .caja-diseño-3{
             display: none;
             position: absolute;
@@ -1158,7 +1158,7 @@ p {
             border-bottom: 500px solid #99f37e;
             z-index: 99999999;
         }
-        
+
         /* Pagina acertijo */
 
         .contenedor-dias{
@@ -1215,6 +1215,10 @@ p {
     margin-top: 1rem;
     margin-bottom: 1rem;
 } */
+
+#contenedor-error{
+    display: none;
+}
 
 #contenedor-resultado{
     height: 2cm;

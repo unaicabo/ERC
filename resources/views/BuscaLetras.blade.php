@@ -21,6 +21,9 @@
             <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
             <button class="btn" onclick="comprobarVacios()">Validar</button>
         </div>
+        <div id="contenedor-error">
+            <p>Parace que ese no es el digito correcto</p>
+        </div>
         <div id="contenedor-resultado">
             <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente"
                     href="{{ route('cuestionario') }}">
