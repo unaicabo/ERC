@@ -584,11 +584,12 @@ p {
 
 #fondo-explicacion .nivel-med{
     background-color: rgba(255, 166, 0, 0.628);
+    border-radius: 0 10px 10px;
 }
 
 #fondo-explicacion .nivel-avan{
     background-color: rgba(255, 0, 0, 0.628);
-    border-radius: 10px;
+   border-radius: 0 0 10px 10px;
 }
 
 #pag-explicacion h1{
