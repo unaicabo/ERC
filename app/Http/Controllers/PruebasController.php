@@ -47,7 +47,7 @@ class PruebasController extends Controller
         if($s > 59) {
             $m = floor($s/60);
             $s = $s%60;
-            $tiempo = $m . ',' . $s;
+            $tiempo = $m . 'min ' . $s . 's';
         } else {
             $tiempo = '0,' .$s;
         }
