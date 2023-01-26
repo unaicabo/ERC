@@ -47,7 +47,7 @@
             <p class="nivel nivel-bas">Basico</p>
         </div>
         <div class="botones">
-                <a href="{{ route ('explicacion', 'lvl=0') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+                <a href="{{ route ('explicacion', 'lvl=Basico') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
     </div>
     <div class="caja-tarjeta">
@@ -61,7 +61,7 @@
             <p class="nivel nivel-med">Medio</p>
         </div>
         <div class="botones">
-            <a href="{{ route ('explicacion', 'lvl=1') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+            <a href="{{ route ('explicacion', 'lvl=Medio') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
     </div>
     <div class="caja-tarjeta">
@@ -75,7 +75,7 @@
             <p class="nivel nivel-avan">Avanzado</p>
         </div>
         <div class="botones">
-            <a href="{{ route ('explicacion', 'lvl=2') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+            <a href="{{ route ('explicacion', 'lvl=Avanzado') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
     </div>
 

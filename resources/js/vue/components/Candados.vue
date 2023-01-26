@@ -7,6 +7,14 @@
             <div class="cajaLetra bg-primary text-white text-center display-6"></div>
         </div>
     </div>
+    <figure id="img-candado">
+            <img src="img/candado.png" alt="candado">
+            <div id="codigo-candado">
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+            </div>
+    </figure>
 </template>
 
 <script>
