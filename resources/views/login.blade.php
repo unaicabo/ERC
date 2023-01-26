@@ -10,21 +10,9 @@
     <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
-<?php
-    use Illuminate\Support\Facades\Log;
-    use Illuminate\Support\Facades\Session;
+<body id="pag-login">
 
-    if(Session::has('error')){
-        if((session('error')) == 'ErrorUsExistRegis'){
-            echo('<div class="container right-panel-active" id="container" >');
-        } else {
-            echo('<div class="container" id="container" >');
-        }
-    } else {
-        echo('<div class="container" id="container" >');
-    }
-?>
+    <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form action="{{ route ('usuarios.store') }}" method="POST" id="formRegister"  enctype="multipart/form-data">
                 @csrf
@@ -51,8 +39,9 @@
                     <input type="file" accept="image/png,image/jpeg,imagen/jpg" placeholder="Imagen" name="imagen" id="imagenIrakaslea" v-model="imagen">
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
-                    <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
+                    
                 </div>
+                <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
             </form>
         </div>
         <div class="form-container sign-in-container" >
@@ -60,15 +49,8 @@
                 @csrf
                 <h1>Iniciar sesión</h1>
                 <?php
-                    if(Session::has('error')){
-                        if((session('error')) == 'ErrorUsContLogin'){
-                            echo('<p id="msgError" class="warn"><i class="fa-solid fa-triangle-exclamation"></i> Usuario o Contraseña incorrectos</p>');
-                            Session::put('error', null);
-                        } else {
-                            echo('<p id="msgError" class="warn"></p>');
-                        }
-                    } else {
-                        echo('<p id="msgError" class="warn"></p>');
+                    if(session()->has('errorLogin')){
+                        echo('<p id="msgError" class="warn"><i class="fa-solid fa-triangle-exclamation"></i> Usuario o Contraseña incorrectos</p>');
                     }
                 ?>
                 <input type="text" placeholder="Usuario" name="usuario" id="usuarioLogin" v-model="usuario"/>

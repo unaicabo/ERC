@@ -70,7 +70,6 @@ header button {
     width: 100%;
     font-size: 3.5rem;
     background-color: #484ae0;
-    border: 2px solid red;
 }
 
 .menu-nav ul{
@@ -120,10 +119,10 @@ header button {
 
 p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-size: 3rem;
-} 
+}
 
 .caja-diseño{
     /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
@@ -262,14 +261,7 @@ p {
     padding: 1.7rem;
 }
 
-.tarjeta {
-    /* There will be 3 cards per row */
-    flex-basis: 33.33333%;
-    padding: 1rem;
-    background-color: blanchedalmond;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-}
+
 
 .tarjetas-explicacion {
     margin-top: 10rem;
@@ -396,6 +388,7 @@ p {
     border-bottom: 500px solid #99f37e;
     z-index: 99999999;
 }
+
 .tarjeta {
     width: 100%;
     margin-bottom: 1rem;
@@ -436,6 +429,48 @@ p {
     text-align: center;
 }
 
+
+/****  Menu pagina principal   ****/
+
+.caja-logo{
+    padding: 80px;
+}
+
+#menu-principal{
+    border-bottom: 2px solid #484ae0cc;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 50px;
+}
+
+#menu-principal li{
+    border: none;
+    padding: 10px 50px;
+}
+
+#menu-principal a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Barlow-Condensed !important;
+}
+
+#menu-principal li:hover a{
+    color: #484ae0;
+}
+
+#menu-principal .fas{
+    font-size: 2.8rem;
+    color: white;
+    margin-left: 10px;
+}
+
+#menu-principal li:hover i{
+    color: #484ae0;
+}
+
+
 /* pagina principal */
 
 .pag-principal{
@@ -443,7 +478,7 @@ p {
 }
 
 .pag-principal .tarjetas{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
@@ -455,6 +490,7 @@ p {
     border-radius: 0 0 10px 10px;
     margin-top: 30px;
     padding: 15px;
+    width: 100%;
 }
 
 .pag-principal .nivel-bas{
@@ -516,7 +552,7 @@ p {
     padding-top: 20px;
 }
 
-.pag-principal a:hover{
+.pag-principal .botones a:hover{
     background-color: #484ae0a5 !important;
     border: 1px solid transparent;
     color: white;
@@ -528,7 +564,7 @@ p {
     box-shadow: none;
 }
 
-.pag-principal a{
+.pag-principal .botones a{
     border: 2px solid #484ae0;
     background-color: transparent !important;
     color: #484ae0;
@@ -576,6 +612,20 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+}
+
+#fondo-explicacion .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+#fondo-explicacion .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+    border-radius: 0 10px 10px;
+}
+
+#fondo-explicacion .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+   border-radius: 0 0 10px 10px;
 }
 
 #pag-explicacion h1{
@@ -639,6 +689,7 @@ p {
     padding: 20px 30px;
     font-size: 3rem;
     font-family: Barlow-Condensed !important;
+    margin-bottom: 50px;
 }
 
 #pag-explicacion .nivel{
@@ -646,6 +697,7 @@ p {
         background-color: rgba(0, 128, 0, 0.623);
         padding: 20px;
         margin-top: 20px;
+        width: 100%;
         border-radius: 0 0 10px 10px;
 }
 
@@ -753,7 +805,7 @@ p {
     border-radius: 10px;
     border: 2px solid #484ae0;
     color: #484ae0;
-    font-weight: bold; 
+    font-weight: bold;
     margin: 10px 0;
 }
 
@@ -976,7 +1028,7 @@ p {
     background-image: url(../img/fondo3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 140vh;
     color: white;
     display: flex;
     flex-direction: column;
@@ -984,7 +1036,7 @@ p {
 }
 
 #pag-sopaletras b{
-    color:#484ae0;
+    color:#5c5fe6;
 }
 
 #pag-sopaletras h1{
@@ -1000,21 +1052,27 @@ p {
     margin-bottom: 0;
 }
 
+#pag-sopaletras .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
 #pag-sopaletras .caja-prueba{
     background-color: rgba(255, 255, 255, 0.283);
     width: 90%;
     border-radius: 10px;
     margin: 30px 0;
     max-width: 800px;
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pag-sopaletras .caja-prueba p{
+/* #pag-sopaletras .caja-prueba p{
     margin-bottom: 30px;
-}
+} */
 
 #pag-sopaletras input{
     background-color: rgba(240, 248, 255, 0.441);
@@ -1056,6 +1114,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding-top: 1rem;
 }
 
 .boton-clear{
@@ -1064,44 +1123,62 @@ p {
     margin: 40px;
 }
 
+#buttonAcabar{
+    color:#484ae0;
+    border: 2px solid #484ae0;
+    background-color: transparent;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: Barlow-Condensed;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+#buttonAcabar:hover{
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
 
     @media (min-width: 1200px){
 
         .caja-todo-contenido{
             width: 70%;
         }
-    
+
         .logo{
             right: 6%;
             left: 0;
             z-index: 999;
             text-align: end;
         }
-    
+
         .menu-nav{
             background-color: transparent;
             top: 0;
             width: 60%;
             padding: 20px;
         }
-    
+
         .menu-nav a{
             font-weight: bold;
             font-size: 3.5rem;
         }
-    
+
         .menu-nav li:hover a{
             opacity: 1;
         }
-    
+
         .menu-nav a::after{
             border-bottom: 3px solid black;
         }
-    
+
         .menu-nav a:hover::after{
             border-bottom: 3px solid black;
         }
-    
+
         #caja-diseño-inicio{
             height: 100%;
             width: 30%;
@@ -1110,11 +1187,11 @@ p {
             right: 0;
             margin-top: 0;
         }
-    
+
         .caja-diseño-1{
             height: 100%;
         }
-    
+
         .caja-diseño-2{
             z-index: 99999999999;
             top: 650px;
@@ -1126,9 +1203,9 @@ p {
             border-bottom: none;
             transform: rotate(90deg);
             display: none;
-         
+
         }
-    
+
         .caja-diseño-3{
             display: none;
             position: absolute;
@@ -1140,7 +1217,7 @@ p {
             border-bottom: 500px solid #99f37e;
             z-index: 99999999;
         }
-        
+
         /* Pagina acertijo */
 
         .contenedor-dias{
@@ -1197,6 +1274,10 @@ p {
     margin-top: 1rem;
     margin-bottom: 1rem;
 } */
+
+#contenedor-error{
+    display: none;
+}
 
 #contenedor-resultado{
     height: 2cm;
