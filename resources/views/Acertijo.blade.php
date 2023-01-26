@@ -11,10 +11,20 @@
 
 <body>
     <div id="pag-acertijo">
+        <!-- <div id="caja-candado">
+            <figure id="img-candado">
+                    <img src="img/candado.png" alt="candado">
+                    <div id="codigo-candado">
+                        <p>*</p>
+                        <p>*</p>
+                        <p>*</p>
+                    </div>
+            </figure>
+        </div> -->
         <h2>Completa el acertijo</h2>
         <div class="caja-prueba">
             <div class="enunciado">
-                <p>Lee el acertijo y elige la respuesta correcta</p>
+                <p>Lee el acertijo e introduce la respuesta correcta</p>
             </div>
             <div class="contenido-prueba">
                 <p>Desde el lunes hasta el viernes, soy la última en llegar, el sábado soy la primera, y el domingo a descansar.</p>
@@ -33,6 +43,9 @@
         <div class="botones">
                 <input type="text" onfocus="limpiar()" id="respuesta" placeholder="Introducir respuesta">
                 <button class="btn" onclick="comprobarVacios()">Validar</button>
+            </div>
+            <div id="contenedor-error">
+                <p>Parace que ese no es el digito correcto</p>
             </div>
             <div id="contenedor-resultado">
                 <p id="resultado">Correcto, has conseguido un dígito del candado<a id="btnSiguiente" href="{{ route ('sopadeletras') }}">

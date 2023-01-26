@@ -45,6 +45,7 @@
 
         <header>
             <div class="caja-logo">
+                <i class="fas fa-globe-europe"></i>
                 <h1 class="logo">LOGO ERC</h1>
             </div>
                 

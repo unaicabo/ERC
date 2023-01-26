@@ -8,11 +8,12 @@ function comprobarVacios() {
     }else if (respuesta != "s" && respuesta != "S"){
         document.getElementById("respuesta").style.borderColor = "red";
         document.getElementById("resultado").style.visibility= 'visible';
-        document.getElementById("resultado").innerHTML = "Parace que ese no es el digito correcto";
+        document.getElementById("contenedor-error").style.display='flex';
     }
     else{
         document.getElementById("respuesta").style.borderColor = "#0fff00";
         document.getElementById("respuesta").style.border = "2px solid #0fff00";
+        document.getElementById("contenedor-error").style.display='none';
         document.getElementById("contenedor-resultado").style.display= 'flex';
         // document.getElementById("resultado").style.visibility= 'visible';
         // document.getElementById("resultado").innerHTML = "Correcto, has consegido un digito del candado";

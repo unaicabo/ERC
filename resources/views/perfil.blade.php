@@ -10,16 +10,16 @@
     @vite(['resources/css/perfil.scss','resources/css/index.css'])
 </head>
 <body id="pag-perfil">
-
-   
- <header>
-        <div class="caja-logo">
-            <h1 class="logo">LOGO ERC</h1>
-        </div>
+    <header>
         <nav class="menu-nav">
+            <div class="row">
+                <div class="col"></div>
+                <h1 class="col">ESCAPE ROOM COMERCE</h1>
+                <div class="col justify-self-end">{{ Auth::user()->username }}<img src="./img/usersImg/{{ Auth::user()->imagen }}"></div>
+            </div>
             <ul class="row">
-                <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-play"></i></div>Nueva partida</a></li>
-                <li class="col"><a class="mi-perfil" href=""><div class="caja-icono-perfil"><i class="fas fa-user"></i></div>Mi perfil</a></li>
+                <li class="col"><a href="principal">Nueva partida</a></li>
+                <li class="col"><a href="">Perfil</a></li>
             </ul>
         </nav>
     </header>
