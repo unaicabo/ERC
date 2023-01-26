@@ -159,12 +159,5 @@
         transition: all 3s;
     }
 
-    #buttonAcabar {
-        margin-top: 40px;
-        transform: scale(0.4);
-        border-radius: 10px;
-        padding: 10px;
-    }
-
 
 </style>
