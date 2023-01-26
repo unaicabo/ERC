@@ -103,14 +103,15 @@ class UsuarioController extends Controller
         //
     }
 
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
 
         $credentials = [
             "username" => $request->usuario,
             "password" => $request->contraseina,
         ];
 
-        if(Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
 
             $request->session()->regenerate();
 
@@ -120,7 +121,8 @@ class UsuarioController extends Controller
         }
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
 
         $request->session()->invalidate();
@@ -129,7 +131,8 @@ class UsuarioController extends Controller
         return redirect(route('index'));
     }
 
-    public function crearProfesor(Request $request) {
+    public function crearProfesor(Request $request)
+    {
         $user = new User();
 
         $user->name = $request->nombre;
@@ -141,11 +144,18 @@ class UsuarioController extends Controller
         $user->rol = 'Profesor';
 
         $user->save();
-        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' 
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.'
             . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
 
         Auth::login($user);
 
         return redirect(route('index'));
+    }
+    public function listarUsuarios()
+    {
+
+        $users = User::all();
+
+        return view('CrearGrupo', compact('users'));
     }
 }

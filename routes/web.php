@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\PruebasController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -43,8 +44,8 @@ Route::get('/Puzle', function () {
 Route::get('/usuarios', [UsuarioController::class, 'index'])
     ->name('perfil');
 
-Route::get('/crearGrupos', [UsuarioController::class, 'create'])
-    ->name('CrearGrupo');
+Route::get('/crearGrupos', [UsuarioController::class, 'listarUsuarios'])
+    ->middleware('auth')->name('CrearGrupo');
 
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
@@ -65,7 +66,7 @@ Route::get('/cuestionario', function () {
 
 Route::get('/vue', function () {
     return view('vue');
- });
+});
 
 
 Route::get('/pruebaCuatro', function () {
