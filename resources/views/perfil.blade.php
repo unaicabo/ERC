@@ -68,8 +68,8 @@
                         <div id="cajaPuntDifi">
                             <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
                             <div class="d-flex">
-                                <h3><?php echo($value->puntuacion) ?></h3>
-                                <i class="fa-solid fa-star"></i>
+                                <h3><?php echo($value->tiempo) ?></h3>
+                                <i class="fa-solid fa-clock"></i>
                             </div>
                         </div>
                     </div>

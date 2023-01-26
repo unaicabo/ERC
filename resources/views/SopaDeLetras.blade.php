@@ -11,7 +11,7 @@
 </head>
 
 <body id="pag-sopaletras">
-    <div id="caja-candado">
+    <!-- <div id="caja-candado">
         <figure id="img-candado">
             <img src="img/candado.png" alt="candado">
             <div id="codigo-candado">
@@ -20,7 +20,7 @@
                 <p>*</p>
             </div>
         </figure>
-    </div>
+    </div> -->
     <h1>Completa la sopa de letras</h1>
     <div class="caja-prueba">
         <div class="enunciado">

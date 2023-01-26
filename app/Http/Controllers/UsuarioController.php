@@ -27,7 +27,12 @@ class UsuarioController extends Controller
      */
     public function create(Request $request)
     {
-        //Validar los datos
+        $users = User::all();
+
+        foreach ($users as $key => $user) {
+            Log::alert($user['username']);
+        }
+
         $user = new User();
 
         $user->name = $request->nombre;
@@ -116,6 +121,7 @@ class UsuarioController extends Controller
 
             return redirect(route('principal'));
         } else {
+            session(['errorLogin' => 'Usuario o Contraseña incorrectas']);
             return redirect(route('usuarios.login'));
         }
     }
@@ -126,7 +132,7 @@ class UsuarioController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
 
     public function crearProfesor(Request $request) {
