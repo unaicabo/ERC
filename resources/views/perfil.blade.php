@@ -12,9 +12,10 @@
 <body id="pag-perfil">
     <header>
         <nav class="menu-nav">
+            <div class="caja-logo">
+                <h1 class="logo">LOGO ERC</h1>
+            </div>
             <div class="row">
-                <div class="col"></div>
-                <h1 class="col">ESCAPE ROOM COMERCE</h1>
                 <div class="col justify-self-end">{{ Auth::user()->username }}<img src="./img/usersImg/{{ Auth::user()->imagen }}"></div>
             </div>
             <ul class="row">
