@@ -31,7 +31,18 @@
 
 </head>
 <body class="pag-principal">
-
+    <header>
+        <div class="row">
+            <h1 class="col">ERC</h1>
+            @auth
+                <div class="col"><a href="{{ route('usuarios.logout') }}"><button> Logout </button></a></div>
+            @else
+                <div class="col"><button>Demo</button></div>
+                <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Register</button></a></div>
+                <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Login</button></a></div>
+            @endauth
+        </div>
+    </header>
 <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
 </div>
