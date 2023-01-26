@@ -26,7 +26,6 @@ const formularioRegister = {
 			contraseina: '',
 			contraseina2: '',
 			imagen: '',
-			terminos: false,
 		}
 	},
 	methods: {
@@ -37,8 +36,6 @@ const formularioRegister = {
 
 			if(this.nombre == '' || this.apellidos == '' || this.usuario == '' || this.email == '' || this.contraseina == '' || this.contraseina2 == ''){
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> Introduce todos los datos');
-			} else if(!this.terminos) {
-				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> Hay que aceptar los terminos');
 			} else if(this.contraseina != this.contraseina2) {
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> Contraseñas no coinciden');
 			} else if(!regexSoloLetras.test(this.nombre)) {
@@ -49,6 +46,7 @@ const formularioRegister = {
 				$('#msgErrorRegister').html('<i class="fa-solid fa-triangle-exclamation"></i> El email tiene que ser un email');
 			} else {
 				$('#msgErrorRegister').html('');
+				console.log('Entro aquí');
 				document.getElementById('formRegister').submit();
 			}
 		}

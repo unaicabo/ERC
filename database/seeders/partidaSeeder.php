@@ -18,14 +18,16 @@ class partidaSeeder extends Seeder
         //
         $partida = new partida();
         $partida-> puntuacion = "8";
-        $partida-> participante_id = null;
-        $partida-> grupo_id = 11;
+        $partida-> participante_id = 2;
+        $partida-> dificultad = "Facil";
+        $partida-> grupo_id = null;
         $partida->save();
 
         $partida = new partida();
         $partida-> puntuacion = "5";
-        $partida-> participante_id = null;
-        $partida-> grupo_id = 11;
+        $partida-> participante_id = 2;
+        $partida-> dificultad = "Media";
+        $partida-> grupo_id = null;
         $partida->save();
     }
 }

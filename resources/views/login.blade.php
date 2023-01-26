@@ -51,7 +51,6 @@
                     <input type="file" accept="image/png,image/jpeg,imagen/jpg" placeholder="Imagen" name="imagen" id="imagenIrakaslea" v-model="imagen">
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
-                    <p>Aceptar los terminos y condiciones:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado" v-model="terminos"></p>
                     <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
                 </div>
             </form>
@@ -59,7 +58,7 @@
         <div class="form-container sign-in-container" >
             <form action="{{ route ('usuarios.login') }}" method="POST" id="formLogin">
                 @csrf
-                <h1>Iniciar sesion</h1>
+                <h1>Iniciar sesión</h1>
                 <?php
                     if(Session::has('error')){
                         if((session('error')) == 'ErrorUsContLogin'){
@@ -74,7 +73,7 @@
                 ?>
                 <input type="text" placeholder="Usuario" name="usuario" id="usuarioLogin" v-model="usuario"/>
                 <input type="password" placeholder="Contraseña" name="contraseina" id="contraseinaLogin" v-model="contraseina"/>
-                <a href="#">Has olvidado la contraseña?</a>
+                <a href="#">¿Has olvidado la contraseña?</a>
                 <button type="submit" value="login" id="login" @click="login">Entrar</button>
             </form>
         </div>

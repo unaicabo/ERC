@@ -10,11 +10,11 @@ body {
 }
 
 .contenedor{
-width: 70%;
-margin-left: 15%;
-background-color: blanchedalmond;
-margin-bottom: 3cm;
-border-radius: 15px;
+    width: 70%;
+    margin-left: 15%;
+    background-color: blanchedalmond;
+    margin-bottom: 3cm;
+    border-radius: 15px;
 }
 
 h1{
