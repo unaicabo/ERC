@@ -70,7 +70,6 @@ header button {
     width: 100%;
     font-size: 3.5rem;
     background-color: #484ae0;
-    border: 2px solid red;
 }
 
 .menu-nav ul{
@@ -120,7 +119,7 @@ header button {
 
 p {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
     font-size: 3rem;
 }
@@ -262,14 +261,7 @@ p {
     padding: 1.7rem;
 }
 
-.tarjeta {
-    /* There will be 3 cards per row */
-    flex-basis: 33.33333%;
-    padding: 1rem;
-    background-color: blanchedalmond;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-}
+
 
 .tarjetas-explicacion {
     margin-top: 10rem;
@@ -396,6 +388,7 @@ p {
     border-bottom: 500px solid #99f37e;
     z-index: 99999999;
 }
+
 .tarjeta {
     width: 100%;
     margin-bottom: 1rem;
@@ -436,6 +429,48 @@ p {
     text-align: center;
 }
 
+
+/****  Menu pagina principal   ****/
+
+.caja-logo{
+    padding: 80px;
+}
+
+#menu-principal{
+    border-bottom: 2px solid #484ae0cc;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 50px;
+}
+
+#menu-principal li{
+    border: none;
+    padding: 10px 50px;
+}
+
+#menu-principal a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Barlow-Condensed !important;
+}
+
+#menu-principal li:hover a{
+    color: #484ae0;
+}
+
+#menu-principal .fas{
+    font-size: 2.8rem;
+    color: white;
+    margin-left: 10px;
+}
+
+#menu-principal li:hover i{
+    color: #484ae0;
+}
+
+
 /* pagina principal */
 
 .pag-principal{
@@ -455,6 +490,7 @@ p {
     border-radius: 0 0 10px 10px;
     margin-top: 30px;
     padding: 15px;
+    width: 100%;
 }
 
 .pag-principal .nivel-bas{
@@ -516,7 +552,7 @@ p {
     padding-top: 20px;
 }
 
-.pag-principal a:hover{
+.pag-principal .botones a:hover{
     background-color: #484ae0a5 !important;
     border: 1px solid transparent;
     color: white;
@@ -528,7 +564,7 @@ p {
     box-shadow: none;
 }
 
-.pag-principal a{
+.pag-principal .botones a{
     border: 2px solid #484ae0;
     background-color: transparent !important;
     color: #484ae0;
@@ -576,6 +612,20 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+}
+
+#fondo-explicacion .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+#fondo-explicacion .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+    border-radius: 0 10px 10px;
+}
+
+#fondo-explicacion .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+   border-radius: 0 0 10px 10px;
 }
 
 #pag-explicacion h1{
@@ -639,6 +689,7 @@ p {
     padding: 20px 30px;
     font-size: 3rem;
     font-family: Barlow-Condensed !important;
+    margin-bottom: 50px;
 }
 
 #pag-explicacion .nivel{
@@ -646,6 +697,7 @@ p {
         background-color: rgba(0, 128, 0, 0.623);
         padding: 20px;
         margin-top: 20px;
+        width: 100%;
         border-radius: 0 0 10px 10px;
 }
 
@@ -939,6 +991,7 @@ p {
 #pag-buscaletras figure{
     width: 100%;
     max-width: 550px;
+    opacity: 0.7;
 }
 
 #pag-buscaletras img{
@@ -984,7 +1037,7 @@ p {
 }
 
 #pag-sopaletras b{
-    color:#484ae0;
+    color:#5c5fe6;
 }
 
 #pag-sopaletras h1{
@@ -1000,21 +1053,27 @@ p {
     margin-bottom: 0;
 }
 
+#pag-sopaletras .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
 #pag-sopaletras .caja-prueba{
     background-color: rgba(255, 255, 255, 0.283);
     width: 90%;
     border-radius: 10px;
     margin: 30px 0;
     max-width: 800px;
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#pag-sopaletras .caja-prueba p{
+/* #pag-sopaletras .caja-prueba p{
     margin-bottom: 30px;
-}
+} */
 
 #pag-sopaletras input{
     background-color: rgba(240, 248, 255, 0.441);
@@ -1056,6 +1115,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    padding-top: 1rem;
 }
 
 .boton-clear{

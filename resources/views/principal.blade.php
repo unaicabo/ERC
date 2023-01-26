@@ -10,42 +10,27 @@
     <!-- CSS only -->
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> --}}
     <title>Pagina Principal</title>
-
-    {{-- <header>
-        <div class="caja-logo">
-            <h1 class="logo">LOGO ERC</h1>
-        </div>
-
-        <figure id="imagen-inicio">
-            <img src="img/candado.jpg" alt="">
-        </figure>
-
-        <nav class="menu-nav">
-            <ul class="row">
-                <li class="col"><a href="">Demo</a></li>
-                <li class="col"><a href="">Register</a></li>
-                <li class="col"><a href="">Login</a></li>
-            </ul>
-        </nav>
-    </header> --}}
-
 </head>
 <body class="pag-principal">
     <header>
         <div class="row">
-            <h1 class="col">ERC</h1>
+            <div class="caja-logo">
+                <h1 class="logo">LOGO ERC</h1>
+            </div>
+            <ul id="menu-principal">
             @auth
-                <div class="col"><a href="{{ route('usuarios.logout') }}"><button> Logout </button></a></div>
+                <li class="col"><a href="{{ route('perfil') }}">Perfil</a></li>
+                <li class="col"><a href="{{ route('usuarios.logout') }}">Salir<i class="fas fa-sign-out-alt"></i></a></li>
             @else
-                <div class="col"><button>Demo</button></div>
-                <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Register</button></a></div>
-                <div class="col"><a href="{{ route ('usuarios.login') }}"><button>Login</button></a></div>
+                <li class="col"><a href="">Demo</a></li>
+                <li class="col"><a href="{{ route ('usuarios.login') }}">Login / Register</a></li>
             @endauth
+            </ul>
         </div>
     </header>
-<div>
+<!-- <div>
     <img class="foto-principal" src="/img/imagen2.png" alt="">
-</div>
+</div> -->
 
 <div class="tarjetas">
     <div class="caja-tarjeta">

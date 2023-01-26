@@ -17,8 +17,8 @@
     <div id="appForm" class="tarjeta-explicacion">
         <p id="integrantes"></p>
     <select id="usuarios">
-        @foreach ($usuarios as $usuario)
-            <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
+        @foreach ($users as $usuario)
+            <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
         @endforeach
       </select>
       <button onclick="aniadirIntegranteArray()">+</button>
