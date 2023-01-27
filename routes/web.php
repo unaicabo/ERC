@@ -81,9 +81,8 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->middleware('auth')->name('perfil');
 
-Route::get('/crearProfesor', function () {
-    return view('CrearProfesor');
-})->middleware('auth');
+Route::get('/crearProfesor', [UsuarioController::class, 'validarPaginaCrearProfesor']
+)->middleware('auth');
 Route::post('/crearProfesor', [UsuarioController::class, 'crearProfesor'])->name('crearProfesor');
 Route::get('/finpartida', [PruebasController::class, 'acabarPartida'])->middleware('auth')->name('finpartida');
 

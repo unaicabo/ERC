@@ -161,7 +161,7 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
     public function listarUsuarios()
     {
@@ -169,5 +169,16 @@ class UsuarioController extends Controller
         $users = User::all();
 
         return view('CrearGrupo', compact('users'));
+    }
+
+    public function validarPaginaCrearProfesor()
+    {
+        if(Auth::user()->rol == 'Profesor'){
+            return view('CrearProfesor');
+        } else {
+            return redirect(route('principal'));
+        }
+
+        return redirect(route('principal'));
     }
 }
