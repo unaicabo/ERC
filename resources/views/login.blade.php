@@ -53,21 +53,21 @@
                 ?>
                 <input type="text" placeholder="Usuario" name="usuario" id="usuarioLogin" v-model="usuario"/>
                 <input type="password" placeholder="Contraseña" name="contraseina" id="contraseinaLogin" v-model="contraseina"/>
-                <a href="#">¿Has olvidado la contraseña?</a>
                 <button type="submit" value="login" id="login" @click="login">Entrar</button>
+                <a href="#">¿Has olvidado la contraseña?</a>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left" id="moveToLogin">
                     <h1>Kaixo, aspaldiko!</h1>
-                    <p>Introduce usuario y contraseña para entrar en la web.</p>
+                    <p>¿Ya tienes una cuenta?</p>
                     <button type="button" class="ghost" id="signIn" @click="moveLogin()">Iniciar Sesion</button>
                 </div>
                 <div class="overlay-panel overlay-right" id="moveToRegistro">
                     <h1>Bienvenido!</h1>
-                    <p>Introduce tus datos para navegar en la web.</p>
-                    <button type="button" class="ghost" id="signUp" @click="moveRegistrar()">Registrarse</button>
+                    <p>Pulsa registro si aún no tienes una cuenta.</p>
+                    <button type="button" class="ghost" id="signUp" @click="moveRegistrar()">Registro</button>
                 </div>
             </div>
         </div>
