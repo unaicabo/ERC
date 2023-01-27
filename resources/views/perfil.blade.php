@@ -9,8 +9,9 @@
     <link href="css/index.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     @vite(['resources/css/perfil.scss','resources/css/index.css'])
 </head>
-@include('header')
+
 <body id="pag-perfil">
+@include('header')
     <main class="contenido">
         <div class="caja-usuario">
             <div class="caja-foto-usuario">

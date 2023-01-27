@@ -16,15 +16,6 @@ body {
 
 /* estilos cl */
 
-#pag-perfil{
-    display: flex;
-    flex-direction: column;
-}
-
-#pag-perfil .logo{
-    border-bottom: 1px solid white;
-}
-
 #pag-perfil .contenido{
     margin-top: 220px;
     font-size: 2rem;
@@ -35,14 +26,25 @@ body {
     justify-content: center;
 }
 
-#pag-perfil .menu-nav{
-    padding: 15px;
+#menu-principal{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end !important;
+    border: 2px solid red;
 }
 
-#pag-perfil .menu-nav a{
-    letter-spacing: 0em;
-    padding: 0;
+#menu-nav{
+    border: 2px solid green;
 }
+
+#menu-principal li{
+    border: 2px solid pink;
+}
+
+#menu-principal a{
+    border: 2px solid blue;
+}
+
 
 #pag-perfil .mi-perfil{
     display: flex;
@@ -182,8 +184,8 @@ body {
         margin: 0;
     }
 
-    .fa-star{
-        color: rgb(232, 192, 10);
+    i{
+        color: rgb(10, 10, 232);
         font-size: 3rem;
     }
 
