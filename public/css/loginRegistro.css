@@ -82,6 +82,16 @@ form {
 
 }
 
+.form-container{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #484ae0;
+}
+
+#login{
+	margin-top: 20px;
+}
+
 input[type='text'], input[type='email'], input[type='password'], input[type='file'], input[type='date'] {
 	background-color: #eee;
 	border: none;
@@ -103,7 +113,7 @@ input[type='checkbox'] {
 	overflow: hidden;
 	width: 100%;
 	max-width: 100%;
-	min-height: 100%;
+	min-height: 70%;
 }
 
 .form-container {
@@ -229,3 +239,13 @@ input[type='checkbox'] {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
+@media (min-width: 1200px){
+	.container {
+		width: 70%;
+		min-height: 70%;
+	}
+
+}
+
+

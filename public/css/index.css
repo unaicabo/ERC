@@ -119,6 +119,7 @@ p {
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 .tarjetas {
     column-count: 3;
     padding: 1.7rem;
@@ -133,6 +134,8 @@ p {
     padding-right: 0.25rem;
 }
 
+=======
+>>>>>>> Stashed changes
 .tarjetas-explicacion {
     margin-top: 10rem;
     padding: 1.7rem;
@@ -331,6 +334,177 @@ p {
     text-align: center;
 }
 
+<<<<<<< Updated upstream
+=======
+
+/****  Menu pagina principal   ****/
+
+.caja-logo{
+    padding: 80px;
+}
+
+#menu-principal{
+    border-bottom: 2px solid #484ae0cc;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 50px;
+}
+
+#menu-principal li{
+    border: none;
+    padding: 10px 50px;
+}
+
+#menu-principal a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Barlow-Condensed !important;
+}
+
+#menu-principal li:hover a{
+    color: #484ae0;
+}
+
+#menu-principal .fas{
+    font-size: 2.8rem;
+    color: white;
+    margin-left: 10px;
+}
+
+#menu-principal li:hover i{
+    color: #484ae0;
+}
+
+
+/* pagina principal */
+
+.pag-principal{
+    color: white;
+}
+
+.pag-principal .tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: center;
+}
+
+.pag-principal .nivel{
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+    padding: 15px;
+    width: 100%;
+}
+
+.pag-principal .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+.pag-principal .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+}
+
+.pag-principal .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+}
+
+.caja-tarjeta{
+    margin: 20px;
+}
+
+.pag-principal .tarjeta{
+    max-width: 600px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+}
+
+.pag-principal .texto{
+    padding: 20px;
+}
+
+.pag-principal h2{
+    padding: 20px;
+    padding-top: 30px;
+    margin: 30px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.817);
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+}
+
+.pag-principal h2::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.304);
+    width: 100%;
+}
+
+.pag-principal h2{
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+.pag-principal .foto-tarjetas{
+    width: 150px;
+}
+
+.pag-principal .botones{
+    margin-top: 20px;
+}
+
+.pag-principal .tarjeta{
+    padding-top: 20px;
+}
+
+.pag-principal .botones a:hover{
+    background-color: #484ae0a5 !important;
+    border: 1px solid transparent;
+    color: white;
+    transition: 0.7s;
+}
+
+.pag-principal .btn{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.pag-principal .botones a{
+    border: 2px solid #484ae0;
+    background-color: transparent !important;
+    color: #484ae0;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pag-principal{
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20vh;
+}
+
+.pag-principal .fa-play{
+    color: #484ae0;
+    font-size: 2.5rem;
+}
+
+.pag-principal a:hover .fa-play{
+    color: white;
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+>>>>>>> Stashed changes
 /* Pagina explicacion juego */
 
 #pag-explicacion{
@@ -453,6 +627,339 @@ p {
     padding: 10px;
 }
 
+<<<<<<< Updated upstream
+=======
+/*********** Pagina cuestionario **************/
+
+
+#cuestionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+    font-size: 2.2rem;
+    color: white;
+}
+
+#cuestionario h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#cajaPruebaCuestionario{
+    background-color: transparent !important;
+    width: 90% !important;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formCuestionario{
+    background-color: rgba(255, 255, 255, 0.283) !important;
+    color: white;
+    border-radius: 10px;
+    margin: 50px;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#labelSinRespuesta{
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+#cajaPruebaCuestionario #preguntaCuestionario {
+    height: 80px;
+    font-size: 3rem;
+}
+
+#cuestionario .text-right{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#cuestionario .text-right:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#btnNextPrueba {
+    display: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#btnNextPrueba:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+/***** Img candado *****/
+
+#caja-candado{
+    width: 100%;
+    padding: 20px 100px;
+}
+
+#img-candado{
+    width: 150px;
+    max-width: 200px;
+    position: relative;
+}
+
+#img-candado img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+#codigo-candado{
+    display: flex;
+    justify-content: center;
+    color: #484ae0;
+    padding: 0 20px;
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+}
+
+#codigo-candado p{
+    padding: 0;
+    font-size: 6rem;
+    padding: 4px;
+    margin: 0;
+}
+
+
+/***************  Pag buscar letra ***************/
+
+#pag-buscaletras h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#pag-buscaletras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white !important;
+    min-height: 100vh;
+}
+
+#pag-buscaletras .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283);
+    width: 90%;
+    border-radius: 10px;
+    margin: 30px 0;
+    max-width: 800px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pag-buscaletras .caja-prueba p{
+    margin-bottom: 30px;
+}
+
+#pag-buscaletras figure{
+    width: 100%;
+    max-width: 550px;
+    opacity: 0.7;
+}
+
+#pag-buscaletras img{
+    width: 100%;
+}
+
+#pag-buscaletras input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
+    color: white;
+}
+
+#pag-buscaletras .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-buscaletras .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+/************** Sopa letras ********************/
+
+#pag-sopaletras {
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pag-sopaletras b{
+    color:#5c5fe6;
+}
+
+#pag-sopaletras h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#pag-sopaletras .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
+#pag-sopaletras .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283);
+    width: 90%;
+    border-radius: 10px;
+    margin: 30px 0;
+    max-width: 800px;
+    /* padding: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #pag-sopaletras .caja-prueba p{
+    margin-bottom: 30px;
+} */
+
+#pag-sopaletras input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border-radius: 5px;
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
+    color: white;
+}
+
+#pag-sopaletras .botones{
+    margin:40px;
+}
+
+.respuesta-sopadeletras{
+    width: 90%;
+    max-width: 600px;
+}
+
+#pag-sopaletras .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-sopaletras .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#pag-sopaletras .contenedor-prueba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.boton-clear{
+    width: 100%;
+    text-align: center;
+    margin: 40px;
+}
+
+#buttonAcabar{
+    color:#484ae0;
+    border: 2px solid #484ae0;
+    background-color: transparent;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: Barlow-Condensed;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+#buttonAcabar:hover{
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+
+>>>>>>> Stashed changes
     @media (min-width: 1200px){
 
         .caja-todo-contenido{

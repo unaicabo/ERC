@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Grupo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
@@ -27,7 +28,22 @@ class UsuarioController extends Controller
      */
     public function create(Request $request)
     {
+
         //Validar los datos
+
+        $users = User::all();
+
+        foreach ($users as $key => $user) {
+            if ($user['username'] == $request->usuario) {
+                session(['errorRegister' => 'El nombre de usuario ya está en uso']);
+                return view('login');
+            } else if ($user['email'] == $request->email) {
+                session(['errorRegister' => 'El email ya está en uso']);
+                return view('login');
+            }
+        }
+
+
         $user = new User();
 
         $user->name = $request->nombre;
@@ -43,7 +59,7 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
 
     /**
@@ -103,14 +119,15 @@ class UsuarioController extends Controller
         //
     }
 
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
 
         $credentials = [
             "username" => $request->usuario,
             "password" => $request->contraseina,
         ];
 
-        if(Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
 
             $request->session()->regenerate();
 
@@ -120,7 +137,8 @@ class UsuarioController extends Controller
         }
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::logout();
 
         $request->session()->invalidate();
@@ -129,7 +147,8 @@ class UsuarioController extends Controller
         return redirect(route('index'));
     }
 
-    public function crearProfesor(Request $request) {
+    public function crearProfesor(Request $request)
+    {
         $user = new User();
 
         $user->name = $request->nombre;
@@ -145,6 +164,34 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
+    }
+
+    public function listarUsuarios()
+    {
+
+        $users = User::all();
+
+        return view('CrearGrupo', compact('users'));
+    }
+
+
+    public function crearGrupo(Request $request)
+    {
+
+        $grupo = new Grupo();
+        $grupo->nombre = $request->nombre;
+        $grupo->save();
+    }
+
+    public function validarPaginaCrearProfesor()
+    {
+        if (Auth::user()->rol == 'Profesor') {
+            return view('CrearProfesor');
+        } else {
+            return redirect(route('principal'));
+        }
+
+        return redirect(route('principal'));
     }
 }

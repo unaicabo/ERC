@@ -35,5 +35,29 @@ class PruebasController extends Controller
         return view('acertijo');
     }
 
+<<<<<<< Updated upstream
+=======
+    public function acabarPartida()
+    {
+        $id = session('IdPartida');
+        $partida = partida::FindOrFail($id);
+
+        $s = date_create()->getTimestamp() - session('tiempo');
+        if($s > 59) {
+            $m = floor($s/60);
+            $s = $s%60;
+            $tiempo = $m . 'min ' . $s . 's';
+        } else {
+            $tiempo = '0,' .$s;
+        }
+
+        Log::alert($tiempo);
+        $partida->tiempo = $tiempo;
+
+        $partida->save();
+
+        return redirect(route('perfil'));
+    }
+>>>>>>> Stashed changes
 
 }

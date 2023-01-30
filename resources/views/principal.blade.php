@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <!-- CSS only -->
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> --}}
+<<<<<<< Updated upstream
     <title>pagina principal</title>
 
     {{-- <header>
@@ -30,14 +31,32 @@
 </head>
 <body id="fondo-principal">
 <div>
+=======
+    <title>Pagina Principal</title>
+</head>
+<body class="pag-principal">
+@include('header')
+<!-- <div>
+>>>>>>> Stashed changes
     <img class="foto-principal" src="/img/imagen2.png" alt="">
     <p class="centrado">ERC</p>
 </div>
 
 <div class="tarjetas">
+<<<<<<< Updated upstream
     <div class="tarjeta">
         <div class="titulo">
             <h2>LA EXTORSIÓN DEL COMERCIO</h2>
+=======
+    <div class="caja-tarjeta">
+        <h2>La extorsión del comercio</h2>
+        <div class="tarjeta">
+            <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
+            <div class="texto">
+                <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
+            </div>
+            <p class="nivel nivel-bas">Basico</p>
+>>>>>>> Stashed changes
         </div>
 
         <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
@@ -51,8 +70,13 @@
         <p class="nivel">Basico</p>
 
     </div>
+<<<<<<< Updated upstream
 
 
+=======
+    <!-- <div class="caja-tarjeta">
+        <h2>La extorsión del comercio</h2>
+>>>>>>> Stashed changes
         <div class="tarjeta">
             <div class="titulo">
                 <h2>LA EXTORSIÓN DEL COMERCIO</h2>
@@ -68,9 +92,18 @@
             </div>
             <p class="nivel">Medio</p>
         </div>
+<<<<<<< Updated upstream
 
 
 
+=======
+        <div class="botones">
+            <a href="{{ route ('explicacion', 'lvl=Medio') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
+        </div>
+    </div> -->
+    <div class="caja-tarjeta">
+        <h2>La extorsión del comercio</h2>
+>>>>>>> Stashed changes
         <div class="tarjeta">
             <div class="titulo">
                 <h2>LA EXTORSIÓN DEL COMERCIO</h2>
