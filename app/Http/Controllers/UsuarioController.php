@@ -182,6 +182,8 @@ class UsuarioController extends Controller
         $grupo = new Grupo();
         $grupo->nombre = $request->nombre;
         $grupo->save();
+
+        
     }
 
     public function validarPaginaCrearProfesor()

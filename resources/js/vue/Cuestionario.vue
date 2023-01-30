@@ -14,14 +14,11 @@
             <input type="button" class="text-right" value="Responder" @click="compPregunta()"> 
             <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
         </form>
-<<<<<<< Updated upstream
-=======
 
         <input id="btnValidar" type="button" class="text-right" value="Validar" @click="compPregunta()">
         <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
 
      <a id="btnNextPrueba" :href="route('finpartida')">Terminar</a>
->>>>>>> Stashed changes
     </div>
 </template>
 
@@ -103,12 +100,8 @@
                     if(this.b > this.a && this.b > this.c && this.b > this.d) {
                         resultado.innerHTML = '<i class="fa-solid fa-b" id="animation"></i>';
 
-<<<<<<< Updated upstream
-                        document.getElementById('cajaPruebaCuestionario').appendChild(resultado);
-=======
                         document.getElementById('btnValidar').style.display = 'none';
                         document.getElementById('cajaPruebaCuestionario').insertBefore(resultado, document.getElementById('btnNextPrueba'));
->>>>>>> Stashed changes
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)"; 
 

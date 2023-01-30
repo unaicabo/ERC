@@ -14,14 +14,27 @@
     {{-- <div>
         <h1 class="centrado-pruebas">CREAR GRUPO</h1>
     </div> --}}
-    <div id="appForm" class="tarjeta-explicacion">
+    
+    <form action="" method="POST" id="formRegister">
+
+        <h1>Crear nuevo grupo</h1>
+
+        <div id="formIkaslea" class="signUpForm">
+            <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreIrakaslea"/>
+            <!-- <input type="text" name="integrantes" placeholder="Integrantes del grupo *" id="integrantes"/> -->
+            <input type="text" name="integrantes">
+            <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
+
+            <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
+        </div>
         <p id="integrantes"></p>
-    <select id="usuarios">
-        @foreach ($usuarios as $usuario)
-            <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
-        @endforeach
-      </select>
-      <button onclick="aniadirIntegranteArray()">+</button>
+        <select id="usuarios">
+            @foreach ($usuarios as $usuario)
+                <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
+            @endforeach
+        </select>
+        <button onclick="aniadirIntegranteArray()">+</button>
+    </form>
 
     </body>
     <script>

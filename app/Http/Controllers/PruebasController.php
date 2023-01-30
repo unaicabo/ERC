@@ -35,8 +35,6 @@ class PruebasController extends Controller
         return view('acertijo');
     }
 
-<<<<<<< Updated upstream
-=======
     public function acabarPartida()
     {
         $id = session('IdPartida');
@@ -58,6 +56,4 @@ class PruebasController extends Controller
 
         return redirect(route('perfil'));
     }
->>>>>>> Stashed changes
-
 }

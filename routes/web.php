@@ -43,8 +43,9 @@ Route::get('/Puzle', function () {
 Route::get('/usuarios', [UsuarioController::class, 'index'])
 ->middleware('auth')->name('perfil');
 
-Route::get('/crearGrupos', [UsuarioController::class, 'create'])
-    ->name('CrearGrupo');
+Route::get('/crearGrupos',  function () {
+    return view('CrearGrupo');
+})->name('CrearGrupo');
 
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
