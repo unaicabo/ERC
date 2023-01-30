@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-    import Candado from './components/Candados.vue';
+    import Candado from './components/CandadosAvanzado.vue';
     import route from 'ziggy';
 </script>
 

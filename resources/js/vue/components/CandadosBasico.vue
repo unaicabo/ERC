@@ -4,6 +4,7 @@
         <div class="cajaProgresoCandados">
             <div class="cajaLetra bg-primary text-white text-center display-6">{{ numUno }}</div>
             <div class="cajaLetra bg-primary text-white text-center display-6">{{ numDos }}</div>
+            <div class="cajaLetra bg-primary text-white text-center display-6">{{ numTres }}</div>
             <div class="cajaLetra bg-primary text-white text-center display-6"></div>
         </div>
     </div>
@@ -11,7 +12,7 @@
 
 <script>
    export default {
-    props: ['numUno','numDos']
+    props: ['numUno','numDos','numTres']
    }
 </script>
 
