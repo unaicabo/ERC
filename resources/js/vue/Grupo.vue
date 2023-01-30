@@ -5,11 +5,7 @@
 
         <div id="formIkaslea" class="signUpForm">
             <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreIrakaslea"/>
-            <!-- <input type="text" name="integrantes" placeholder="Integrantes del grupo *" id="integrantes"/> -->
             <p id="integrantes"></p>
-            <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
-
-            <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
         </div>
     </form>
 

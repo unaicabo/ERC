@@ -15,14 +15,25 @@
         <h1 class="centrado-pruebas">CREAR GRUPO</h1>
     </div> --}}
     <div id="appForm" class="tarjeta-explicacion">
-        <p id="integrantes"></p>
+        {{-- <p id="integrantes"></p>
     <select id="usuarios">
         @foreach ($users as $usuario)
             <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
         @endforeach
       </select>
-      <button onclick="aniadirIntegranteArray()">+</button>
-
+        <button id="enviar" type="button" class="">enviar </button>
+      <button onclick="aniadirIntegranteArray()">+</button> --}}
+    </div>
+    <div  class="tarjeta-explicacion">
+        <p id="integrantes"></p>
+        <select id="usuarios">
+            @foreach ($users as $usuario)
+                <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
+            @endforeach
+          </select>
+            <button id="enviar" type="button" class="">enviar </button>
+          <button onclick="aniadirIntegranteArray()">+</button>
+    </div>
     </body>
     <script>
         let idUsuarios = []
@@ -31,12 +42,13 @@
                 var usuario = document.getElementById('usuarios').value;
                 var miUsuario = usuario.split("-");
 
+                if (idUsuarios)
                 idUsuarios.push(miUsuario[0]);
                 nombreUsuarios.push(miUsuario[1]);
 
                 console.log(idUsuarios);
                 console.log(nombreUsuarios);
-                document.getElementById('integrantes').innerHTML = integrantes;
+                document.getElementById('integrantes').innerHTML = nombreUsuarios;
         }
 
     </script>

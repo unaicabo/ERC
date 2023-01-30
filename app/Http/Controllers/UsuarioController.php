@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Grupo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
@@ -163,5 +164,15 @@ class UsuarioController extends Controller
         $users = User::all();
 
         return view('CrearGrupo', compact('users'));
+    }
+
+    public function crearGrupo(Request $request)
+    {
+
+        $grupo = new Grupo();
+        $grupo->nombre = $request-> nombre;
+        $grupo->save();
+        $grupo->
+
     }
 }
