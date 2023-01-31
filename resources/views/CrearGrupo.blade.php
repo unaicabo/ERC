@@ -11,47 +11,21 @@
 </head>
 
 <body id="fondo-explicacion">
-    {{-- <div>
-        <h1 class="centrado-pruebas">CREAR GRUPO</h1>
-    </div> --}}
-    
-    <form action="" method="POST" id="formRegister">
-
-        <h1>Crear nuevo grupo</h1>
-
-        <div id="formIkaslea" class="signUpForm">
-            <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreIrakaslea"/>
-            <!-- <input type="text" name="integrantes" placeholder="Integrantes del grupo *" id="integrantes"/> -->
-            <input type="text" name="integrantes">
-            <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
-
-            <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
-        </div>
-        <p id="integrantes"></p>
-        <select id="usuarios">
-            @foreach ($usuarios as $usuario)
-                <option value="{{$usuario->id}}-{{$usuario->nombre}} {{$usuario->apellido}}">{{$usuario->nombre}} {{$usuario->apellido}}</option>
-            @endforeach
-        </select>
-        <button onclick="aniadirIntegranteArray()">+</button>
-    </form>
-
-    </body>
-    <script>
-        let idUsuarios = []
-        let nombreUsuarios = []
-         function aniadirIntegranteArray(){
-                var usuario = document.getElementById('usuarios').value;
-                var miUsuario = usuario.split("-");
-
-                idUsuarios.push(miUsuario[0]);
-                nombreUsuarios.push(miUsuario[1]);
-
-                console.log(idUsuarios);
-                console.log(nombreUsuarios);
-                document.getElementByName('integrantes')[0].value = nombreUsuarios;
-        }
-
-    </script>
+    <div id="formCrearGrupos">
+        <form action="{{ route('principal') }}" method="GET" id="formCrearGrupos">
+            <h1>Crear nuevo grupo</h1>
+            <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreGrupo"/>
+            <input type="submit" id="btnCrearGrupo" value="Crear Grupo">
+            <h2>INTEGRANTES</h2>
+            <div id="cajaIntegrantes"></div>
+            <select id="usuarios">
+                @foreach ($users as $usuario)
+                    <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
+                @endforeach
+            </select>
+            <input type="button" id="aniadirIntegrante" value="+">
+        </form>
+    </div>
+</body>
 </html>
 

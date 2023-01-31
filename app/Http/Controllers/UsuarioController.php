@@ -176,14 +176,22 @@ class UsuarioController extends Controller
     }
 
 
-    public function crearGrupo(Request $request)
+    public function crearGrupo()
     {
+        $data = json_decode(file_get_contents("php://input"), true);
 
         $grupo = new Grupo();
-        $grupo->nombre = $request->nombre;
+        $grupo->nombre = $data['groupName'];
         $grupo->save();
 
-        
+        foreach ($data['usersId'] as $key => $value) {
+            $user = User::findOrFail($value);
+            $user->grupo_id = $grupo->id;
+            $user->save();
+        }
+
+        return redirect(route('principal'));
+        Log::alert('El joputa no me hace');
     }
 
     public function validarPaginaCrearProfesor()
