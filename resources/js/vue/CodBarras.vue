@@ -1,7 +1,7 @@
 <template>
     <Candado numUno="1"></Candado>
 
-    <h1 class="ttitulo">Segunda Prueba</h1>
+    <h1 class="titulo">Segunda Prueba</h1>
 
     <div class="caja-tarjetas">
         <div id="cajaPrueba" class="tarjeta ml-1 w-50 mx-auto">
