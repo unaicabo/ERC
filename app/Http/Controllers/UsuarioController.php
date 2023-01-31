@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grupo;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -180,5 +181,20 @@ class UsuarioController extends Controller
         }
 
         return redirect(route('principal'));
+    }
+
+    public function crearGrupo()
+    {
+        $data = json_decode(file_get_contents("php://input"), true);
+
+        $grupo = new Grupo();
+        $grupo->nombre = $data['groupName'];
+        $grupo->save();
+
+        foreach ($data['usersId'] as $key => $value) {
+            $user = User::findOrFail($value);
+            $user->grupo_id = $grupo->id;
+            $user->save();
+        }
     }
 }

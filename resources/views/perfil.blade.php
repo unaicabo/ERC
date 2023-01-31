@@ -31,7 +31,7 @@
                 <div>
                     <div class="usuario-icono"><i class="fas fa-users"></i></div>
                     <dt>Grupo</dt>
-                    <dd>{{ Auth::user()->grupo_id }}</dd>
+                    <dd>{{ Auth::user()->grupo->nombre }}</dd>
                 </div>
 
                 <div>
