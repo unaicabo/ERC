@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('grupos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 20);
-            $table->string('puntuacion', 15);
             $table->timestamps();
         });
     }

@@ -32,18 +32,13 @@
                 </div>
 
                 <?php
-
-                $nivel = $_GET['lvl'];
-                if ($nivel == 'Basico') {
-                    echo '<p class=nivel  nivel-bas">Básico</p>';
-                } elseif ($nivel == 'Avanzado') {
-                    echo '<p class="nivel-avan">Avanzado</p>';
-                }
-
+                    $nivel = $_GET['lvl'];
+                    if ($nivel == 'Basico') {
+                        echo '<p class=nivel  nivel-bas">Básico</p>';
+                    } elseif ($nivel == 'Avanzado') {
+                        echo '<p class="nivel-avan">Avanzado</p>';
+                    }
                 ?>
-
-
-
             </div>
             <div class="botones">
                 <a href="{{ route('iniciarPrueba') }}"><button class="btn">Empezar a jugar</button></a>
