@@ -13,9 +13,6 @@
 </head>
 <body class="pag-principal">
 @include('header')
-<!-- <div>
-    <img class="foto-principal" src="/img/imagen2.png" alt="">
-</div> -->
 
 <div class="tarjetas">
     <div class="caja-tarjeta">
