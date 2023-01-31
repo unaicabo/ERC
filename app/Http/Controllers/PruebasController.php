@@ -29,7 +29,6 @@ class PruebasController extends Controller
         $partida->grupo_id = $grupo;
         $partida->participante_id = $usuario;
         $partida->dificultad = session('lvl');
-        $partida->puntuacion = "0";
 
         $partida->save();
 
@@ -63,4 +62,17 @@ class PruebasController extends Controller
         return redirect(route('perfil'));
     }
 
+    public function partidasByUserId($id)
+    {
+        $partidas = Partida::all();
+        $partidasReturn = [];
+
+        foreach ($partidas as $key => $value) {
+            if($value->participante_id == $id){
+                array_push($partidasReturn, $value);
+            }
+        }
+
+        return $partidasReturn;
+    }
 }
