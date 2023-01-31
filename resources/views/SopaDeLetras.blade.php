@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     {{-- @vite(['resources/js/app.js']) --}}
     <title>Sopa de letras</title>
+    <script src="js/jquery.js"></script>
 </head>
 
 <body id="pag-sopaletras">
@@ -35,7 +36,7 @@
 
         <div class="contenedor-prueba">
 
-            <table class="tablasopaletras">
+            <table id="tablasopaletras" class="tablasopaletras">
                 {{-- Fila 1 --}}
                 <tr>
                     <td id="letra-f1-c1">
@@ -782,7 +783,8 @@
                 href="{{ route('buscarletra') }}"><button class="btn">Siguiente prueba</button></a></p>
     </div>
 
-    <script src="js/pintar.js"></script>
+    <script src="js/sopaletras.js"></script>
+
     <script src="js/validarSopaLetras.js"></script>
 </body>
 
