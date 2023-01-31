@@ -199,24 +199,5 @@ body {
 
 @media (min-width: 1600px){
 
-    #pag-perfil .contenido{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .caja-usuario{
-        width: 40%;
-    }
-
-    #partidas{
-        width: 45%;
-        padding: 0;
-
-        h2{
-            margin: 0;
-        }
-    }
 
 }

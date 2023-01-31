@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | ERC</title>
     <!--link rel="stylesheet" href="./view/css/generalStyles.css"-->
-    <link rel="stylesheet" href="./css/loginRegistro.css">
+    <link rel="stylesheet" href="./css/index.css">
 
     <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body id="pag-login">
     <?php 
         if(session()->has('errorRegister')){
             echo('<div class="container right-panel-active" id="container">');

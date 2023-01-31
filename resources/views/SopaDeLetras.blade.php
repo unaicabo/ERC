@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,16 +11,6 @@
 </head>
 
 <body id="pag-sopaletras">
-    <!-- <div id="caja-candado">
-        <figure id="img-candado">
-            <img src="img/candado.png" alt="candado">
-            <div id="codigo-candado">
-                <p>*</p>
-                <p>*</p>
-                <p>*</p>
-            </div>
-        </figure>
-    </div> -->
     <h1>Completa la sopa de letras</h1>
     <div class="caja-prueba">
         <div class="enunciado">

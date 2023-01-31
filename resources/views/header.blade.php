@@ -1,7 +1,7 @@
 <header>
     <div class="row">
         <div class="caja-logo">
-            <h1 class="logo">LOGO ERC</h1>
+            <h1 class="logo">ERC</h1>
         </div>
         <nav id="menu-nav">
             <ul id="menu-principal">
