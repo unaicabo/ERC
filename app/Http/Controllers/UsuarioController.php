@@ -110,9 +110,14 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        $user->partidas->each->delete();
+        //$user->grupos->each->delete();
+        $user->delete();
+
+        return redirect(route('principal'));
     }
 
     public function login(Request $request)

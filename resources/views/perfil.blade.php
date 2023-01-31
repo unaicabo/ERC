@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Perfil | {{ Auth::user()->name }}</title>
     <link href="css/index.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    @vite(['resources/css/perfil.scss','resources/css/index.css'])
+    @vite(['resources/css/perfil.scss','resources/css/index.css','resources/js/perfil.js'])
 </head>
 
 <body id="pag-perfil">
@@ -18,6 +18,9 @@
                 <figure id="img-usuario">
                     <img src="./img/usersImg/{{ Auth::user()->imagen }}" alt="Foto Perfil">
                 </figure>
+                <form action="{{ route('eliminar') }}" method="GET" id="formEliminarCuenta">
+                    <input type="submit" id="btnEliminarCuenta" value="Eliminar cuenta">
+                </form>
                 <p class="usuario-nombre">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>
             </div>
 
@@ -70,5 +73,6 @@
     
     <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

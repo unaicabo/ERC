@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('participante_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('grupo_id');
             $table->string('dificultad', 30);
             $table->string('tiempo')->nullable();
             //Nullable??
             $table->foreign('grupo_id')->references('id')->on('grupos');
-            $table->foreign('participante_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
