@@ -45,9 +45,9 @@
         <div id="partidas">
             <h2>Mis partidas</h2>
             <?php
-                use App\Http\Controllers\PartidaController;
+                use App\Http\Controllers\PruebasController;
                 
-                $partidaController = new PartidaController;
+                $partidaController = new PruebasController;
                 $partidas = $partidaController->partidasByUserId(Auth::user()->id);
                 foreach ($partidas as $key => $value) {
                     ?>
