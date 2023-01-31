@@ -27,7 +27,7 @@ class PruebasController extends Controller
 
         //$partida->tiempo = $hora;
         $partida->grupo_id = $grupo;
-        $partida->participante_id = $usuario;
+        $partida->user_id = $usuario;
         $partida->dificultad = session('lvl');
 
         $partida->save();
@@ -68,7 +68,7 @@ class PruebasController extends Controller
         $partidasReturn = [];
 
         foreach ($partidas as $key => $value) {
-            if($value->participante_id == $id){
+            if($value->user_id == $id){
                 array_push($partidasReturn, $value);
             }
         }

@@ -88,3 +88,4 @@ Route::get('/finpartida', [PruebasController::class, 'acabarPartida'])->middlewa
 Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
+Route::get('/destroy', [UsuarioController::class, 'destroy'])->name('eliminar');
