@@ -4,7 +4,6 @@ window.addEventListener("load", function() {
 
 function borrarCuenta(event) {
     event.preventDefault();
-
     Swal.fire({
         text: "Estas seguro de que quieres borrar tu cuenta?",
         icon: 'warning',

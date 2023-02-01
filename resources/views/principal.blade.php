@@ -31,7 +31,6 @@
     <!-- <div class="caja-tarjeta">
         <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
-
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
             <div class="texto">
                 <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
