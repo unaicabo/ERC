@@ -487,11 +487,11 @@ body {
 
 #pag-login input[type='checkbox'] {
 	margin-left: 5px;
-} 
+}
 
 #pag-login .container {
 	background-color: #282828;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
@@ -550,7 +550,7 @@ body {
 		opacity: 0;
 		z-index: 1;
 	}
-	
+
 	50%, 100% {
 		opacity: 1;
 		z-index: 5;
@@ -1006,6 +1006,20 @@ body{
     width: 100%;
 }
 
+#pag-acertijo .progreso-candados h2 {
+    text-shadow: none;
+    color: white;
+    text-transform: none;
+    font-weight: normal;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: normal;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 #pag-acertijo .caja-prueba{
     background-color: rgba(255, 255, 255, 0.283);
     color: white;
@@ -1451,7 +1465,6 @@ body{
     align-self: center;
     transition: all 2s;
     margin-bottom: 50px;
-    padding: 30px;
 }
 
 #btnSiguientePrueba{
@@ -1459,8 +1472,8 @@ body{
 }
 
 
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 /***** Pagina cod de barras ********/

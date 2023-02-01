@@ -2,7 +2,7 @@
     <Candado/>
 
     <h1 class="titulo">Primera Prueba</h1>
-   
+
     <div class="caja-tarjetas">
         <div id="cajaPrueba" class="tarjeta ml-1 w-50 mx-auto">
         <p class="texto text-center mx-auto w-75">Para obtener el primer número del candado azul tendrás que calcular el IVA del siguiente PVP: <b>45,67</b>.<br>El segundo decimal del importe será será el número del candado.</p>
@@ -13,7 +13,7 @@
     <a id="btnSiguientePrueba" :href="route('codBarras')"><button class="btn">Siguiente prueba</button></a>
     <label class="text-danger" id="labelError">{{ mensajeError }}</label>
     </div>
-    
+
 </template>
 
 <script setup>
@@ -62,13 +62,13 @@
                         document.getElementById("animation").style.display = 'block';
 
                         setTimeout(() => {
-                                document.getElementById("animation").style.transform = "scale(8)";
+                                document.getElementById("animation").style.transform = "scale(5)";
                         }, 1);
                     }
                 } else if(this.numClickBtn == 1) {
                     this.numClickBtn = 0;
                     this.textButton = 'Responder';
-                    
+
                     document.getElementById("animation").style.transform = "scale(1)";
                     document.getElementById('textNumero').style.display = 'block';
                     document.getElementById("animation").style.display = 'none';
