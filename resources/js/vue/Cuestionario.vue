@@ -1,5 +1,6 @@
 <template>
     <Candado numUno="S" numDos="7" numTres="P"/>
+    <i class="fa-solid fa-b" id="animation"></i>
 
     <h1 class="text-center">Cuestionario</h1>
     <h3 class="text-center mx-auto w-75"></h3>
@@ -16,7 +17,7 @@
         <input id="btnValidar" type="button" class="text-right" value="Validar" @click="compPregunta()">
         <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
 
-     <a id="btnNextPrueba" :href="route('finpartida')">Terminar</a>
+    <a id="btnNextPrueba" :href="route('finpartida')">Terminar</a>
     </div>
 </template>
 
@@ -26,7 +27,7 @@
 </script>
 
 <script>
-   export default {
+    export default {
         data() {
             return {
                 a: 0,
