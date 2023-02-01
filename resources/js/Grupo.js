@@ -32,7 +32,8 @@ function crearGrupo(event) {
     axios.post('/api/hacerGrupo',{
         usersId: idUsuarios,
         groupName: nombreGrupo
+    })
+    .then(response => {
+        document.getElementById('formCrearGrupos').submit();
     });
-
-    document.getElementById('formCrearGrupos').submit();
 }

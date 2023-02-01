@@ -10,12 +10,14 @@
 </head>
 
 <body id="fondo-explicacion">
+
     <form action="{{ route('principal') }}" method="GET" id="formCrearGrupos">
         <h1>Crear nuevo grupo</h1>
         <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreGrupo"/>
         <input type="submit" id="btnCrearGrupo" value="Crear Grupo">
         <h2>INTEGRANTES</h2>
         <div id="cajaIntegrantes"></div>
+
         <select id="usuarios">
             @foreach ($users as $usuario)
                 <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
@@ -24,3 +26,4 @@
         <input type="button" id="aniadirIntegrante" value="+">
     </form>
 </body>
+

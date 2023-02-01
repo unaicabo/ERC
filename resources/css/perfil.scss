@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -180,7 +181,62 @@ body {
     }
 }
 
+.swal2-popup {
+    font-size: 2rem !important;
+}
+
 @media (min-width: 1600px){
 
+    #pag-perfil .contenido{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .caja-usuario{
+        width: 40%;
+    }
+
+    #partidas{
+        width: 45%;
+        padding: 0;
+
+
+        h2{
+            margin: 0;
+        }
+
+    }
+
+    .d-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0 20px;
+        border-top: 1px solid rgb(206, 200, 200);
+    }
+
+    h3{
+        font-size: 3.4rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    i{
+        color: rgb(10, 10, 232);
+        font-size: 3rem;
+    }
+
+    h5{
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 30px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 1600px){
 
 }

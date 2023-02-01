@@ -11,7 +11,7 @@
 
 </head>
 <body id="pag-login">
-    <?php 
+    <?php
         if(session()->has('errorRegister')){
             echo('<div class="container right-panel-active" id="container">');
         } else {
@@ -37,7 +37,7 @@
                     <input type="file" accept="image/png,image/jpeg,imagen/jpg" placeholder="Imagen" name="imagen" id="imagenIrakaslea" v-model="imagen">
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
-                    
+
                 </div>
                 <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
             </form>
