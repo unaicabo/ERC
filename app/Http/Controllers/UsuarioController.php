@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupo;
 use App\Models\User;
-use App\Models\Grupo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
@@ -32,10 +31,10 @@ class UsuarioController extends Controller
         $users = User::all();
 
         foreach ($users as $key => $user) {
-            if($user['username'] == $request->usuario) {
+            if ($user['username'] == $request->usuario) {
                 session(['errorRegister' => 'El nombre de usuario ya está en uso']);
                 return view('login');
-            } else if($user['email'] == $request->email){
+            } else if ($user['email'] == $request->email) {
                 session(['errorRegister' => 'El email ya está en uso']);
                 return view('login');
             }
@@ -178,19 +177,9 @@ class UsuarioController extends Controller
         return view('CrearGrupo', compact('users'));
     }
 
-<<<<<<< HEAD
-    public function crearGrupo(Request $request)
-    {
-
-        $grupo = new Grupo();
-        $grupo->nombre = $request-> nombre;
-        $grupo->save();
-        $grupo->
-
-=======
     public function validarPaginaCrearProfesor()
     {
-        if(Auth::user()->rol == 'Profesor'){
+        if (Auth::user()->rol == 'Profesor') {
             return view('CrearProfesor');
         } else {
             return redirect(route('principal'));
@@ -212,6 +201,5 @@ class UsuarioController extends Controller
             $user->grupo_id = $grupo->id;
             $user->save();
         }
->>>>>>> 46d83cc8a863bc5f744400c868835f419258dcf2
     }
 }

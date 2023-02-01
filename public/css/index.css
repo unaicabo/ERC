@@ -1559,3 +1559,65 @@ p {
     display: none;
 }
 
+/*Pagina crear Grupo*/
+.formCrearGrupos{
+    background: #2b2b2b;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 75rem;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+    font-size: 2rem;
+    color: white;
+    font-family: Barlow-Condensed !important;
+}
+
+#formCrearGrupos input[type='text'] {
+	background-color: rgba(238, 238, 238, 0.76);
+	border-radius: 5px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	font-size: 2rem;
+	max-width: 400px;
+}
+#btnCrearGrupo  {
+	border-radius: 10px;
+	border: 2px solid #484ae0;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 3rem;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    font-family: Barlow-Condensed !important;
+}
+
+.desplegable {
+    background-color: rgba(238, 238, 238, 0.76);
+	border-radius: 5px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	font-size: 2rem;
+	max-width: 400px;
+  }
+  #aniadirIntegrante{
+    border-radius: 10px;
+	border: 2px solid #484ae0;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 3rem;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    font-family: Barlow-Condensed !important;
+  }
