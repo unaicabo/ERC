@@ -41,8 +41,7 @@ Route::get('/Puzle', function () {
 Route::get('/usuarios', [UsuarioController::class, 'index'])
 ->middleware('auth')->name('perfil');
 
-Route::get('/crearGrupos', [UsuarioController::class, 'listarUsuarios'])
-    ->middleware('auth')->name('CrearGrupo');
+Route::get('/crearGrupos',[UsuarioController::class, 'listarUsuarios'])->middleware('auth')->name('CrearGrupo');
 
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
@@ -89,3 +88,4 @@ Route::get('/finpartida', [PruebasController::class, 'acabarPartida'])->middlewa
 Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
+Route::get('/destroy', [UsuarioController::class, 'destroy'])->name('eliminar');

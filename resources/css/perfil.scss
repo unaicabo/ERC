@@ -17,32 +17,13 @@ body {
 /* estilos cl */
 
 #pag-perfil .contenido{
-    margin-top: 220px;
+    margin-top: 50px;
     font-size: 2rem;
     padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#menu-principal{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end !important;
-    border: 2px solid red;
-}
-
-#menu-nav{
-    border: 2px solid green;
-}
-
-#menu-principal li{
-    border: 2px solid pink;
-}
-
-#menu-principal a{
-    border: 2px solid blue;
 }
 
 
@@ -126,6 +107,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+    margin: auto;
 }
 
 .usuario-icono i{
@@ -199,24 +181,5 @@ body {
 
 @media (min-width: 1600px){
 
-    #pag-perfil .contenido{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
-    .caja-usuario{
-        width: 40%;
-    }
-
-    #partidas{
-        width: 45%;
-        padding: 0;
-
-        h2{
-            margin: 0;
-        }
-    }
 
 }

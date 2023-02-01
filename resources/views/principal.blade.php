@@ -13,9 +13,6 @@
 </head>
 <body class="pag-principal">
 @include('header')
-<!-- <div>
-    <img class="foto-principal" src="/img/imagen2.png" alt="">
-</div> -->
 
 <div class="tarjetas">
     <div class="caja-tarjeta">
@@ -25,7 +22,7 @@
             <div class="texto">
                 <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
             </div>
-            <p class="nivel nivel-bas">Basico</p>
+            <p class="nivel nivel-bas">Básico</p>
         </div>
         <div class="botones">
                 <a href="{{ route ('explicacion', 'lvl=Basico') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
