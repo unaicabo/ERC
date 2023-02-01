@@ -563,11 +563,11 @@ p {
 
 #pag-login input[type='checkbox'] {
 	margin-left: 5px;
-} 
+}
 
 #pag-login .container {
 	background-color: #282828;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
@@ -626,7 +626,7 @@ p {
 		opacity: 0;
 		z-index: 1;
 	}
-	
+
 	50%, 100% {
 		opacity: 1;
 		z-index: 5;
