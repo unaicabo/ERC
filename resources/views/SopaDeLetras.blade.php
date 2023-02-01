@@ -236,7 +236,7 @@
                         O
                     </td>
                     <td id="letra-f5-c5">
-                        N
+                        A
                     </td>
                     <td id="letra-f5-c6">
                         E
@@ -287,7 +287,7 @@
                         R
                     </td>
                     <td id="letra-f6-c6">
-                        A
+                        L
                     </td>
                     <td id="letra-f6-c7">
                         T
@@ -338,7 +338,7 @@
                         Ü
                     </td>
                     <td id="letra-f7-c7">
-                        R
+                        B
                     </td>
                     <td id="letra-f7-c8">
                         O
@@ -440,7 +440,7 @@
                         T
                     </td>
                     <td id="letra-f9-c9">
-                        B
+                        R
                     </td>
                     <td id="letra-f9-c10">
                         S
@@ -491,7 +491,7 @@
                         Y
                     </td>
                     <td id="letra-f10-c10">
-                        L
+                        A
                     </td>
                     <td id="letra-f10-c11">
                         R
@@ -542,7 +542,7 @@
                         N
                     </td>
                     <td id="letra-f11-c11">
-                        A
+                        N
                     </td>
                     <td id="letra-f11-c12">
                         S
