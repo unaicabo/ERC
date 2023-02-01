@@ -1,8 +1,6 @@
 <template>
     <div class="w-50 progreso-candados">
-        <figure class="img-candado">
-            <img src="img/candado.png" alt="candado">
-        </figure>
+        <h2>Progreso de candado:</h2>
         <div class="cajaProgresoCandados">
             <div class="cajaLetra bg-primary text-white text-center display-6">{{ numUno }}</div>
             <div class="cajaLetra bg-primary text-white text-center display-6">{{ numDos }}</div>

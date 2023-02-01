@@ -51,7 +51,7 @@ class PruebasController extends Controller
             $s = $s%60;
             $tiempo = $m . 'min ' . $s . 's';
         } else {
-            $tiempo = '0,' .$s;
+            $tiempo = $s . 's';
         }
 
         Log::alert($tiempo);
