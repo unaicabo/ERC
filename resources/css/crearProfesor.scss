@@ -1,49 +1,84 @@
-#formNewProfe {
-    margin: auto;
-    margin-top: 10%;
-    background-color: lightgrey;
-    border-radius: 5px;
-    width: 40%;
-    padding: 20px;
-    padding-top: 10px;
-    padding-inline: 30px;
-    box-shadow: 5px 5px 40px;
+#pag-crearprofesor{
+    font-size: 2.5rem;
+ 
+}
+
+#formNewProfe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
-        font-weight: bold;
+        color: rgba(255, 255, 255, 0.779);
+        text-transform: uppercase;
+        font-weight: normal;
         text-align: center;
+        padding: 50px;
+        font-size: 4rem;
+        letter-spacing: 0.1em;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+#formRegister {
+    background-color: rgba(211, 211, 211, 0.349);
+    border: 2px solid #484ae0;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 20px;
+    padding-inline: 30px;
+    box-shadow: 5px 5px 40px;
+    color: rgb(73, 73, 73);
+
+        input {
+        background-color: #dbdbdb5f;
+        color: white;
+        border: 0px;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 1.1em;
+        border-bottom: 2px solid #484ae0;
     }
 
-    form {
-        margin-top: 20px;
+    input:hover{
+        border: 2px solid #484ae0;
+        color: #252525;
+    }
 
         .cajaInput {
             margin-top: 10px;
+            
 
             label {
                 font-size: 1.1em;
+                color: white;
             }
         }
 
-        #btnSubmit {
-            margin-top: 20px;
+        
+    }
+
+    #btnSubmit {
+        text-align: center;
+        input{
+            margin: 10px;
+            margin-bottom: 50px;
+            padding: 10px 20px;
             text-align: center;
-            margin-right: 10%;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid white;
+            text-transform: uppercase;
+            background-color: transparent;
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+        }
 
-            input {
-                background-color: #252525;
-                color: white;
-                border: 0px;
-                border-radius: 5px;
-                padding: 5px;
-                font-size: 1.1em;
-            }
-
-            input:hover{
-
-                background-color: white;
-                color: #252525;
-            }
+        input:hover{
+            color: #484ae0;
+            border: 2px solid #484ae0;
         }
     }
-}

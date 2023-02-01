@@ -30,6 +30,16 @@
         margin-bottom: 50px;
     }
 
+    .img-candado{
+        width: 20%;
+        max-width: 300px;
+    }
+
+    .img-candado img{
+        width: 100%;
+        opacity: 0.8;
+    }
+
     .cajaProgresoCandados {
         height: 50px;
         width: 200px;
@@ -38,10 +48,12 @@
     }
     .cajaProgresoCandados .cajaLetra {
         margin: 3px;
-        height: 100%;
-        width: 25%;
+        height: 40px;
+        width: 50px;
         background-color: none;
-        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 </style>

@@ -15,43 +15,45 @@ html{
 
 body {
     font-family: Barlow-Condensed !important;
-    background-color: rgb(38, 38, 38);
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-/* Pagina inicio */
-/*
-
-
-#imagen-inicio img{
-    width: 100%;
-}
-
-.menu-nav ul{
-    list-style: none;
-    text-align: center;
-    padding-right: 12px;
-    box-shadow: 0px 5px 5px #888888;
-}
-
-header button {
-    border: 0px;
-    border-radius: 10px;
-    width: 100%;
-    height: 60%;
-    margin-top: 6px;
-}
-*/
-/* */
 
 /******* Pagina inicio ********/
+.caja-logo{
+    padding-left: 5%;
+}
+
 .logo{
     padding: 50px;
-    position: absolute;
-    top: 10px;
-    right: 30px;
+    color: red;
+    font-size: 7rem;
+    position: relative;
+    z-index: 9999;
+    letter-spacing: 0.1em;
+}
+
+.logo::after{
+    content: "ERC";
+    display: inline-block;
     color: white;
-    font-size: 5rem;
+    position: absolute;
+    top: 46px;
+    left: 60px;
+}
+
+.logo::before{
+    content: "ERC";
+    display: inline-block;
+    color: #484ae0;
+    position: absolute;
+    top: 50px;
+    left: 54px;
 }
 
 #imagen-inicio{
@@ -115,13 +117,6 @@ header button {
     margin-top: 50px;
     text-align: center;
     font-size: 8rem;
-}
-
-p {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    font-size: 3rem;
 }
 
 .caja-diseño{
@@ -256,36 +251,12 @@ p {
     text-align: center;
 }
 
-.tarjetas {
-    column-count: 3;
-    padding: 1.7rem;
-}
-
-
-
 .tarjetas-explicacion {
-    margin-top: 10rem;
     padding: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-.tarjeta-explicacion {
-    padding: 1rem;
-    background-color: blanchedalmond;
-}
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    /* align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    backdrop-filter: blur(10px); */
 }
 
 .botones {
@@ -300,31 +271,6 @@ p {
     margin-right: 20px;
     font-size: 1.7rem;
     color: white;
-}
-
-.btn {
-    background-color: #484ae0;
-    color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 3px;
-    padding: 10px;
-    letter-spacing: 0.1em;
-    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
-    cursor: pointer;
-}
-
-.texto {
-    margin: 5%;
-    font-size: 2.5rem;
-}
-
-.nivel{
-    color: white;
-    background-color: green;
-    padding: 10px;
-    margin-top: 20px;
 }
 
 .foto-tarjetas {
@@ -389,11 +335,6 @@ p {
     z-index: 99999999;
 }
 
-.tarjeta {
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
 .tarjetas-explicacion {
     flex-direction: column;
     margin-top: 10rem;
@@ -429,12 +370,270 @@ p {
     text-align: center;
 }
 
+/********** Login ***********/
+
+#pag-login{
+	background: #2b2b2b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 2rem;
+	color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Barlow-Condensed !important;
+}
+
+#pag-login h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 5% 2.5% 2.5% 2.5%;
+	letter-spacing: 0.1em;
+    font-size: 4rem;
+}
+
+#formLogin h1{
+	color:#484ae0;
+}
+
+#formLogin button{
+	color:#484ae0;
+}
+
+#formRegister button{
+	color:#484ae0;
+}
+
+#formRegister h1{
+	color:#484ae0;
+}
+
+#pag-login h2 {
+	text-align: center;
+}
+
+#pag-login p {
+	font-size: 2.5rem;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+#pag-login span {
+	font-size: 12px;
+}
+
+#pag-login a {
+	color: white;
+	font-size: 2.5rem;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+#pag-login button {
+	border-radius: 10px;
+	border: 2px solid #484ae0;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 3rem;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    font-family: Barlow-Condensed !important;
+}
+
+#pag-login button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+#pag-login form {
+	background-color: #282828;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+
+}
+
+#pag-login .form-container{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #484ae0;
+}
+
+#login{
+	margin-top: 20px;
+}
+
+#pag-login input[type='text'], input[type='email'], input[type='password'], input[type='file'], input[type='date'] {
+	background-color: rgba(238, 238, 238, 0.76);
+	border-radius: 5px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	font-size: 2rem;
+	max-width: 400px;
+}
+
+#pag-login input[type='checkbox'] {
+	margin-left: 5px;
+} 
+
+#pag-login .container {
+	background-color: #282828;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 100%;
+	min-height: 70%;
+}
+
+#pag-login .form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+#pag-login .sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+#pag-login .container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+#pag-login .sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	background-color: white;
+	z-index: 1;
+}
+
+#pag-login .container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+	overflow-y: scroll;
+}
+
+#pag-login .button-container{
+    display: flex;
+}
+
+#pag-login .button-container > * {
+   margin: 10px;
+}
+#pag-login .warn{
+    color: red;
+    margin: 0px !important;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+#pag-login .overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+#pag-login .container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+#pag-login .overlay {
+	background: #484ae0;
+	background: -webkit-linear-gradient(to right, #484ae0, #4184ff);
+	background: linear-gradient(to right, #484ae0, #4184ff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+#pag-login .container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+#pag-login .overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+#pag-login .overlay-left {
+	transform: translateX(-20%);
+}
+
+#pag-login .container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+#pag-login .overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+#pag-login .container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+@media (min-width: 1200px){
+	#pag-login .container {
+		width: 70%;
+		min-height: 70%;
+	}
+
+}
+
 
 /****  Menu pagina principal   ****/
-
-.caja-logo{
-    padding: 80px;
-}
 
 #menu-principal{
     border-bottom: 2px solid #484ae0cc;
@@ -471,6 +670,85 @@ p {
 }
 
 
+/* css generico **/
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caja-tarjetas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.titulo{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 3rem;
+    font-family: Barlow-Condensed !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+}
+
+
+.nivel{
+    color: white;
+    background-color: green;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.texto {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.tarjeta{
+    width: 90% !important;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 /* pagina principal */
 
 .pag-principal{
@@ -484,6 +762,7 @@ p {
     margin: 20px;
     margin-top: 0;
     padding-top: 0;
+    justify-content: center;
 }
 
 .pag-principal .nivel{
@@ -510,10 +789,14 @@ p {
 }
 
 .pag-principal .tarjeta{
-    max-width: 800px;
+    max-width: 600px;
     padding: 0;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.352);
+}
+
+.pag-principal .texto{
+    padding: 20px;
 }
 
 .pag-principal h2{
@@ -526,6 +809,7 @@ p {
     text-align: center;
     color: rgba(255, 255, 255, 0.817);
     text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    letter-spacing: 0.1em;
 }
 
 .pag-principal h2::after{
@@ -533,11 +817,6 @@ p {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.304);
     width: 100%;
-}
-
-.pag-principal h2{
-    font-weight: normal;
-    letter-spacing: 0.1em;
 }
 
 .pag-principal .foto-tarjetas{
@@ -1024,17 +1303,17 @@ p {
 }
 
 /************** Sopa letras ********************/
-
+/*
 #pag-sopaletras {
     background-image: url(../img/fondo3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 140vh;
+    margin-bottom: 10vh;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}*/
 
 #pag-sopaletras b{
     color:#5c5fe6;
@@ -1142,18 +1421,63 @@ p {
     transition: 0.5s;
 }
 
+/***** Pagina Calcular iva ******/
+
+#btnSiguientePrueba {
+    display: none;
+    margin: auto;
+}
+
+#btnResponder{
+    margin-top: 30px;
+}
+
+#labelError {
+    display: none;
+    align-self: center;
+}
+
+#textNumero {
+    font-size: 4em;
+    width: 30%;
+    height: 100%;
+    align-self: center;
+    text-align: center;
+    max-width: 85px;
+}
+
+#animation {
+    display: none;
+    align-self: center;
+    transition: all 2s;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+#btnSiguientePrueba{
+    background-color: transparent !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+
+/***** Pagina cod de barras ********/
+#imgCodBarras {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.fa-xmark{
+    margin-top: 50px;
+}
 
     @media (min-width: 1200px){
 
         .caja-todo-contenido{
             width: 70%;
-        }
-
-        .logo{
-            right: 6%;
-            left: 0;
-            z-index: 999;
-            text-align: end;
         }
 
         .menu-nav{
@@ -1230,10 +1554,6 @@ p {
             width: 50%;
         }
 
-        #pag-acertijo{
-          height: 100vh;
-        }
-
         /* pagina principal */
 
         .pag-principal .tarjetas{
@@ -1283,43 +1603,6 @@ p {
 #contenedor-resultado{
     height: 2cm;
     display: none;
-}
-
-@media (max-width: 730px) {
-    .tarjetas {
-        column-count: 1;
-    }
-
-    .tarjeta {
-        margin-bottom: 1rem;
-    }
-
-    .tarjetas-explicacion {
-        margin-top: 12rem;
-    }
-
-    .tarjeta-explicacion {
-        width: 28rem;
-    }
-
-    .foto-buscarLetra {
-        width: 28rem;
-    }
-
-    .centrado-explicacion {
-        width: 14rem;
-    }
-
-    .centrado-pruebas {
-        width: 17rem;
-        font-size: 190%;
-        text-align: center;
-    }
-
-    .img-acertijo {
-        width: 20rem;
-
-    }
 }
 
 
