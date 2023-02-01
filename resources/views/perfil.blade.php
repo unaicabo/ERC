@@ -56,7 +56,6 @@
                     ?>
                     <div class="partida">
                         <h4>La extorsión del comercio</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio recusandae accusantium voluptatem soluta explicabo pariatur, eum unde aperiam tenetur officia assumenda fuga aspernatur, sunt, praesentium totam voluptatum autem at nesciunt.</p>
                         <div id="cajaPuntDifi">
                             <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
                             <div class="d-flex">
