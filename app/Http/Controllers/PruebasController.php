@@ -34,10 +34,14 @@ class PruebasController extends Controller
 
         session(['IdPartida' => $partida->id, 'tiempo' => $hora->getTimestamp()]);
 
-        if($partida->dificultad == 'Basico')
-            return redirect(route('acertijo'));
-        else
-            return redirect(route('IVA'));
+
+        if ($partida->dificultad == "Basico")
+        {
+            return view('acertijo');
+        }if($partida->dificultad == "Avanzado"){
+            return view('IVA');
+        }
+
     }
 
     public function acabarPartida()

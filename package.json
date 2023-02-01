@@ -15,6 +15,7 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^4.0.0",
+        "jquery": "^3.6.3",
         "sass": "^1.57.1",
         "scss": "^0.2.4",
         "vue": "^3.2.36",
