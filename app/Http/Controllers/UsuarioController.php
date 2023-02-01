@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Grupo;
 use App\Models\User;
-use App\Models\Grupo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
@@ -178,16 +177,6 @@ class UsuarioController extends Controller
         return view('CrearGrupo', compact('users'));
     }
 
-<<<<<<< HEAD
-    public function crearGrupo(Request $request)
-    {
-
-        $grupo = new Grupo();
-        $grupo->nombre = $request-> nombre;
-        $grupo->save();
-        $grupo->
-
-=======
     public function validarPaginaCrearProfesor()
     {
         if(Auth::user()->rol == 'Profesor'){
@@ -212,6 +201,5 @@ class UsuarioController extends Controller
             $user->grupo_id = $grupo->id;
             $user->save();
         }
->>>>>>> 46d83cc8a863bc5f744400c868835f419258dcf2
     }
 }
