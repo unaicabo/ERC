@@ -843,7 +843,7 @@ p {
 
 #cajaPruebaCuestionario{
     background-color: transparent !important;
-    width: 90% !important;
+    width: 100% !important;
     max-width: 800px;
     display: flex;
     flex-direction: column;
