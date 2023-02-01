@@ -19,14 +19,14 @@ class partidaSeeder extends Seeder
         $partida = new partida();
         $partida-> user_id = 2;
         $partida-> dificultad = "Basico";
-        $partida->tiempo = "3,56";
+        $partida->tiempo = "3min 56s";
         $partida-> grupo_id = 1;
         $partida->save();
 
         $partida = new partida();
         $partida-> user_id = 3;
         $partida-> dificultad = "Avanzado";
-        $partida->tiempo = "10,30";
+        $partida->tiempo = "10min 30s";
         $partida-> grupo_id = null;
         $partida->save();
     }

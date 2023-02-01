@@ -1,5 +1,5 @@
 <template>
-    <Candado/>
+    <Candado numUno="S" numDos="7" numTres="P"/>
 
     <h1 class="text-center">Cuestionario</h1>
     <h3 class="text-center mx-auto w-75"></h3>
@@ -22,7 +22,7 @@
 
 <script setup>
     import route from 'ziggy';
-    import Candado from './components/CandadosAvanzado.vue';
+    import Candado from './components/CandadosBasico.vue';
 </script>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
     <div class="w-50 progreso-candados">
-        <h4>Progreso de candado:</h4>
+        <h2>Progreso de candado:</h2>
         <div class="cajaProgresoCandados">
-            <div class="cajaLetra bg-primary text-white text-center display-6">{{ numUno }}</div>
-            <div class="cajaLetra bg-primary text-white text-center display-6">{{ numDos }}</div>
-            <div class="cajaLetra bg-primary text-white text-center display-6">{{ numTres }}</div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"></div>
+            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numUno }}</p></div>
+            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numDos }}</p></div>
+            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numTres }}</p></div>
+            <div class="cajaLetra bg-primary text-white text-center display-6"><p></p></div>
         </div>
     </div>
 </template>
@@ -30,7 +30,7 @@
     }
 
     .cajaProgresoCandados {
-        height: 50px;
+        height: 40px;
         width: 200px;
         display: flex;
         justify-content: center;
