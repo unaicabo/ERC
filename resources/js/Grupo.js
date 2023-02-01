@@ -33,5 +33,6 @@ function crearGrupo(event) {
         usersId: idUsuarios,
         groupName: nombreGrupo
     });
-}
 
+    document.getElementById('formCrearGrupos').submit();
+}

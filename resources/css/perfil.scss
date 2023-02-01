@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
-#nombre {
-=======
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -20,32 +18,13 @@ body {
 /* estilos cl */
 
 #pag-perfil .contenido{
-    margin-top: 220px;
+    margin-top: 50px;
     font-size: 2rem;
     padding-bottom: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#menu-principal{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end !important;
-    border: 2px solid red;
-}
-
-#menu-nav{
-    border: 2px solid green;
-}
-
-#menu-principal li{
-    border: 2px solid pink;
-}
-
-#menu-principal a{
-    border: 2px solid blue;
 }
 
 
@@ -69,25 +48,30 @@ body {
     font-size: 2.5rem;
     width: auto;
     margin: 0;
->>>>>>> Stashed changes
     text-align: center;
-    font-size: 3em;
+    display: flex;
+    justify-content: center;
 }
 
-.fichaPerfil {
-    margin: auto;
-    margin-top: 20px;
+.caja-usuario{
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+    display: flex;
+    flex-direction: column;
     width: 80%;
+    max-width: 800px;
+}
 
-    .fotoPerfil {
-        display: flex;        
-        justify-content: flex-end;
-        margin-right: 5%;
+.caja-foto-usuario{
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-<<<<<<< Updated upstream
-        img {
-            width: 70%;
-=======
 .usuario-nombre{
     text-align: center;
     font-size: 3rem;
@@ -124,6 +108,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
+    margin: auto;
 }
 
 .usuario-icono i{
@@ -214,51 +199,39 @@ body {
 
         h2{
             margin: 0;
->>>>>>> Stashed changes
         }
+
     }
 
-    .datosPerfil {
-        justify-self: flex-start;
-        margin-left: 5%;
+    .d-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0 20px;
+        border-top: 1px solid rgb(206, 200, 200);
+    }
+
+    h3{
+        font-size: 3.4rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    i{
+        color: rgb(10, 10, 232);
+        font-size: 3rem;
+    }
+
+    h5{
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 30px;
+        font-weight: bold;
     }
 }
 
-#partidas {
-    margin-top: 30px;
-    margin-left: 10%;
-    margin-bottom: 50px;
+@media (min-width: 1600px){
 
-    h2 {
-        font-size: 2em;
-        font-weight: bold;
-        margin-left: 20px;
-    }
 
-    hr {
-        size: 10px;
-    }
-
-    p {
-        text-align: justify;
-        margin: 5px;
-        width: 95%;
-    }
-
-    .partida {
-        border: solid 1px black;
-        border-radius: 5px;
-        width: 80%;
-        margin-top: 20px;
-        padding: 10px;
-
-        #cajaPuntDifi {
-            display: flex;
-            justify-content: space-between;
-
-            i {
-                margin-top: 10px;
-            }
-        }
-    }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Grupo;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
@@ -28,21 +28,17 @@ class UsuarioController extends Controller
      */
     public function create(Request $request)
     {
-
-        //Validar los datos
-
         $users = User::all();
 
         foreach ($users as $key => $user) {
-            if ($user['username'] == $request->usuario) {
+            if($user['username'] == $request->usuario) {
                 session(['errorRegister' => 'El nombre de usuario ya está en uso']);
                 return view('login');
-            } else if ($user['email'] == $request->email) {
+            } else if($user['email'] == $request->email){
                 session(['errorRegister' => 'El email ya está en uso']);
                 return view('login');
             }
         }
-
 
         $user = new User();
 
@@ -114,9 +110,14 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        $user->partidas->each->delete();
+        //$user->grupos->each->delete();
+        $user->delete();
+
+        return redirect(route('principal'));
     }
 
     public function login(Request $request)
@@ -133,6 +134,7 @@ class UsuarioController extends Controller
 
             return redirect(route('principal'));
         } else {
+            session(['errorLogin' => 'Usuario o Contraseña incorrectas']);
             return redirect(route('usuarios.login'));
         }
     }
@@ -144,7 +146,7 @@ class UsuarioController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
 
     public function crearProfesor(Request $request)
@@ -160,13 +162,13 @@ class UsuarioController extends Controller
         $user->rol = 'Profesor';
 
         $user->save();
-        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.' . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
+        move_uploaded_file($request->imagen, './img/usersImg/' . $request->usuario . '.'
+            . (pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION)));
 
         Auth::login($user);
 
         return redirect(route('principal'));
     }
-
     public function listarUsuarios()
     {
 
@@ -175,6 +177,16 @@ class UsuarioController extends Controller
         return view('CrearGrupo', compact('users'));
     }
 
+    public function validarPaginaCrearProfesor()
+    {
+        if(Auth::user()->rol == 'Profesor'){
+            return view('CrearProfesor');
+        } else {
+            return redirect(route('principal'));
+        }
+
+        return redirect(route('principal'));
+    }
 
     public function crearGrupo()
     {
@@ -189,19 +201,5 @@ class UsuarioController extends Controller
             $user->grupo_id = $grupo->id;
             $user->save();
         }
-
-        return redirect(route('principal'));
-        Log::alert('El joputa no me hace');
-    }
-
-    public function validarPaginaCrearProfesor()
-    {
-        if (Auth::user()->rol == 'Profesor') {
-            return view('CrearProfesor');
-        } else {
-            return redirect(route('principal'));
-        }
-
-        return redirect(route('principal'));
     }
 }

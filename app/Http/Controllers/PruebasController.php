@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PruebasController extends Controller
 {
@@ -16,23 +17,31 @@ class PruebasController extends Controller
 
 
     //
-    public function iniciarBasica()
+    public function iniciarPrueba()
     {
         $partida = new partida();
 
         $usuario = Auth::user()->id;
-        $hora = date('H:i:s');
         $grupo = Auth::user()->grupo_id;
+        $hora = date_create();
 
-
-        $partida->hora_inicio = $hora;
+        //$partida->tiempo = $hora;
         $partida->grupo_id = $grupo;
-        $partida->participante_id = $usuario;
-        $partida->dificultad = "Basica";
-        $partida->puntuacion = "0";
+        $partida->user_id = $usuario;
+        $partida->dificultad = session('lvl');
 
         $partida->save();
-        return view('acertijo');
+
+        session(['IdPartida' => $partida->id, 'tiempo' => $hora->getTimestamp()]);
+
+
+        if ($partida->dificultad == "Basico")
+        {
+            return view('acertijo');
+        }if($partida->dificultad == "Avanzado"){
+            return view('IVA');
+        }
+
     }
 
     public function acabarPartida()
@@ -46,7 +55,7 @@ class PruebasController extends Controller
             $s = $s%60;
             $tiempo = $m . 'min ' . $s . 's';
         } else {
-            $tiempo = '0,' .$s;
+            $tiempo = $s . 's';
         }
 
         Log::alert($tiempo);
@@ -55,5 +64,19 @@ class PruebasController extends Controller
         $partida->save();
 
         return redirect(route('perfil'));
+    }
+
+    public function partidasByUserId($id)
+    {
+        $partidas = Partida::all();
+        $partidasReturn = [];
+
+        foreach ($partidas as $key => $value) {
+            if($value->user_id == $id){
+                array_push($partidasReturn, $value);
+            }
+        }
+
+        return $partidasReturn;
     }
 }

@@ -12,39 +12,16 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'apellido',
-        'email',
-        'imagen',
-        'password',
-        'username',
-        'rol',
-        'grupo_id',
+    protected $table = "users";
+    protected $fillable = ['name','apellido','email','imagen','password','username','rol','grupo_id',];
+    protected $hidden = ['password','remember_token'];
+    protected $casts = ['email_verified_at' => 'datetime',];
 
-    ];
+    public function grupo(){
+        return $this->belongsTo(Grupo::class);
+    }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function partidas(){
+        return $this->hasMany(Partida::class);
+    }
 }

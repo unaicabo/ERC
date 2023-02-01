@@ -1,5 +1,8 @@
 import './bootstrap';
 
 import { createApp } from "vue";
-import Candado from "./vue/Cuestionario.vue";
-createApp(Candado).mount("#app");
+import Cuestionario from "./vue/Cuestionario.vue";
+import { ZiggyVue } from 'ziggy-vue';
+
+createApp(Cuestionario).use(ZiggyVue);
+createApp(Cuestionario).mount("#app");

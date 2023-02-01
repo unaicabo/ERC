@@ -13,4 +13,12 @@ class Grupo extends Model
     protected $primaryKey = "id";
     protected $fillable = ['nombre'];
     protected $hidden = ['id'];
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
+
+    public function partidas(){
+        return $this->hasMany(Partida::class);
+    }
 }

@@ -15,10 +15,12 @@ class grupoSeeder extends Seeder
      */
     public function run()
     {
-        //
         $grupo = new grupo();
-        $grupo -> nombre = 'Grupo 4';
-        $grupo -> puntuacion = '8';
+        $grupo -> nombre = 'Grupo 1';
+        $grupo->save();
+
+        $grupo = new grupo();
+        $grupo -> nombre = 'Grupo 2';
         $grupo->save();
     }
 }

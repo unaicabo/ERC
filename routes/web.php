@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\PruebasController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -15,17 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('index');
-Route::get('/principal', function () {
     return view('principal');
-})->middleware('auth')->name('principal');
+})->name('principal');
 Route::get('/explicacion', function () {
     return view('ExplicacionExtorsionDelComercio');
-})->name('explicacion');
+})->middleware('auth')->name('explicacion');
 
-Route::get('/iniciarBasica', [PruebasController::class, 'iniciarBasica'])
-    ->name('iniciarBasica');
+Route::get('/iniciarPrueba', [PruebasController::class, 'iniciarPrueba'])
+    ->name('iniciarPrueba');
 
 Route::get('/IVA', function () {
     return view('IVA');
@@ -43,7 +41,7 @@ Route::get('/Puzle', function () {
 Route::get('/usuarios', [UsuarioController::class, 'index'])
 ->middleware('auth')->name('perfil');
 
-Route::get('/crearGrupos',[UsuarioController::class, 'listarUsuarios'])->name('CrearGrupo');
+Route::get('/crearGrupos',[UsuarioController::class, 'listarUsuarios'])->middleware('auth')->name('CrearGrupo');
 
 Route::get('/buscarletra', function () {
     return view('BuscaLetras');
@@ -64,7 +62,7 @@ Route::get('/cuestionario', function () {
 
 Route::get('/vue', function () {
     return view('vue');
- });
+});
 
 
 Route::get('/pruebaCuatro', function () {
@@ -80,12 +78,14 @@ Route::get('/login', function () {
 
 Route::get('/perfil', function () {
     return view('perfil');
-})->middleware('auth');
+})->middleware('auth')->name('perfil');
 
 Route::get('/crearProfesor', [UsuarioController::class, 'validarPaginaCrearProfesor']
 )->middleware('auth');
 Route::post('/crearProfesor', [UsuarioController::class, 'crearProfesor'])->name('crearProfesor');
+Route::get('/finpartida', [PruebasController::class, 'acabarPartida'])->middleware('auth')->name('finpartida');
 
 Route::post('/register', [UsuarioController::class, 'create'])->name('usuarios.store');
 Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
+Route::get('/destroy', [UsuarioController::class, 'destroy'])->name('eliminar');
