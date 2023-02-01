@@ -17,16 +17,16 @@ class partidaSeeder extends Seeder
     {
         //
         $partida = new partida();
-        $partida-> puntuacion = "8";
-        $partida-> participante_id = 2;
-        $partida-> dificultad = "Facil";
-        $partida-> grupo_id = null;
+        $partida-> user_id = 2;
+        $partida-> dificultad = "Basico";
+        $partida->tiempo = "3,56";
+        $partida-> grupo_id = 1;
         $partida->save();
 
         $partida = new partida();
-        $partida-> puntuacion = "5";
-        $partida-> participante_id = 2;
-        $partida-> dificultad = "Media";
+        $partida-> user_id = 3;
+        $partida-> dificultad = "Avanzado";
+        $partida->tiempo = "10,30";
         $partida-> grupo_id = null;
         $partida->save();
     }
