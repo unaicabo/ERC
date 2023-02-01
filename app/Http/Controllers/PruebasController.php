@@ -27,15 +27,17 @@ class PruebasController extends Controller
 
         //$partida->tiempo = $hora;
         $partida->grupo_id = $grupo;
-        $partida->participante_id = $usuario;
+        $partida->user_id = $usuario;
         $partida->dificultad = session('lvl');
-        $partida->puntuacion = "0";
 
         $partida->save();
 
         session(['IdPartida' => $partida->id, 'tiempo' => $hora->getTimestamp()]);
 
-        return view('acertijo');
+        if($partida->dificultad == 'Basico')
+            return redirect(route('acertijo'));
+        else
+            return redirect(route('IVA'));
     }
 
     public function acabarPartida()
@@ -47,9 +49,9 @@ class PruebasController extends Controller
         if($s > 59) {
             $m = floor($s/60);
             $s = $s%60;
-            $tiempo = $m . ',' . $s;
+            $tiempo = $m . 'min ' . $s . 's';
         } else {
-            $tiempo = '0,' .$s;
+            $tiempo = $s . 's';
         }
 
         Log::alert($tiempo);
@@ -60,4 +62,17 @@ class PruebasController extends Controller
         return redirect(route('perfil'));
     }
 
+    public function partidasByUserId($id)
+    {
+        $partidas = Partida::all();
+        $partidasReturn = [];
+
+        foreach ($partidas as $key => $value) {
+            if($value->user_id == $id){
+                array_push($partidasReturn, $value);
+            }
+        }
+
+        return $partidasReturn;
+    }
 }

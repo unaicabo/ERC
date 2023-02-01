@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Grupo;
 use App\Models\User;
 use App\Models\Grupo;
 use Illuminate\Http\Request;
@@ -31,7 +32,13 @@ class UsuarioController extends Controller
         $users = User::all();
 
         foreach ($users as $key => $user) {
-            Log::alert($user['username']);
+            if($user['username'] == $request->usuario) {
+                session(['errorRegister' => 'El nombre de usuario ya está en uso']);
+                return view('login');
+            } else if($user['email'] == $request->email){
+                session(['errorRegister' => 'El email ya está en uso']);
+                return view('login');
+            }
         }
 
         $user = new User();
@@ -49,7 +56,7 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
 
     /**
@@ -104,9 +111,14 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        $user->partidas->each->delete();
+        //$user->grupos->each->delete();
+        $user->delete();
+
+        return redirect(route('principal'));
     }
 
     public function login(Request $request)
@@ -156,7 +168,7 @@ class UsuarioController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('index'));
+        return redirect(route('principal'));
     }
     public function listarUsuarios()
     {
@@ -166,6 +178,7 @@ class UsuarioController extends Controller
         return view('CrearGrupo', compact('users'));
     }
 
+<<<<<<< HEAD
     public function crearGrupo(Request $request)
     {
 
@@ -174,5 +187,31 @@ class UsuarioController extends Controller
         $grupo->save();
         $grupo->
 
+=======
+    public function validarPaginaCrearProfesor()
+    {
+        if(Auth::user()->rol == 'Profesor'){
+            return view('CrearProfesor');
+        } else {
+            return redirect(route('principal'));
+        }
+
+        return redirect(route('principal'));
+    }
+
+    public function crearGrupo()
+    {
+        $data = json_decode(file_get_contents("php://input"), true);
+
+        $grupo = new Grupo();
+        $grupo->nombre = $data['groupName'];
+        $grupo->save();
+
+        foreach ($data['usersId'] as $key => $value) {
+            $user = User::findOrFail($value);
+            $user->grupo_id = $grupo->id;
+            $user->save();
+        }
+>>>>>>> 46d83cc8a863bc5f744400c868835f419258dcf2
     }
 }

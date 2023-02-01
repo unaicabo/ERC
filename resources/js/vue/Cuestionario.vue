@@ -1,5 +1,6 @@
 <template>
-    <Candado/>
+    <Candado numUno="S" numDos="7" numTres="P"/>
+    <i class="fa-solid fa-b" id="animation"></i>
 
     <h1 class="text-center">Cuestionario</h1>
     <h3 class="text-center mx-auto w-75"></h3>
@@ -12,21 +13,21 @@
             <input type="radio" value="c" name="pregunta1" v-model="respuesta" id="respuestaC"><label for="respuestaC" id="respuestaCCuestionario">{{ respuestaC }}</label><br>
             <input type="radio" value="d" name="pregunta1" v-model="respuesta" id="respuestaD"><label for="respuestaD" id="respuestaDCuestionario">{{ respuestaD }}</label><br><br>
         </form>
-        
-        <input type="button" class="text-right" value="Validar" @click="compPregunta()">
+
+        <input id="btnValidar" type="button" class="text-right" value="Validar" @click="compPregunta()">
         <label class="text-danger" id="labelSinRespuesta">Selecciona una respuesta</label>
-        
-     <a id="btnNextPrueba" :href="route('finpartida')">Siguiente Prueba</a>
+
+    <a id="btnNextPrueba" :href="route('finpartida')">Terminar</a>
     </div>
 </template>
 
 <script setup>
     import route from 'ziggy';
-    import Candado from './components/Candados.vue';
+    import Candado from './components/CandadosBasico.vue';
 </script>
 
 <script>
-   export default {
+    export default {
         data() {
             return {
                 a: 0,
@@ -99,6 +100,7 @@
                     if(this.b > this.a && this.b > this.c && this.b > this.d) {
                         resultado.innerHTML = '<i class="fa-solid fa-b" id="animation"></i>';
 
+                        document.getElementById('btnValidar').style.display = 'none';
                         document.getElementById('cajaPruebaCuestionario').insertBefore(resultado, document.getElementById('btnNextPrueba'));
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)";

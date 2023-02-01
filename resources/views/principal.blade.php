@@ -12,41 +12,23 @@
     <title>Pagina Principal</title>
 </head>
 <body class="pag-principal">
-    <header>
-        <div class="row">
-            <div class="caja-logo">
-                <h1 class="logo">LOGO ERC</h1>
-            </div>
-            <ul id="menu-principal">
-            @auth
-                <li class="col"><a href="{{ route('perfil') }}">Perfil</a></li>
-                <li class="col"><a href="{{ route('usuarios.logout') }}">Salir<i class="fas fa-sign-out-alt"></i></a></li>
-            @else
-                <li class="col"><a href="">Demo</a></li>
-                <li class="col"><a href="{{ route ('usuarios.login') }}">Login / Register</a></li>
-            @endauth
-            </ul>
-        </div>
-    </header>
-<!-- <div>
-    <img class="foto-principal" src="/img/imagen2.png" alt="">
-</div> -->
+@include('header')
 
 <div class="tarjetas">
     <div class="caja-tarjeta">
-    <h2>La extorsión del comercio</h2>
+        <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
             <img class="foto-tarjetas" src="/img/extorsion2.png" alt="foto">
             <div class="texto">
                 <p>Un misterioso comerciante os ha robado la llave del cofre. Os amenaza con difundir todos vuestros trapos sucios por redes sociales si no jugáis al juego que os propone. </p>
             </div>
-            <p class="nivel nivel-bas">Basico</p>
+            <p class="nivel nivel-bas">Básico</p>
         </div>
         <div class="botones">
                 <a href="{{ route ('explicacion', 'lvl=Basico') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
     </div>
-    <div class="caja-tarjeta">
+    <!-- <div class="caja-tarjeta">
         <h2>La extorsión del comercio</h2>
         <div class="tarjeta">
 
@@ -59,7 +41,7 @@
         <div class="botones">
             <a href="{{ route ('explicacion', 'lvl=Medio') }}"><button class="btn"><i class="fas fa-play"></i></button></a>
         </div>
-    </div>
+    </div> -->
     <div class="caja-tarjeta">
         <h2>La extorsión del comercio</h2>
         <div class="tarjeta">

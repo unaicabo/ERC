@@ -3,25 +3,202 @@
     src: url(./font/BarlowCondensed-Regular.ttf);
 }
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 0.625em;
+}
+
 body {
     font-family: Barlow-Condensed !important;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header {
-    margin-top: 5px;
-    font-family: Barlow-Condensed;
-    text-align: center;
-    padding-right: 12px;
-    box-shadow: 0px 5px 5px #888888;
+/******* Pagina inicio ********/
+.caja-logo{
+    padding-left: 5%;
 }
 
-header button {
-    border: 0px;
-    border-radius: 10px;
+.logo{
+    padding: 50px;
+    color: red;
+    font-size: 7rem;
+    position: relative;
+    z-index: 9999;
+    letter-spacing: 0.1em;
+}
+
+.logo::after{
+    content: "ERC";
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 46px;
+    left: 60px;
+}
+
+.logo::before{
+    content: "ERC";
+    display: inline-block;
+    color: #484ae0;
+    position: absolute;
+    top: 50px;
+    left: 54px;
+}
+
+#imagen-inicio{
+    max-width: 1300px;
+}
+
+#imagen-inicio img{
     width: 100%;
-    height: 60%;
-    margin-top: 6px;
 }
+
+.menu-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    font-size: 3.5rem;
+    background-color: #484ae0;
+}
+
+.menu-nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu-nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 1s;
+    position: relative;
+    padding: 8px;
+}
+
+.menu-nav li:hover a{
+    color: white;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.menu-nav a::after{
+    content: "";
+    display: inline-block;
+    border-bottom: 2px solid white;
+    width: 1%;
+    opacity: 0;
+    transition: 0.8s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-nav a:hover::after{
+    width: 100%;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.titleEscape {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 8rem;
+}
+
+.caja-diseño{
+    /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+#caja-diseño-inicio{
+    position: relative;
+    margin-top: 200px;
+}
+
+.caja-diseño-1{
+    height: 300px;
+    background-color: #484ae0;
+}
+
+.caja-diseño-2{
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 50%;
+    height: 0px;
+    border-left: 5rem solid transparent;
+    border-bottom: 80px solid #484ae0;
+}
+
+.caja-diseño-3{
+    display: none;
+}
+
+#btn-jugar{
+    text-align: center;
+    font-size: 3rem;
+    margin: 50px;
+}
+
+#btn-jugar button{
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 22222;
+}
+
+#btn-jugar button::after{
+    content: "";
+    display: inline-block;
+    background-color: #484ae0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 1s;
+    opacity: 0;
+}
+
+#btn-jugar button:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+
+#btn-jugar button:hover{
+    border: none;
+    transition: 1s;
+}
+
+/* */
 
 .titleEscape {
     margin-top: 50px;
@@ -29,8 +206,1403 @@ header button {
     font-size: 5em;
 }
 
-p {
+.centrado {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: rgb(251, 252, 252);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
+}
+
+.centrado-explicacion {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    font-weight: bold;
+    color: rgb(251, 252, 252);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
+}
+
+.centrado-pruebas {
+    position: absolute;
+    width: 27rem;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: rgb(251, 252, 252);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 50px;
     text-align: center;
-    width: 80%;
+}
+
+.tarjetas-explicacion {
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.foto-tarjetas {
+    width: 10rem;
+    display: block;
     margin: auto;
+    margin-bottom: 2rem;
+}
+
+.foto-principal {
+    width: 20rem;
+    display: block;
+    margin: auto;
+}
+
+.img-acertijo {
+    width: 40rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+#btn-jugar button::after{
+    content: "";
+    display: inline-block;
+    background-color: #484ae0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 1s;
+    opacity: 0;
+}
+
+#btn-jugar button:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+
+#btn-jugar button:hover{
+    border: none;
+    transition: 1s;
+}
+
+.foto-principal {
+    width: 20rem;
+}
+
+.caja-diseño-3{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    width: 25%;
+    height: 0px;
+    border-right: 5rem solid transparent;
+    border-bottom: 500px solid #99f37e;
+    z-index: 99999999;
+}
+
+.tarjetas-explicacion {
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.tarjeta-explicacion {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.foto-buscarLetra {
+    width: 19rem;
+}
+
+.foto-tarjetas {
+    width: 6rem;
+    display: block;
+    margin: auto;
+}
+
+.centrado {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+    font-size: 400%;
+}
+
+.centrado-pruebas {
+    width: 13rem;
+    font-size: 145%;
+    text-align: center;
+}
+
+/********** Login ***********/
+
+#pag-login{
+	background: #2b2b2b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 2rem;
+	color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Barlow-Condensed !important;
+}
+
+#pag-login h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 5% 2.5% 2.5% 2.5%;
+	letter-spacing: 0.1em;
+    font-size: 4rem;
+}
+
+#formLogin h1{
+	color:#484ae0;
+}
+
+#formLogin button{
+	color:#484ae0;
+}
+
+#formRegister button{
+	color:#484ae0;
+}
+
+#formRegister h1{
+	color:#484ae0;
+}
+
+#pag-login h2 {
+	text-align: center;
+}
+
+#pag-login p {
+	font-size: 2.5rem;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+#pag-login span {
+	font-size: 12px;
+}
+
+#pag-login a {
+	color: white;
+	font-size: 2.5rem;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+#pag-login button {
+	border-radius: 10px;
+	border: 2px solid #484ae0;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 3rem;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	cursor: pointer;
+    font-family: Barlow-Condensed !important;
+}
+
+#pag-login button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+#pag-login form {
+	background-color: #282828;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+
+}
+
+#pag-login .form-container{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #484ae0;
+}
+
+#login{
+	margin-top: 20px;
+}
+
+#pag-login input[type='text'], input[type='email'], input[type='password'], input[type='file'], input[type='date'] {
+	background-color: rgba(238, 238, 238, 0.76);
+	border-radius: 5px;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	font-size: 2rem;
+	max-width: 400px;
+}
+
+#pag-login input[type='checkbox'] {
+	margin-left: 5px;
 } 
+
+#pag-login .container {
+	background-color: #282828;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 100%;
+	min-height: 70%;
+}
+
+#pag-login .form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+#pag-login .sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+#pag-login .container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+#pag-login .sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	background-color: white;
+	z-index: 1;
+}
+
+#pag-login .container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+	overflow-y: scroll;
+}
+
+#pag-login .button-container{
+    display: flex;
+}
+
+#pag-login .button-container > * {
+   margin: 10px;
+}
+#pag-login .warn{
+    color: red;
+    margin: 0px !important;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+#pag-login .overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+#pag-login .container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+#pag-login .overlay {
+	background: #484ae0;
+	background: -webkit-linear-gradient(to right, #484ae0, #4184ff);
+	background: linear-gradient(to right, #484ae0, #4184ff);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+#pag-login .container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+#pag-login .overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+#pag-login .overlay-left {
+	transform: translateX(-20%);
+}
+
+#pag-login .container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+#pag-login .overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+#pag-login .container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+@media (min-width: 1200px){
+	#pag-login .container {
+		width: 70%;
+		min-height: 70%;
+	}
+
+}
+
+
+/****  Menu pagina principal   ****/
+
+#menu-principal{
+    border-bottom: 2px solid #484ae0cc;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 50px;
+}
+
+#menu-principal li{
+    border: none;
+    padding: 10px 50px;
+}
+
+#menu-principal a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Barlow-Condensed !important;
+}
+
+#menu-principal li:hover a{
+    color: #484ae0;
+}
+
+#menu-principal .fas{
+    font-size: 2.8rem;
+    color: white;
+    margin-left: 10px;
+}
+
+#menu-principal li:hover i{
+    color: #484ae0;
+}
+
+
+/* css generico **/
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caja-tarjetas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.titulo{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 3rem;
+    font-family: Barlow-Condensed !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+}
+
+
+.nivel{
+    color: white;
+    background-color: green;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.texto {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.tarjeta{
+    width: 90% !important;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* pagina principal */
+
+.pag-principal{
+    color: white;
+}
+
+.pag-principal .tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    justify-content: center;
+}
+
+.pag-principal .nivel{
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+    padding: 15px;
+    width: 100%;
+}
+
+.pag-principal .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+.pag-principal .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+}
+
+.pag-principal .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+}
+
+.caja-tarjeta{
+    margin: 20px;
+}
+
+.pag-principal .tarjeta{
+    max-width: 600px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+}
+
+.pag-principal .texto{
+    padding: 20px;
+}
+
+.pag-principal h2{
+    padding: 20px;
+    padding-top: 30px;
+    margin: 30px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.817);
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    letter-spacing: 0.1em;
+}
+
+.pag-principal h2::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.304);
+    width: 100%;
+}
+
+.pag-principal .foto-tarjetas{
+    width: 150px;
+}
+
+.pag-principal .botones{
+    margin-top: 20px;
+}
+
+.pag-principal .tarjeta{
+    padding-top: 20px;
+}
+
+.pag-principal .botones a:hover{
+    background-color: #484ae0a5 !important;
+    border: 1px solid transparent;
+    color: white;
+    transition: 0.7s;
+}
+
+.pag-principal .btn{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.pag-principal .botones a{
+    border: 2px solid #484ae0;
+    background-color: transparent !important;
+    color: #484ae0;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pag-principal{
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20vh;
+}
+
+.pag-principal .fa-play{
+    color: #484ae0;
+    font-size: 2.5rem;
+}
+
+.pag-principal a:hover .fa-play{
+    color: white;
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+/* Pagina explicacion juego */
+
+#pag-explicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pag-explicacion .caja-prueba{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 50px;
+    max-width: 900px;
+}
+
+#fondo-explicacion {
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#fondo-explicacion .nivel-bas{
+    background-color: rgba(0, 128, 0, 0.623);;
+}
+
+#fondo-explicacion .nivel-med{
+    background-color: rgba(255, 166, 0, 0.628);
+    border-radius: 0 10px 10px;
+}
+
+#fondo-explicacion .nivel-avan{
+    background-color: rgba(255, 0, 0, 0.628);
+   border-radius: 0 0 10px 10px;
+}
+
+#pag-explicacion h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#pag-explicacion h2{
+    padding: 5px;
+    margin-top: 30px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#pag-explicacion h2::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid white;
+    width: 100%;
+}
+
+#pag-explicacion .titulo{
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+
+#pag-explicacion .texto{
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+#pag-explicacion p{
+    padding: 10px;
+}
+
+#pag-explicacion .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283) !important;
+    color: white !important;
+}
+
+#pag-explicacion .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+}
+
+#pag-explicacion .btn{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 20px 30px;
+    font-size: 3rem;
+    font-family: Barlow-Condensed !important;
+    margin-bottom: 50px;
+}
+
+#pag-explicacion .nivel{
+        color: white;
+        background-color: rgba(0, 128, 0, 0.623);
+        padding: 20px;
+        margin-top: 20px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+}
+
+
+/* Pagina acertijo */
+
+#pag-acertijo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+}
+
+#pag-acertijo h2{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#pag-acertijo .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283);
+    color: white;
+    border-radius: 10px;
+    margin: 50px;
+    margin-bottom: 0;
+    max-width: 800px;
+}
+
+#pag-acertijo .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-acertijo .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#pag-acertijo .botones{
+    margin-bottom: 40px;
+}
+
+#resultado{
+    color: white;
+    padding: 20px;
+}
+
+#resultado .btn{
+    margin: 20px;
+}
+
+#pag-acertijo .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
+#pag-acertijo .contenido-prueba{
+    padding: 40px;
+}
+
+#pag-acertijo p{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+#pag-acertijo input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
+}
+
+#pag-acertijo .enunciado p{
+   color: white;
+   font-size: 3rem;
+   text-transform: uppercase;
+}
+
+.contenedor-dias{
+    margin: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.contenedor-dias .dia{
+    border-radius: 10px;
+    border: 2px solid #484ae0;
+    color: #484ae0;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contenedor-dias p{
+    padding: 10px;
+}
+
+/*********** Pagina cuestionario **************/
+
+
+#cuestionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+    font-size: 2.2rem;
+    color: white;
+}
+
+#cuestionario h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+}
+
+#cajaPruebaCuestionario{
+    background-color: transparent !important;
+    width: 100% !important;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formCuestionario{
+    background-color: rgba(255, 255, 255, 0.283) !important;
+    color: white;
+    border-radius: 10px;
+    margin: 50px;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#labelSinRespuesta{
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+#cajaPruebaCuestionario #preguntaCuestionario {
+    height: 80px;
+    font-size: 3rem;
+}
+
+#cuestionario .text-right{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#cuestionario .text-right:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#btnNextPrueba {
+    display: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#btnNextPrueba:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+/***** Img candado *****/
+
+#caja-candado{
+    width: 100%;
+    padding: 20px 100px;
+}
+
+#img-candado{
+    width: 150px;
+    max-width: 200px;
+    position: relative;
+}
+
+#img-candado img{
+    width: 100%;
+    opacity: 0.7;
+}
+
+#codigo-candado{
+    display: flex;
+    justify-content: center;
+    color: #484ae0;
+    padding: 0 20px;
+    position: absolute;
+    bottom: -60px;
+    right: 10px;
+}
+
+#codigo-candado p{
+    padding: 0;
+    font-size: 6rem;
+    padding: 4px;
+    margin: 0;
+}
+
+
+/***************  Pag buscar letra ***************/
+
+#pag-buscaletras h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#pag-buscaletras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white !important;
+    min-height: 100vh;
+}
+
+#pag-buscaletras .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283);
+    width: 90%;
+    border-radius: 10px;
+    margin: 30px 0;
+    max-width: 800px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pag-buscaletras .caja-prueba p{
+    margin-bottom: 30px;
+}
+
+#pag-buscaletras figure{
+    width: 100%;
+    max-width: 550px;
+    opacity: 0.7;
+}
+
+#pag-buscaletras img{
+    width: 100%;
+}
+
+#pag-buscaletras input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
+    color: white;
+}
+
+#pag-buscaletras .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-buscaletras .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+/************** Sopa letras ********************/
+/*
+#pag-sopaletras {
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+
+#pag-sopaletras b{
+    color:#5c5fe6;
+}
+
+#pag-sopaletras h1{
+    text-shadow: 0.1em 0.1em 0.05em rgba(184, 184, 184, 0.719);
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    padding: 50px;
+    font-size: 7rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#pag-sopaletras .enunciado{
+    background-color: #484ae0a5;
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+}
+
+#pag-sopaletras .caja-prueba{
+    background-color: rgba(255, 255, 255, 0.283);
+    width: 90%;
+    border-radius: 10px;
+    margin: 30px 0;
+    max-width: 800px;
+    /* padding: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #pag-sopaletras .caja-prueba p{
+    margin-bottom: 30px;
+} */
+
+#pag-sopaletras input{
+    background-color: rgba(240, 248, 255, 0.441);
+    border-radius: 5px;
+    border: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.327) 0px 4px 12px;
+    font-size: 2rem;
+    color: white;
+}
+
+#pag-sopaletras .botones{
+    margin:40px;
+}
+
+.respuesta-sopadeletras{
+    width: 90%;
+    max-width: 600px;
+}
+
+#pag-sopaletras .btn{
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    font-family: Barlow-Condensed;
+    font-size: 3rem;
+}
+
+#pag-sopaletras .btn:hover{
+    color: #484ae0;
+    border: 2px solid #484ae0;
+    transition: 0.5s;
+}
+
+#pag-sopaletras .contenedor-prueba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.boton-clear{
+    width: 100%;
+    text-align: center;
+    margin: 40px;
+}
+
+#buttonAcabar{
+    color:#484ae0;
+    border: 2px solid #484ae0;
+    background-color: transparent;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-family: Barlow-Condensed;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+#buttonAcabar:hover{
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+/***** Pagina Calcular iva ******/
+
+#btnSiguientePrueba {
+    display: none;
+    margin: auto;
+}
+
+#btnResponder{
+    margin-top: 30px;
+}
+
+#labelError {
+    display: none;
+    align-self: center;
+}
+
+#textNumero {
+    font-size: 4em;
+    width: 30%;
+    height: 100%;
+    align-self: center;
+    text-align: center;
+    max-width: 85px;
+}
+
+#animation {
+    display: none;
+    align-self: center;
+    transition: all 2s;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+#btnSiguientePrueba{
+    background-color: transparent !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+
+/***** Pagina cod de barras ********/
+#imgCodBarras {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.fa-xmark{
+    margin-top: 50px;
+}
+
+    @media (min-width: 1200px){
+
+        .caja-todo-contenido{
+            width: 70%;
+        }
+
+        .menu-nav{
+            background-color: transparent;
+            top: 0;
+            width: 60%;
+            padding: 20px;
+        }
+
+        .menu-nav a{
+            font-weight: bold;
+            font-size: 3.5rem;
+        }
+
+        .menu-nav li:hover a{
+            opacity: 1;
+        }
+
+        .menu-nav a::after{
+            border-bottom: 3px solid black;
+        }
+
+        .menu-nav a:hover::after{
+            border-bottom: 3px solid black;
+        }
+
+        #caja-diseño-inicio{
+            height: 100%;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin-top: 0;
+        }
+
+        .caja-diseño-1{
+            height: 100%;
+        }
+
+        .caja-diseño-2{
+            z-index: 99999999999;
+            top: 650px;
+            right: 45%;
+            width: 500px;
+            max-width: none;
+            height: 0px;
+            border-top: 100px solid #484ae0;
+            border-bottom: none;
+            transform: rotate(90deg);
+            display: none;
+
+        }
+
+        .caja-diseño-3{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: -20%;
+            width: 25%;
+            height: 0px;
+            border-right: 5rem solid transparent;
+            border-bottom: 500px solid #99f37e;
+            z-index: 99999999;
+        }
+
+        /* Pagina acertijo */
+
+        .contenedor-dias{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .contenedor-dias .dia{
+            width: 50%;
+        }
+
+        /* pagina principal */
+
+        .pag-principal .tarjetas{
+            flex-direction: row;
+        }
+
+    }
+
+.contenedor-sopadeletras{
+    width: 70%;
+    margin-left: 15%;
+    background-color: blanchedalmond;
+    margin-bottom: 3cm;
+    /* border-radius: 15px; */
+    margin-top: 6cm;
+}
+
+.respuesta-sopadeletras {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.foto-buscarLetra {
+    width: 40rem;
+}
+
+#respuesta {
+    border: 2px solid rgb(160, 160, 160);
+}
+
+/* #resultado{
+    visibility: hidden;
+}
+
+#btnSiguiente{
+    visibility: hidden;
+    margin-left: 44%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} */
+
+#contenedor-error{
+    display: none;
+}
+
+#contenedor-resultado{
+    height: 2cm;
+    display: none;
+}
+
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
     <form action="" method="POST" id="formRegister">
 
@@ -30,3 +31,5 @@
         }
     }
 </script>
+=======
+>>>>>>> 46d83cc8a863bc5f744400c868835f419258dcf2
