@@ -47,9 +47,9 @@
             <input type="number" max="9"  id="textNumero" v-model="numeroRespuesta">
         </div>
         <button class="btn" id="btnResponder" @click="clickBtn()">{{ textButton }}</button>
-        <a id="btnSiguientePrueba" :href="route('principal')"><button class="btn">Siguiente prueba</button></a>
+        <a id="btnSiguientePrueba" :href="route('finpartida')"><button class="btn">Terminar</button></a>
         <label class="text-danger" id="labelError">{{ mensajeError }}</label>
-    
+
     </div>
 </template>
 
@@ -100,7 +100,7 @@
                         document.getElementById("animation").style.display = 'block';
 
                         setTimeout(() => {
-                                document.getElementById("animation").style.transform = "scale(8)";
+                                document.getElementById("animation").style.transform = "scale(5)";
                         }, 1);
                     }
                 } else if(this.numClickBtn == 1) {
@@ -108,7 +108,7 @@
                     this.textButton = 'Responder';
 
                     document.getElementById('puzle').style.display = 'block';
-                    
+
                     document.getElementById("animation").style.transform = "scale(1)";
                     document.getElementById('textNumero').style.display = 'block';
                     document.getElementById("animation").style.display = 'none';
