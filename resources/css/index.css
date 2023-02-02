@@ -1157,6 +1157,7 @@ body{
     background-size: cover;
     min-height: 110vh;
     width: 100%;
+    margin-bottom: 10vh;
 }
 
 #pag-acertijo h2{
