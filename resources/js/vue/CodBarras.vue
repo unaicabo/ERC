@@ -9,7 +9,7 @@
             <i id="animation"></i>
             <img src="../../img/CodBarras.jpeg" alt="Codigo de barras" id="imgCodBarras">
             <input type="number" max="9"  id="textNumero" v-model="numeroRespuesta">
-            
+
         </div>
         <button id="btnResponder" class="btn" @click="clickBtn()">{{ textButton }}</button>
         <a id="btnSiguientePrueba" :href="route('puzle')"><button class="btn">Siguiente prueba</button></a>
@@ -64,7 +64,7 @@
                         document.getElementById("animation").style.display = 'block';
 
                         setTimeout(() => {
-                                document.getElementById("animation").style.transform = "scale(8)";
+                                document.getElementById("animation").style.transform = "scale(5)";
                         }, 1);
                     }
                 } else if(this.numClickBtn == 1) {
@@ -72,7 +72,7 @@
                     this.textButton = 'Responder';
 
                     document.getElementById('imgCodBarras').style.display = 'block';
-                    
+
                     document.getElementById("animation").style.transform = "scale(1)";
                     document.getElementById('textNumero').style.display = 'block';
                     document.getElementById("animation").style.display = 'none';
@@ -84,14 +84,12 @@
 </script>
 
 <style>
-    
     #textNumero {
-        font-size: 4em;
+        font-size: 10rem;
         width: 30%;
         height: 100%;
         align-self: center;
         text-align: center;
-        max-width: 85px;
+        max-width: 120px;
     }
-
 </style>
