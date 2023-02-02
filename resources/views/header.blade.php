@@ -7,6 +7,9 @@
             <ul id="menu-principal">
             @auth
                 <li class="col"><a href="{{ route('principal') }}">Inicio</a></li>
+            @if(Auth::user()->rol != 'Alumno')
+                <li class="col"><a href="{{ route('crearProfesor') }}">Crear Profesor</a></li>
+            @endif
                 <li class="col"><a href="{{ route('CrearGrupo') }}">Crear Grupos</a></li>
                 <li class="col"><a href="{{ route('perfil') }}">Perfil</a></li>
                 <li class="col"><a href="{{ route('usuarios.logout') }}">Salir<i class="fas fa-sign-out-alt"></i></a></li>

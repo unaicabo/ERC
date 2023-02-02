@@ -810,6 +810,7 @@ p {
 #menu-principal li{
     border: none;
     padding: 10px 50px;
+    width: 250px;
 }
 
 #menu-principal a{
@@ -1155,6 +1156,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 110vh;
+    width: 100%;
 }
 
 #pag-acertijo h2{

@@ -44,5 +44,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./js/loginRegistro.js"></script>
+    <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
 </body>
 </html>
