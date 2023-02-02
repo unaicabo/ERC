@@ -521,7 +521,6 @@ p {
 	transition: transform 80ms ease-in;
 	cursor: pointer;
     font-family: Barlow-Condensed !important;
-    margin-bottom: 2rem;
 }
 
 #pag-login button.ghost {
@@ -536,7 +535,7 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 50px;
-	min-height: 55rem;
+	height: 100%;
 	text-align: center;
 
 }

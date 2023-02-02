@@ -32,14 +32,14 @@
                     <input type="text" name="apellido" placeholder="Apellidos *" id="apellidosIrakaslea" value="{{ old('apellido') }}" v-model="apellidos"/>
                     <input type="email" name="email"  placeholder="Email *" id="emailIrakaslea" v-model="email">
                     <input type="text" name="usuario" placeholder="Usuario *" id="usuarioIrakaslea" value="{{ old('usuario') }}" v-model="usuario"/>
-                    <input type="password" name="contraseña" placeholder="Contraseña *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>
-                    <input type="password" name="contraseina2Irakaslea" placeholder="Repite la contraseña *" id="contraseina2Irakaslea" value="{{ old('contraseina2Irakaslea') }}" v-model="contraseina2"/>
+                    <input type="password" name="contraseña" placeholder="Pasahitza *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>
+                    <input type="password" name="contraseina2Irakaslea" placeholder="Errepikatu pasahitza *" id="contraseina2Irakaslea" value="{{ old('contraseina2Irakaslea') }}" v-model="contraseina2"/>
                     <input type="file" accept="image/png,image/jpeg,imagen/jpg" placeholder="Imagen" name="imagen" id="imagenIrakaslea" v-model="imagen">
                     <!--input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" -->
 
 
                 </div>
-                <button type="submit" id="btnIrakaslea" @click="register">Entrar</button>
+                <button type="submit" id="btnIrakaslea" @click="register">Sartu</button>
             </form>
         </div>
         <div class="form-container sign-in-container" >
@@ -60,12 +60,12 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left" id="moveToLogin">
-                    <h1>Bienvenido!</h1>
+                    <h1>Kaixo, aspaldiko!</h1>
                     <p>¿Ya tienes una cuenta?</p>
                     <button type="button" class="ghost" id="signIn" @click="moveLogin()">Iniciar Sesion</button>
                 </div>
                 <div class="overlay-panel overlay-right" id="moveToRegistro">
-                    <h1>Bienvenido de nuevo!</h1>
+                    <h1>Bienvenido!</h1>
                     <p>Pulsa registro si aún no tienes una cuenta.</p>
                     <button type="button" class="ghost" id="signUp" @click="moveRegistrar()">Registro</button>
                 </div>
