@@ -31,10 +31,10 @@ class UsuarioController extends Controller
         $users = User::all();
 
         foreach ($users as $key => $user) {
-            if ($user['username'] == $request->usuario) {
+            if($user['username'] == $request->usuario) {
                 session(['errorRegister' => 'El nombre de usuario ya está en uso']);
                 return view('login');
-            } else if ($user['email'] == $request->email) {
+            } else if($user['email'] == $request->email){
                 session(['errorRegister' => 'El email ya está en uso']);
                 return view('login');
             }
@@ -182,7 +182,7 @@ class UsuarioController extends Controller
 
     public function validarPaginaCrearProfesor()
     {
-        if (Auth::user()->rol == 'Profesor') {
+        if(Auth::user()->rol == 'Profesor'){
             return view('CrearProfesor');
         } else {
             return redirect(route('principal'));
