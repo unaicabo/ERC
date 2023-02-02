@@ -810,7 +810,6 @@ p {
 #menu-principal li{
     border: none;
     padding: 10px 50px;
-    width: 250px;
 }
 
 #menu-principal a{
@@ -1156,8 +1155,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 110vh;
-    width: 100%;
-    margin-bottom: 10vh;
 }
 
 #pag-acertijo h2{
@@ -1171,20 +1168,6 @@ body{
     font-size: 7rem;
     letter-spacing: 0.1em;
     width: 100%;
-}
-
-#pag-acertijo .progreso-candados h2 {
-    text-shadow: none;
-    color: white;
-    text-transform: none;
-    font-weight: normal;
-    text-align: center;
-    padding: 0px;
-    margin: 0;
-    font-size: 2rem;
-    letter-spacing: normal;
-    width: 100%;
-    margin-bottom: 5px;
 }
 
 #pag-acertijo .caja-prueba{
@@ -1633,6 +1616,7 @@ body{
     align-self: center;
     transition: all 2s;
     margin-bottom: 50px;
+    padding: 30px;
 }
 
 #btnSiguientePrueba{
