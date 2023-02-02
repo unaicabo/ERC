@@ -63,6 +63,169 @@ body {
 #imagen-inicio img{
     width: 100%;
 }
+*/
+/* */
+
+/******* Pagina inicio ********/
+.logo{
+    padding: 50px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: white;
+    font-size: 5rem;
+}
+
+#imagen-inicio{
+    max-width: 1300px;
+}
+
+#imagen-inicio img{
+    width: 100%;
+}
+
+.menu-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    font-size: 3.5rem;
+    background-color: #484ae0;
+}
+
+.menu-nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu-nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 1s;
+    position: relative;
+    padding: 8px;
+}
+
+.menu-nav li:hover a{
+    color: white;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.menu-nav a::after{
+    content: "";
+    display: inline-block;
+    border-bottom: 2px solid white;
+    width: 1%;
+    opacity: 0;
+    transition: 0.8s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-nav a:hover::after{
+    width: 100%;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.titleEscape {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 8rem;
+}
+
+p {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 3rem;
+}
+
+.caja-diseño{
+    /* background-image: linear-gradient(90deg, #1109ac 0%, #8829d6 35%, #7e80f3 80%, #b446d0 100%); */
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+#caja-diseño-inicio{
+    position: relative;
+    margin-top: 200px;
+}
+
+.caja-diseño-1{
+    height: 300px;
+    background-color: #484ae0;
+}
+
+.caja-diseño-2{
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 50%;
+    height: 0px;
+    border-left: 5rem solid transparent;
+    border-bottom: 80px solid #484ae0;
+}
+
+.caja-diseño-3{
+    display: none;
+}
+
+#btn-jugar{
+    text-align: center;
+    font-size: 3rem;
+    margin: 50px;
+}
+
+#btn-jugar button{
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 22222;
+}
+
+#btn-jugar button::after{
+    content: "";
+    display: inline-block;
+    background-color: #484ae0;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 1s;
+    opacity: 0;
+}
+
+#btn-jugar button:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+
+#btn-jugar button:hover{
+    border: none;
+    transition: 1s;
+}
+
+/* */
 
 .menu-nav{
     position: fixed;
@@ -487,11 +650,11 @@ body {
 
 #pag-login input[type='checkbox'] {
 	margin-left: 5px;
-} 
+}
 
 #pag-login .container {
 	background-color: #282828;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
@@ -550,7 +713,7 @@ body {
 		opacity: 0;
 		z-index: 1;
 	}
-	
+
 	50%, 100% {
 		opacity: 1;
 		z-index: 5;
@@ -1459,8 +1622,8 @@ body{
 }
 
 
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 /***** Pagina cod de barras ********/
