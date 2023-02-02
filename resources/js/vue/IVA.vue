@@ -80,3 +80,14 @@
         }
     }
 </script>
+
+<style>
+    #textNumero {
+        font-size: 10rem;
+        width: 30%;
+        height: 100%;
+        align-self: center;
+        text-align: center;
+        max-width: 120px;
+    }
+</style>
