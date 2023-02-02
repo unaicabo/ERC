@@ -38,6 +38,15 @@ Route::get('/Puzle', function () {
 //     return view('CrearGrupo');
 // });
 
+Route::get('/sopadeletrasdemo', function () {
+    return view('SopaDeLetrasDemo');
+})->name('sopadeletrasdemo');
+
+Route::get('/buscarletrademo', function () {
+    return view('BuscaLetrasDemo');
+})->name('buscarletrademo');
+
+
 Route::get('/usuarios', [UsuarioController::class, 'index'])
 ->middleware('auth')->name('perfil');
 
@@ -54,6 +63,8 @@ Route::get('/acertijo', function () {
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
 })->middleware('auth')->name('sopadeletras');
+
+
 
 Route::get('/cuestionario', function () {
     return view('Cuestionario');
@@ -74,7 +85,7 @@ Route::get('/inicio', function () {
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
 Route::get('/perfil', function () {
     return view('perfil');
