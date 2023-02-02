@@ -1,6 +1,5 @@
 <template>
     <Candado numUno="S" numDos="7" numTres="P"/>
-    <i class="fa-solid fa-b" id="animation"></i>
 
     <h1 class="text-center">Cuestionario</h1>
     <h3 class="text-center mx-auto w-75"></h3>
@@ -112,6 +111,7 @@
 
                         document.getElementById('cajaPruebaCuestionario').appendChild(resultado);
                         document.getElementById("animation").style.color = "red";
+                        document.getElementById("animation").style.display = "block";
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)";
 

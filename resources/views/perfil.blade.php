@@ -12,6 +12,34 @@
 </head>
 
 <body id="pag-perfil">
+<?php
+function obtenerMejorTiempo(){
+    $minMejorTiempo = 999999;
+    $sMejorTiempo = 99;
+    $mejorTiempo = '';
+    foreach (Auth::user()->partidas as $key => $partida) {
+        $tiempo = $partida['tiempo'];
+        if(strpos($tiempo, 'min') ==! false){
+            $min = Str::substr($tiempo, 0, strpos($tiempo, 'm'));
+            $s = Str::substr($tiempo, strpos($tiempo, ' '), (strpos($tiempo, 's') - strpos($tiempo, ' ')));
+
+            if($minMejorTiempo > $min) {
+                $mejorTiempo = $tiempo;
+            } else if($minMejorTiempo == $min && $sMejorTiempo > $s) {
+                $mejorTiempo = $tiempo;
+            }
+        } else {
+            $minMejorTiempo = 0;
+            $s = Str::substr($tiempo, strpos($tiempo, ' '), (strpos($tiempo, 's') - strpos($tiempo, ' ')));
+            if($sMejorTiempo > $s){
+                $mejorTiempo = $tiempo;
+            }
+        }
+    }
+
+    return $mejorTiempo;
+}
+?>
 @include('header')
     <main class="contenido">
         <div class="caja-usuario">
@@ -35,13 +63,15 @@
                 <div>
                     <div class="usuario-icono"><i class="fas fa-users"></i></div>
                     <dt>Grupo</dt>
+                    @if(Auth::user()->grupo_id != '')
                     <dd>{{ Auth::user()->grupo->nombre }}</dd>
+                    @endif
                 </div>
 
                 <div>
                     <div class="usuario-icono"><i class="fas fa-star-half-alt"></i></div>
-                    <dt>Puntuación</dt>
-                    <dd>120</dd>
+                    <dt>Mejor tiempo</dt>
+                    <dd><?php echo(obtenerMejorTiempo()); ?></dd>
                 </div>
             </dl>
         </div>
@@ -58,7 +88,12 @@
                     <div class="partida">
                         <h4>La extorsión del comercio</h4>
                         <div id="cajaPuntDifi">
-                            <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
+                            <div class="d-flex" id="cajaDifGrupo">
+                                <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
+                                @if(Auth::user()->grupo_id != '')
+                                <h5>Grupo: {{ Auth::user()->grupo->nombre }}</h5>
+                                @endif
+                            </div>
                             <div class="d-flex">
                                 <i class="fa-solid fa-clock"></i>
                                 <h3><?php echo($value->tiempo) ?></h3>
