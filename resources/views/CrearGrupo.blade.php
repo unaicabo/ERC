@@ -18,7 +18,7 @@
         <h2>INTEGRANTES</h2>
         <div id="cajaIntegrantes"></div>
 
-        <select id="usuarios">
+        <select id="usuarios" class="desplegable">
             @foreach ($users as $usuario)
                 <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
             @endforeach
