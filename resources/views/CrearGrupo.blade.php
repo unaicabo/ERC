@@ -10,7 +10,7 @@
 </head>
 
 <body id="fondo-explicacion">
-
+    @include('header')
     <form action="{{ route('principal') }}" method="GET" id="formCrearGrupos">
         <div class="formCrearGrupos">
             <h1>Crear nuevo grupo</h1>

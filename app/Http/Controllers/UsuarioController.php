@@ -117,6 +117,9 @@ class UsuarioController extends Controller
         //$user->grupos->each->delete();
         $user->delete();
 
+        session()->invalidate();
+        session()->regenerateToken();
+
         return redirect(route('principal'));
     }
 

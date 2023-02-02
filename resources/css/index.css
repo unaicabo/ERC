@@ -804,6 +804,7 @@ p {
     justify-content: flex-end;
     list-style: none;
     margin: 0 50px;
+    width: 100%;
 }
 
 #menu-principal li{

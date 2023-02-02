@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -180,6 +181,10 @@ body {
     }
 }
 
+.swal2-popup {
+    font-size: 2rem !important;
+}
+
 @media (min-width: 1600px){
 
     #pag-perfil .contenido{
@@ -196,6 +201,7 @@ body {
     #partidas{
         width: 45%;
         padding: 0;
+
 
         h2{
             margin: 0;
@@ -232,6 +238,5 @@ body {
 }
 
 @media (min-width: 1600px){
-
 
 }

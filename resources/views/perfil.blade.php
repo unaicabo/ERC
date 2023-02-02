@@ -49,14 +49,13 @@
             <h2>Mis partidas</h2>
             <?php
                 use App\Http\Controllers\PruebasController;
-                
+
                 $partidaController = new PruebasController;
                 $partidas = $partidaController->partidasByUserId(Auth::user()->id);
                 foreach ($partidas as $key => $value) {
                     ?>
                     <div class="partida">
                         <h4>La extorsión del comercio</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio recusandae accusantium voluptatem soluta explicabo pariatur, eum unde aperiam tenetur officia assumenda fuga aspernatur, sunt, praesentium totam voluptatum autem at nesciunt.</p>
                         <div id="cajaPuntDifi">
                             <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
                             <div class="d-flex">
@@ -70,7 +69,7 @@
             ?>
         </div>
     </main>
-    
+
     <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
