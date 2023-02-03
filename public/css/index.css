@@ -535,7 +535,7 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 50px;
-	height: 100%;
+	min-height: 55rem;
 	text-align: center;
 
 }
