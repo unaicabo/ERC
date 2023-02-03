@@ -121,8 +121,9 @@ body {
     color: white;
     font-size: 4rem;
     letter-spacing: 0.1em;
-    width: 80%;
-    margin: 50px;
+    width: 70%;
+    text-align: center;
+    margin: 50px auto;
 }
 
 #pag-perfil h2::after{
@@ -134,6 +135,7 @@ body {
 
 #partidas{
     max-width: 1000px;
+    width: 60%;
 }
 
 .partida{
@@ -178,6 +180,11 @@ body {
         text-transform: uppercase;
         padding: 30px;
         font-weight: bold;
+    }
+
+    #cajaDifGrupo {
+        border-top: none;
+        justify-content: space-around;
     }
 }
 
