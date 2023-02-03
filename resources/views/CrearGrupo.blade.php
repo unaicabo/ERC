@@ -23,7 +23,7 @@
                 <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
             @endforeach
         </select>
-        <input type="button" id="aniadirIntegrante" value="+">
+        <input type="button" id="aniadirIntegrante" value="Añadir">
     </form>
 </body>
 
