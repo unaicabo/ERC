@@ -776,7 +776,7 @@
     </div>
 
     <script src="js/sopaletras.js"></script>
-
+    <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
     <script src="js/validarSopaLetras.js"></script>
 </body>
 

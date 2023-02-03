@@ -513,6 +513,7 @@ class ComposerStaticInited22715674a7aee95fae753c1a23e72a
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PartidaController' => __DIR__ . '/../..' . '/app/Http/Controllers/PartidaController.php',
         'App\\Http\\Controllers\\PruebasController' => __DIR__ . '/../..' . '/app/Http/Controllers/PruebasController.php',
         'App\\Http\\Controllers\\UsuarioController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsuarioController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

@@ -1,10 +1,11 @@
 <template>
     <div class="w-50 progreso-candados">
-        <h2>Progreso de candado:</h2>
+        <i class="fa-solid fa-lock" id="faCandado"></i>
         <div class="cajaProgresoCandados">
-            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numUno }}</p></div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numDos }}</p></div>
-            <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numTres }}</p></div>
+            <div class="cajaLetra bg-danger text-white text-center display-6"><p>{{ numUno }}</p></div>
+            <div class="cajaLetra bg-danger text-white text-center display-6"><p>{{ numDos }}</p></div>
+            <div class="cajaLetra bg-danger text-white text-center display-6"><p>{{ numTres }}</p></div>
+            <div class="cajaLetra bg-danger text-white text-center display-6"><p></p></div>
         </div>
     </div>
 </template>
@@ -16,6 +17,13 @@
 </script>
 
 <style>
+
+#faCandado {
+    font-size: 10rem;
+    margin-bottom: 10px;
+    color: lightcoral;
+}
+
 .progreso-candados{
     width: 100% !important;
     display: flex;
@@ -28,7 +36,7 @@
 }
 .cajaProgresoCandados {
     height: 40px;
-    width: 150px;
+    width: 200px;
     display: flex;
     justify-content: center;
 }

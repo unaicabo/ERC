@@ -6,7 +6,6 @@
     <title>Login | ERC</title>
     <!--link rel="stylesheet" href="./view/css/generalStyles.css"-->
     <link rel="stylesheet" href="./css/index.css">
-
     <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
 
 </head>
@@ -25,11 +24,13 @@
                 <?php
                     if(session()->has('errorRegister')){
                         echo('<p id="msgErrorRegister" class="warn"><i class="fa-solid fa-triangle-exclamation"></i>' . session('errorRegister') . ' </p>');
+                    } else {
+                        echo('<p id="msgErrorRegister" class="warn"></p>');
                     }
                 ?>
                 <div id="formIkaslea" class="signUpForm">
                     <input type="text" name="nombre" placeholder="Nombre *" id="nombreIrakaslea" value="{{ old('nombre') }}" v-model="nombre"/>
-                    <input type="text" name="apellido" placeholder="Apellidos *" id="apellidosIrakaslea" value="{{ old('apellido') }}" v-model="apellidos"/>
+                    <input type="text" name="apellido" placeholder="Apellido *" id="apellidosIrakaslea" value="{{ old('apellido') }}" v-model="apellidos"/>
                     <input type="email" name="email"  placeholder="Email *" id="emailIrakaslea" v-model="email">
                     <input type="text" name="usuario" placeholder="Usuario *" id="usuarioIrakaslea" value="{{ old('usuario') }}" v-model="usuario"/>
                     <input type="password" name="contraseña" placeholder="Pasahitza *" id="contraseinaIrakaslea" value="{{ old('contraseña') }}" v-model="contraseina"/>

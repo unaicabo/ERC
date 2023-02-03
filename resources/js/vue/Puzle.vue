@@ -5,7 +5,7 @@
 
     <div class="caja-tarjetas">
         <div id="cajaPrueba" class="tarjeta ml-1 w-50 mx-auto">
-            <p class="texto text-center mx-auto w-75">Para obtener el ultimo numero del candado azul deberás primero completar este puzle.<br>A continuacion deberás sumar todos los digitos de los cuadradados azules. El ultimo digito será la solución.</p>
+            <p class="texto text-center mx-auto w-75">Para obtener el tercer numero del candado rojo deberás primero completar este puzle.<br>A continuacion deberás sumar todos los digitos de los cuadradados azules. El ultimo digito será la solución.</p>
             <i id="animation"></i>
             <div id="puzle">
                 <div class="row">
@@ -47,7 +47,7 @@
             <input type="number" max="9"  id="textNumero" v-model="numeroRespuesta">
         </div>
         <button class="btn" id="btnResponder" @click="clickBtn()">{{ textButton }}</button>
-        <a id="btnSiguientePrueba" :href="route('finpartida')"><button class="btn">Terminar</button></a>
+        <a id="btnSiguientePrueba" :href="route('factura')"><button class="btn">Terminar</button></a>
         <label class="text-danger" id="labelError">{{ mensajeError }}</label>
 
     </div>

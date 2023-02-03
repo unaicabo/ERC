@@ -34,5 +34,6 @@
         </div>
     </div>
         <script src="js/validarBuscarLetra.js"></script>
+        <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
 </body>
 </html>

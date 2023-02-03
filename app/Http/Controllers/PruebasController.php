@@ -19,26 +19,17 @@ class PruebasController extends Controller
     //
     public function iniciarPrueba()
     {
-        $partida = new partida();
-
         $usuario = Auth::user()->id;
         $grupo = Auth::user()->grupo_id;
         $hora = date_create();
 
-        //$partida->tiempo = $hora;
-        $partida->grupo_id = $grupo;
-        $partida->user_id = $usuario;
-        $partida->dificultad = session('lvl');
-
-        $partida->save();
-
-        session(['IdPartida' => $partida->id, 'tiempo' => $hora->getTimestamp()]);
+        session(['userId' => $usuario, 'tiempo' => $hora->getTimestamp(), 'grupo' => $grupo]);
 
 
-        if ($partida->dificultad == "Basico")
+        if (session('lvl') == "Basico")
         {
             return view('acertijo');
-        }if($partida->dificultad == "Avanzado"){
+        }if(session('lvl') == "Avanzado"){
             return view('IVA');
         }
 
@@ -46,8 +37,12 @@ class PruebasController extends Controller
 
     public function acabarPartida()
     {
-        $id = session('IdPartida');
-        $partida = partida::FindOrFail($id);
+        $partida = new partida();
+        
+        $partida->grupo_id = session('grupo');
+        $partida->user_id = session('userId');
+        $partida->dificultad = session('lvl');
+        
 
         $s = date_create()->getTimestamp() - session('tiempo');
         if($s > 59) {
@@ -58,12 +53,12 @@ class PruebasController extends Controller
             $tiempo = $s . 's';
         }
 
-        Log::alert($tiempo);
         $partida->tiempo = $tiempo;
-
         $partida->save();
 
-        return redirect(route('perfil'));
+        session(['tiempoFinal' => $tiempo]);
+
+        return redirect(route('finalScape'));
     }
 
     public function partidasByUserId($id)
