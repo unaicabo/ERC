@@ -17,6 +17,32 @@ body {
 
 /* estilos cl */
 
+.contenidoTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .cajaAux {
+        width: 10%;
+    }
+
+    .cajaEliminarCuenta {
+        width: 10%;
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: rgb(215, 38, 38);
+        }
+
+        input:hover {
+            background-color: darkred;
+            color: black;
+        }
+    }
+}
+
 #pag-perfil .contenido{
     margin-top: 50px;
     font-size: 2rem;
@@ -97,6 +123,7 @@ body {
 #img-usuario img{
     padding-top: 1px;
     width: 100%;
+    border-radius: 15px;
 }
 
 .usuario-icono{

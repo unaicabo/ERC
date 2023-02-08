@@ -34,9 +34,9 @@ Route::get('/CodBarras', function () {
 Route::get('/Puzle', function () {
     return view('Puzle');
 })->middleware('auth')->name('puzle');
-// Route::get('/crearGrupos', function () {
-//     return view('CrearGrupo');
-// });
+Route::get('/Factura', function () {
+    return view('Factura');
+})->middleware('auth')->name('factura');
 
 Route::get('/sopadeletrasdemo', function () {
     return view('SopaDeLetrasDemo');
@@ -45,7 +45,6 @@ Route::get('/sopadeletrasdemo', function () {
 Route::get('/buscarletrademo', function () {
     return view('BuscaLetrasDemo');
 })->name('buscarletrademo');
-
 
 Route::get('/usuarios', [UsuarioController::class, 'index'])
 ->middleware('auth')->name('perfil');
@@ -58,30 +57,20 @@ Route::get('/buscarletra', function () {
 
 Route::get('/acertijo', function () {
     return view('Acertijo');
-})->name('acertijo');
+})->middleware('auth')->name('acertijo');
 
 Route::get('/sopadeletras', function () {
     return view('SopaDeLetras');
 })->middleware('auth')->name('sopadeletras');
 
-
-
 Route::get('/cuestionario', function () {
     return view('Cuestionario');
 })->middleware('auth')->name('cuestionario');
 
+Route::get('/finalScape', function () {
+    return view('FinalScape');
+})->middleware('auth')->name('finalScape');
 
-Route::get('/vue', function () {
-    return view('vue');
-});
-
-
-Route::get('/pruebaCuatro', function () {
-    return view('PruebaCuatro');
-});
-Route::get('/inicio', function () {
-    return view('inicio');
-});
 
 Route::get('/login', function () {
     return view('login');

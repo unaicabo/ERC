@@ -1770,4 +1770,11 @@ input[type=number]::-webkit-inner-spin-button {
     display: none;
 }
 
+/* Pagina Final Scape */
+
+#pag-finalScape #tiempo {
+    color: white;
+    text-align: center;
+    font-size: 7rem !important;
+}
 

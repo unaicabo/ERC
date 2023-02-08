@@ -172,6 +172,7 @@ class UsuarioController extends Controller
 
         return redirect(route('principal'));
     }
+    
     public function listarUsuarios()
     {
 

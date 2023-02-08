@@ -27,13 +27,23 @@ function aniadirIntegranteArray(){
 
 function crearGrupo(event) {
     event.preventDefault();
-    let nombreGrupo = document.getElementById('nombreGrupo').value;
+        document.getElementById('errorGrupos').innerHTML = '';
+        let nombreGrupo = document.getElementById('nombreGrupo').value;
 
-    axios.post('/api/hacerGrupo',{
-        usersId: idUsuarios,
-        groupName: nombreGrupo
-    })
-    .then(response => {
-        document.getElementById('formCrearGrupos').submit();
-    });
+    if(nombreGrupo != '') {
+        if(idUsuarios.length != 0) {
+            idUsuarios.push(document.getElementsByClassName('h1CrearGrupo')[0].id);
+            axios.post('/api/hacerGrupo',{
+                usersId: idUsuarios,
+                groupName: nombreGrupo
+            })
+            .then(response => {
+                document.getElementById('formCrearGrupos').submit();
+            });
+        } else {
+            document.getElementById('errorGrupos').innerHTML = 'El grupo tiene que tener al menos un integrante';
+        }
+    } else {
+        document.getElementById('errorGrupos').innerHTML = 'El grupo tiene que tener un nombre';
+    }
 }

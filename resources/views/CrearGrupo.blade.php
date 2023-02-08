@@ -12,7 +12,8 @@
 <body id="fondo-explicacion">
     @include('header')
     <form action="{{ route('principal') }}" method="GET" id="formCrearGrupos">
-        <h1>Crear nuevo grupo</h1>
+        <p id="errorGrupos"></p>
+        <h1 id="<?php echo(Auth::user()->id) ?>" class="h1CrearGrupo">Crear nuevo grupo</h1>
         <input type="text" name="nombre" placeholder="Nombre del grupo *" id="nombreGrupo"/>
         <input type="submit" id="btnCrearGrupo" value="Crear Grupo">
         <h2>INTEGRANTES</h2>
@@ -20,7 +21,9 @@
 
         <select id="usuarios" class="desplegable">
             @foreach ($users as $usuario)
-                <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
+                @if($usuario->id != Auth::user()->id)
+                    <option value="{{$usuario->id}}-{{$usuario->name}} {{$usuario->apellido}}">{{$usuario->name}} {{$usuario->apellido}}</option>
+                @endif
             @endforeach
         </select>
         <input type="button" id="aniadirIntegrante" value="Añadir">

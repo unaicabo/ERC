@@ -5,7 +5,7 @@
    
     <div class="caja-tarjetas">
         <div id="cajaPrueba" class="tarjeta ml-1 w-50 mx-auto">
-        <p class="texto text-center mx-auto w-75">Para obtener el primer número del candado azul tendrás que calcular el IVA del siguiente PVP: <b>45,67</b>.<br>El segundo decimal del importe será será el número del candado.</p>
+        <p class="texto text-center mx-auto w-75">Para obtener el primer número del candado rojo tendrás que calcular el IVA del siguiente PVP: <b>45,67</b>.<br>El segundo decimal del importe será será el número del candado.</p>
         <i id="animation"></i>
         <input type="number" max="9"  id="textNumero" v-model="numeroRespuesta">
     </div>

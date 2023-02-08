@@ -49,6 +49,7 @@
         },
         methods: {
             volverAJugar() {
+                document.getElementById('btnValidar').style.display = 'block';
 
                 this.pregunta = this.preguntas[0];
                 this.respuestaA = this.respuestasA[0];
@@ -101,6 +102,7 @@
 
                         document.getElementById('btnValidar').style.display = 'none';
                         document.getElementById('cajaPruebaCuestionario').insertBefore(resultado, document.getElementById('btnNextPrueba'));
+                        document.getElementById('animation').style.display = 'block';
                         setTimeout(() => {
                             document.getElementById("animation").style.transform = "scale(3)";
 
@@ -109,6 +111,7 @@
                     } else {
                         resultado.innerHTML = '<i class="fa-solid fa-xmark" id="animation"></i>';
 
+                        document.getElementById('btnValidar').style.display = 'none';
                         document.getElementById('cajaPruebaCuestionario').appendChild(resultado);
                         document.getElementById("animation").style.color = "red";
                         document.getElementById("animation").style.display = "block";

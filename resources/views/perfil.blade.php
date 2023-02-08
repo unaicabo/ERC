@@ -13,6 +13,7 @@
 
 <body id="pag-perfil">
 <?php
+<<<<<<< HEAD
 function obtenerMejorTiempo(){
     $minMejorTiempo = 999999;
     $sMejorTiempo = 99;
@@ -39,20 +40,77 @@ function obtenerMejorTiempo(){
 
     return $mejorTiempo;
 }
+=======
+    function obtenerMejorTiempo(){
+        $minMejorTiempo = 999999;
+        $sMejorTiempo = 99;
+        $mejorTiempo = '';
+        foreach (Auth::user()->partidas as $key => $partida) {
+            $tiempo = $partida['tiempo'];
+            if(strpos($tiempo, 'min') ==! false){
+                $min = Str::substr($tiempo, 0, strpos($tiempo, 'm'));
+                $s = Str::substr($tiempo, strpos($tiempo, ' '), (strpos($tiempo, 's') - strpos($tiempo, ' ')));
+                if($minMejorTiempo > $min) {
+                    $minMejorTiempo = $min;
+                    $mejorTiempo = $tiempo;
+                } else if($minMejorTiempo == $min && $sMejorTiempo > $s) {
+                    $sMejorTiempo = $s;
+                    $minMejorTiempo = $min;
+                    $mejorTiempo = $tiempo;
+                }
+            } else {
+                $minMejorTiempo = 0;
+                $s = Str::substr($tiempo, strpos($tiempo, ' '), (strpos($tiempo, 's') - strpos($tiempo, ' ')));
+                if($sMejorTiempo > $s){
+                    $sMejorTiempo = $s;
+                    $mejorTiempo = $tiempo;
+                }
+            }
+        }
+        return $mejorTiempo;
+    }
+>>>>>>> 89e87fa65e7aa43af1b08db81b07c13541a6b7dd
 ?>
 @include('header')
     <main class="contenido">
-        <div class="caja-usuario">
-            <div class="caja-foto-usuario">
-                <figure id="img-usuario">
-                    <img src="./img/usersImg/{{ Auth::user()->imagen }}" alt="Foto Perfil">
-                </figure>
-                <form action="{{ route('eliminar') }}" method="GET" id="formEliminarCuenta">
-                    <input type="submit" id="btnEliminarCuenta" value="Eliminar cuenta">
-                </form>
-                <p class="usuario-nombre">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>
+        <div class="contenidoTop">
+            <div class="cajaAux"></div>
+            <div class="caja-usuario">
+                <div class="caja-foto-usuario">
+                    <figure id="img-usuario">
+                        @if(Auth::user()->imagen != '')
+                        <img src="./img/usersImg/{{ Auth::user()->imagen }}" alt="Foto Perfil">
+                        @else
+                        <img src="./img/usersImg/perfil.webp" alt="Foto Perfil">
+                        @endif
+                    </figure>
+                    <p class="usuario-nombre">{{ Auth::user()->name }} {{ Auth::user()->apellido }}</p>
+                </div>
+
+                <dl class="datos-usuario">
+                    <div>
+                        <div class="usuario-icono"><i class="fas fa-user"></i></div>
+                        <dt>Usuario</dt>
+                        <dd>{{ Auth::user()->username }}</dd>
+                    </div>
+
+                    <div>
+                        <div class="usuario-icono"><i class="fas fa-users"></i></div>
+                        <dt>Grupo</dt>
+                        @if(Auth::user()->grupo_id != '')
+                        <dd>{{ Auth::user()->grupo->nombre }}</dd>
+                        @endif
+                    </div>
+
+                    <div>
+                        <div class="usuario-icono"><i class="fas fa-star-half-alt"></i></div>
+                        <dt>Mejor tiempo</dt>
+                        <dd><?php echo(obtenerMejorTiempo()); ?></dd>
+                    </div>
+                </dl>
             </div>
 
+<<<<<<< HEAD
             <dl class="datos-usuario">
                 <div>
                     <div class="usuario-icono"><i class="fas fa-user"></i></div>
@@ -74,8 +132,14 @@ function obtenerMejorTiempo(){
                     <dd><?php echo(obtenerMejorTiempo()); ?></dd>
                 </div>
             </dl>
+=======
+            <div class="cajaEliminarCuenta">
+                <form action="{{ route('eliminar') }}" method="GET" id="formEliminarCuenta">
+                    <input type="submit" id="btnEliminarCuenta" value="Eliminar Cuenta">
+                </form>
+            </div>
+>>>>>>> 89e87fa65e7aa43af1b08db81b07c13541a6b7dd
         </div>
-
         <div id="partidas">
             <h2>Mis partidas</h2>
             <?php
@@ -90,8 +154,13 @@ function obtenerMejorTiempo(){
                         <div id="cajaPuntDifi">
                             <div class="d-flex" id="cajaDifGrupo">
                                 <h5>Dificultad: <?php echo($value->dificultad) ?></h5>
+<<<<<<< HEAD
                                 @if(Auth::user()->grupo_id != '')
                                 <h5>Grupo: {{ Auth::user()->grupo->nombre }}</h5>
+=======
+                                @if($value->grupo != '')
+                                <h5>Grupo: <?php echo($value->grupo->nombre) ?></h5>
+>>>>>>> 89e87fa65e7aa43af1b08db81b07c13541a6b7dd
                                 @endif
                             </div>
                             <div class="d-flex">

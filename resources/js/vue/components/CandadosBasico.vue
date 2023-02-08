@@ -1,6 +1,6 @@
 <template>
     <div class="w-50 progreso-candados">
-        <h2>Progreso de candado:</h2>
+        <i class="fa-solid fa-lock" id="faCandado"></i>
         <div class="cajaProgresoCandados">
             <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numUno }}</p></div>
             <div class="cajaLetra bg-primary text-white text-center display-6"><p>{{ numDos }}</p></div>
@@ -17,6 +17,12 @@
 </script>
 
 <style>
+
+    #faCandado {
+        font-size: 10rem;
+        margin-bottom: 10px;
+        color: lightblue;
+    }
 
     .progreso-candados{
         width: 100% !important;
